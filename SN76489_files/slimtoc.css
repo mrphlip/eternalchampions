@@ -1,0 +1,40 @@
+/*
+ * css for slimtoc
+ *
+ * The triangles in the tocheader are created via border-styles,
+ * got that from DokuWiki's toc
+ * toc_open span is for the triangle with edge downwards ('klick to open toc')
+ * toc_close span is for the triangle with edge upwards ('klick to close toc')
+ */
+
+div.toc { margin:0 5em;
+    border: 1px solid #047;
+    padding: 0.25em;
+    background-color: #07a;
+}
+div.tocheader{border:1px solid #047;
+    background-color:#047;
+    text-align:left;
+    font-weight:bold;padding:3px;margin-bottom:2px;}
+span.toc_open,
+span.toc_close{
+  border:0.4em solid #047;
+  float:right;
+  display:block;
+  margin-left:0;
+  margin-right:3px;
+  margin-bottom:0;
+}
+span.toc_open{
+   margin-top:0.4em;
+   border-top-color:#fff;
+}
+span.toc_close{
+  margin-top:0;
+  border-bottom-color:#fff;
+}
+span.toc_open span,
+span.toc_close span{ display:none;}
+
+.toclist ol { list-style: none; }
+.toclist ol li{text-indent:-2em}

@@ -1,0 +1,3 @@
+RATE=44100
+MAX_BEND = 8
+

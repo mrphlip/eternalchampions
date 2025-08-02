@@ -1,0 +1,470 @@
+/* containers */
+html {
+	overflow-y:scroll; /* always show scrollbar, avoid "page shift" */
+}
+
+body {
+	background:#069 url(image/background.png);
+	color:#fff;
+	/* we list some ClearType fonts for Japanese/Korean */
+	font-family: Arial, Helvetica, Meiryo, Malgun Gothic, sans-serif;
+	margin:0;
+	padding:0;
+	text-align:center;
+	font-size:11pt;
+	line-height:120%;
+}
+#wrap{
+	margin:1em auto;
+	text-align:left;
+	width:64em;
+	border:1px solid #047;
+	background:#069;
+	padding:1em;
+}
+#header{
+}
+#menubar{
+	font-size:83%;
+}
+#menubar ul{
+	margin:0px; padding: 0px;
+}
+#menubar ul li{
+	list-style: none; display: inline; text-indent: 0px; text-align: left; padding: 0 0.25em;
+}
+
+/* Headers and paragraphs  *************************************/
+h1, h2, h3, h4, h5{
+	font-weight:bold;
+	margin:0;
+	line-height:120%;
+}
+h5 { font-size:100%; }
+
+/* header search box */
+#header input { margin-top:0.2em; }
+
+/*************************************
+ +Wiki
+ *************************************/
+.urllink{
+	background:url(image/external.png) center right no-repeat;
+	padding-right:13px;
+}
+.noexternallinkmarkup .urllink {
+	background:inherit;
+	padding-right:0;
+}
+.wikilink{
+}
+#wikitext{
+}
+#wikiedit{
+	font-size:83%;
+}
+#wikiedit form{
+	width:100%;
+}
+#wikiedit form input{
+	margin:0.3em;
+	font-size:inherit;
+	font-family:inherit;
+}
+#wikiedit textarea{
+	width:100%;
+}
+#wikitext table {
+	border-collapse:collapse;
+}
+#wikitext table[border="1"], #wikitext table[border="1"]>tbody>tr, #wikitext table[border="1"]>tbody>tr>td, #wikitext table[border="1"]>tbody>tr>th {
+	border:1px solid #047;
+}
+#wikitext th {
+	background-color:#047;
+	font-weight:normal;
+	font-style:italic;
+	padding:0.3em 0.3em;
+}
+#wikitext td {
+	padding:0 0.3em;
+}
+#wikitext pre {
+	border:1px solid #047;
+	background-color:#07a;
+	overflow-x:auto;
+	padding:0 0.3em;
+}
+#wikitext code {
+	background-color:#07a;
+	padding-left:0.2em;
+	padding-right:0.2em;
+}
+
+#wikitext h3.wikimessage {
+	border:4px solid red;
+	background-color:#a00;
+	margin:0 5em;
+	padding:0.5em 5em;
+	text-align:center;
+}
+
+#wikitext ul {
+	padding-left:2em;
+}
+
+/*************************************
+ +Misc
+ *************************************/
+a {
+	color:#fff;
+	text-decoration:underline;
+}
+a:hover {
+	color:#ffc;
+}
+/* tags */
+.categorylink {
+	border:1px solid #047;
+	padding: 0.2em;
+	background-color:#08b;
+	padding-left:20px;
+	line-height:180%;
+	background-image:url(image/tag.png);
+	background-position: 0.2em center;
+	background-repeat: no-repeat;
+	white-space: nowrap;
+}
+.categorylink input {
+	vertical-align: text-top;
+	margin-left:2px;
+}
+span.tagextra {
+	border:1px solid #047;
+	padding:0.2em;
+	padding-left:0px;
+	white-space:nowrap;
+}
+/* "tag cloud" helper */
+span.tagclouditem {
+	white-space:nowrap;
+	padding:0px 0.1em;
+	line-height:100%;
+}
+span.tagclouditem a {
+	text-decoration:none;
+}
+span.tagclouditem a:hover {
+	text-decoration:underline;
+}
+
+
+
+hr{
+	border:0;
+	clear:both;
+	border-bottom:1px solid #047;
+	margin:4px 0;
+}
+.clear{
+	border:0;
+	clear:both;
+}
+.spacing{
+	margin:1em auto;
+}
+#searchbox{
+	margin:1em auto;
+}
+#searchbox input{
+	font-family:inherit;
+	font-size:83%;
+	margin-right:0.3em;
+}
+.textinput{
+	color:#555;
+}
+.button{
+	background-color:#fff;
+	color:#579;
+}
+.checkbox{
+	border:inherit;
+	margin:inherit;
+}
+
+/* clearfix */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+/* Useful general stuff */
+.nowrap { white-space: nowrap; }
+
+/* Fixing up non-matching built-in stuff */
+.frame {
+	border:1px solid #047 !important;
+	background-color:#07a !important;
+}
+.diffbox {
+	border-left:1px solid #047 !important;
+	width:auto !important;
+}
+.difftime {
+	background-color:#047 !important;
+	font-family:inherit !important;
+	padding-left:0.5em;
+}
+.difftype {
+	font-family:inherit !important;
+	padding-left:0.5em;
+}
+.diffmarkup ins, .diffmarkup del { color:black; }
+
+table.quickref td {
+	padding:0.2em;
+}
+.attachtable tr:hover { background-color:#07a !important; }
+.attachtable .refbox { background-color: #07a !important; border-color: #047 !important; }
+.lfloat { margin-bottom:0.5em; }
+.rfloat { margin-bottom:0.5em; }
+#wikitext td.coverimage { padding:0; border-right:hidden; vertical-align:middle;}
+.nobreak { white-space: nowrap; }
+td .lfloat { margin:0; margin-right:0.5em; }
+a.createlinktext { border-bottom: 1px dashed white !important; }
+
+/* phpbbnews */
+div.newsrow {
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+}
+div.newsheader {
+	background-color:#047;
+	padding:0.2em;
+	margin-left:-0.2em;
+}
+div.newsposted {
+	font-size:smaller;
+/*	margin-top:0.4em;*/
+}
+div.newstext {
+	margin-top:1em;
+	margin-bottom:1em;
+  overflow:hidden;
+}
+div.newstext img
+{
+  max-width:100%;
+}
+div.newsfooter {
+	margin-bottom:1em;
+}
+div.phpbbquote {
+	margin-left:2em;
+	margin-right:2em;
+	border:1px solid #047;
+	background-color:#07a;
+	padding:0.55555em;
+}
+div.phpbbcode {
+	font-family:monospace;
+	border:1px solid #047;
+	background-color:#07a;
+	padding:0.5em;
+}
+
+/* gallery */
+.gallery img {
+	margin:2px;
+	padding:0;
+}
+.gallery-current img {
+/*	opacity:0.6;
+	filter:alpha(opacity=60);*/
+	border:2px solid #fff;
+	margin:0px;
+	padding:0;
+}
+
+/* move/copy page form */
+#wikimove input[type=text] {
+	width:30em;
+}
+
+#wikitext h2 {
+	border-bottom:1px solid #047;
+	margin-bottom:0.2em;
+}
+
+/* Table of Contents styling */
+div.toc {
+  border:1px solid #004477;
+/*  margin-top:0.5em;*/
+  margin-left:1em;
+  margin-right:1em;
+}
+
+div.toc p {
+  background:#0080B0;
+  padding:0.5em;
+}
+
+div.toc ol#tocid {
+  border-top:1px solid #004477;
+}
+
+/* Link styling */
+a.forumuserlink {
+	background:url(image/forumuser.png) center left no-repeat;
+	padding-left:13px;
+}
+a.forumtopiclink {
+	background:url(image/forumtopic.png) center left no-repeat;
+	padding-left:18px;
+}
+a.forumpostlink {
+	background:url(image/forumpost.png) center left no-repeat;
+	padding-left:20px;
+}
+a.wikipedialink {
+	background:url(image/wikipedia.png) center left no-repeat;
+	padding-left:18px;
+}
+a.imdblink {
+	background:url(image/imdb.png) center left no-repeat;
+	padding-left:18px;
+}
+div#wikitext a[target="_blank"]:after {
+	content:" " url(image/newwin.png);
+}
+
+/* A-Z indices */
+.letterindex ul {
+	padding:0 !important;
+}
+.letterindex li {
+	display:inline;
+}
+.letterindex a {
+	border:1px solid #047;
+	padding-left:0.4em;
+	padding-right:0.4em;
+	text-decoration:none;
+	line-height:150%;
+}
+.letterindex a:hover {
+	background-color:#07a;
+}
+.letterindex a.selflink {
+	background-color:#07a;
+}
+
+/* release lists (outside of Games pages) */
+.gamereleasesindex a {
+	text-decoration:none;
+}
+
+.editlink {
+	opacity:0.5;
+}
+.editlink:hover {
+	opacity:1.0;
+}
+
+div.inline {display:inline;}
+span.sprite {
+	display:inline-block;
+	border:1px solid #047;
+	background-color:#07a;
+	text-align:center;
+	padding:0.3em;
+	margin:0.2em;
+}
+
+div#wikiupload input[type="text"] { width:30em; }
+
+table.hoverhighlight tr:hover { background-color:#07a; }
+
+div.scanthumb { display:inline-block; border:1px solid #047; background-color:#07a; padding:0.3em; margin:0.2em; position:relative; text-align:center; }
+div.scanthumb div.wrapper { display:inline; margin-bottom:0.3em; }
+
+.bigform form input { font-size:100% !important; margin:0.1em; }
+
+table.data th { white-space:nowrap; }
+table.data td { vertical-align:middle; }
+
+/* stuff with class=editor should be only for wikieditor people to see */
+.editor { background-color:#07a; border:2px dashed #047;}
+
+#wikitext td.video-thumbnail { padding-bottom:2px; }
+
+/* this is pretty much here for Alex Kidd in Miracle World */
+.double-over {
+	background-image:url("image/double-over.png"); background-repeat:repeat-x; background-position:center center;
+}
+
+/* footnotes */
+sup { line-height: 0; }
+a.footnoteref { text-decoration:none; font-size:smaller; }
+a.footnotebackref { text-decoration:none; font-weight:bold; }
+a.footnoteref:target { background-color:#07a; }
+
+.scanthumboverlay { position:absolute; bottom:6px; right:6px; }
+.scanthumboverlay img { margin-left:1px; }
+
+.horizontalonly {
+	overflow-x:hidden;
+	white-space:nowrap;
+	text-align:center;
+	-webkit-mask-image: -webkit-linear-gradient(right, transparent, black 10%)
+}
+
+/* Coloured buttons... */
+input[type="submit"], input[type="button"], input[type="reset"], button {
+	-moz-box-shadow:inset 0.1em 0.1em rgba(255,255,255,0.15), inset -0.1em -0.1em rgba(0,0,0,0.15), 0.1em 0.1em 0.1em rgba(0,0,0,0.2);
+	-webkit-box-shadow:inset 0.1em 0.1em rgba(255,255,255,0.15), inset -0.1em -0.1em rgba(0,0,0,0.15), 0.1em 0.1em 0.1em rgba(0,0,0,0.2);
+	box-shadow:inset 0.1em 0.1em rgba(255,255,255,0.15), inset -0.1em -0.1em rgba(0,0,0,0.15), 0.1em 0.1em 0.1em rgba(0,0,0,0.2);
+	background-color:#07a;
+	-moz-border-radius:0.3em;
+	-webkit-border-radius:0.3em;
+	border-radius:0.3em;
+	border:1px solid #047;
+	color:#ffffff;
+	text-decoration:none;
+	padding:0.2em 0.5em;
+	font-size:100%;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, button:hover {
+	background-color:#08b;
+}
+input[type="submit"]:active, input[type="button"]:active, input[type="reset"]:active, button:active {
+	-moz-box-shadow:inset 0.1em 0.1em rgba(255,255,255,0.15), inset -0.1em -0.1em rgba(0,0,0,0.15);
+	-webkit-box-shadow:inset 0.1em 0.1em rgba(255,255,255,0.15), inset -0.1em -0.1em rgba(0,0,0,0.15);
+	box-shadow:inset 0.1em 0.1em rgba(255,255,255,0.15), inset -0.1em -0.1em rgba(0,0,0,0.15);
+	position:relative;
+	top:1px;
+	left:1px;
+}
+
+/* Fixes for DDMU */
+div#DDMU { color:black; }
+
+img.scalefix { image-rendering:pixelated; }

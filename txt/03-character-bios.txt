@@ -1,0 +1,253 @@
+#amk 2
+
+#SPC
+{ #game "Eternal Champions"
+  #title "Character Bios"
+  #author "DMP Entertainment"
+  ; song length is 1:20, but this seems to be traditionally multiplied by 2.5x for loops
+  #length "3:20" }
+
+#path "eternalchampions"
+
+#samples
+{
+	#optimized
+	"ec-fm-12.brr"
+	"ec-fm-13.brr"
+	"ec-fm-14.brr"
+	"ec-fm-15.brr"
+	"ec-fm-16.brr"
+	"ec-fm-17.brr"
+	"ec-fm-18.brr"
+	"ec-fm-19.brr"
+	"ec-fm-20.brr"
+	"ec-fm-21.brr"
+}
+
+#instruments
+{
+	"ec-fm-12.brr" $FF $E0 $00 $07 $DE
+	"ec-fm-13.brr" $FF $E0 $00 $04 $7B
+	"ec-fm-14.brr" $FF $F0 $00 $04 $7E
+	"ec-fm-15.brr" $FF $E0 $00 $07 $CB
+	"ec-fm-16.brr" $C9 $C0 $00 $04 $C1
+	"ec-fm-17.brr" $FF $E0 $00 $05 $40
+	"ec-fm-18.brr" $FF $EE $00 $06 $3F
+	"ec-fm-19.brr" $FF $E0 $00 $07 $E2
+	"ec-fm-20.brr" $FF $EE $00 $09 $7C
+	"ec-fm-21.brr" $FF $E0 $00 $07 $D4
+}
+
+w191
+t34
+$EF $00 $00 $00
+$F0
+l4
+
+#0
+@30
+v192
+y10
+o2
+
+; 1
+g1^2^4 d < g1^2^4 > d
+g1^2^4 d < g1^2^4^8 r8
+
+; 9
+g2^4^8 > d8 < g2^4^8 r8
+g2 > d2 < g2^4 r4
+g2^4^8 > d8 < g2^4^8 r8
+g2 > d2 < g2^4 g8 > f8
+
+; 17
+e-2^4 e-8 d8 c2^4^8 c8
+d4^8 d8 d2 < g2^4 > g8 f8
+e-2 e-4^8 e-16 d-16 c4^8 c8 c2
+d4^8 d8^2 < g2^4 r4
+
+; 25
+g2^4^8 > d8 < g2^4^8 r8
+; tempo rit
+$E3 $C0 $1A
+g2 > d2 <
+$E3 $C0 $11
+g1
+; 29
+
+#1
+@31
+v192
+y10
+o3
+
+; 1
+r (3)[
+	g8 b-8 a f8 g8^4 d e c
+	r g8 b-8 a f8 g8^2^4
+]
+@35
+g16 a16 g16 f+16 g16 r16^8
+@31
+(3) r
+
+; 9
+@34
+o3
+[ r1 r1 r1 r8 e-8 d8 c8 d r ]2
+
+;17
+[ r1 ]12
+
+#2
+@31
+v192
+y10
+o4
+
+; 1
+[
+	r d8 f8 e c8 d8^4 < b- > c < a >
+	r d8 f8 e c8 d8^2^4 r
+]2
+
+o3
+; 9
+@36
+(5)[
+	r8 d8^4 r8 e-8^4 r8 e8^4 r8 e-8^4
+	r8 d8^4 r8 d8^4 r8 e-8 d8 c8 d4 ] r4
+(5)
+@38
+(7)[ o3 g8 f8
+
+; 17
+e-4^8 r8^4 e-8 d8 c4^8 r8^4 d8 c8
+d2^8 c8 < b-8 a8 ] b-4^8 r8^4
+(7) o2 g8 e-8 d8 c8 d r
+
+; 25
+@36
+o3
+(5) r4
+
+#3
+@32
+v192
+y10
+o3
+l16
+
+; 1
+(4)[r4 b- r > d r c r16^8 < a r b- r
+r4 g r16^8 a r16^8 f r16^8
+d r16^8 b- r > d r c r16^8 < a r b- r]
+r1
+
+; 5
+@36
+(4)
+l4
+r2^4 [[ g8 a8
+
+; 9
+b- a8 g8 a g8 f+8
+[g a8 b-8 a g8 f+8]2
+g2^4 ]]2 r
+
+;17
+[ r1 ]7
+r2^4 g8 a8
+
+;25
+b- > c8 < b-8 a g8 f+8 g a8 b-8 a g8 a8
+b- > c8 < b-8 a g8 f+8 g r4^2
+
+#4
+@34
+v192
+y10
+o3
+
+; 1
+r b-8 > d8 c $DD $06 $06 c+ $DD $00 $06 c < a8 b-8^4 g a $DD $06 $06 a+ $DD $06 $06 a f
+r b-8 > d8 c $DD $06 $06 c+ $DD $00 $06 c < a8 b-8^2^4 r >
+r d8 f8 e $DD $06 $06 e+ $DD $00 $06 e c8 d8^4 < b- > c < a >
+r d8 f8 e c8 d8^2^4 < [[ g8 a8
+
+; 9
+b- $DD $06 $06 b $DD $00 $06 b- a8 g8 a $DD $06 $06 a+ $DD $00 $06 a g8 f+8
+[ g a8 b-8 a $DD $06 $06 a+ $DD $00 $06 a g8 f+8 ]2
+g2^4 ]]2 r
+
+;17
+l8
+(1)[g b- > c d e- d c < b-
+e- g a b- > c $DD $06 $06 c+ $DD $00 $06 c c < b- a
+r g a g f+] > c < b- a
+b-2^4 r4
+(1) e- d c
+d2^4 g a
+l4
+
+;25
+(2)[b- $DD $06 $06 b $DD $00 $06 b- > c8 < b-8 a $DD $06 $06 a+ $DD $00 $06 a g8 f+8]
+g a8 b-8 a $DD $06 $06 a+ $DD $00 $06 a g8 a8
+(2)
+g1
+
+#5
+@36
+v192
+y10
+o2
+
+; 1
+[ r1 ]8
+
+; 9
+l2
+(6)[g g g g g a g8 > c8 < b-8 a8 b-4 r4]2
+
+;17
+@38
+o2
+l8
+(8)[
+	e- b- > c d e- d c < b-
+	c g a b- > c c < b- a
+	d g a g f+ > c < b- a
+]
+< g > d g a b- a g f
+(8)
+< g2^8 r8^4
+l2
+
+;25
+@36
+o2
+(6)
+l4
+
+#6
+@33
+v192
+y10
+o3
+
+; 1
+[ r c ]16
+; 9
+[[
+	@37 o1 c32 r32^16^8 @33 o3 c r c8 @37 o1 c32 r32^16
+	[ @37 o1 c32 r32^16^8 @33 o3 c r c ]3
+]]2
+; 17
+[ @37 o1 c32 r32^16^8 @39 o3 c8 @37 o1 c32 r32^16 c32 r32^16^8 @39 o3 c4 ]7
+@37 o1 c32 r32^16^8 @39 o3 c8 @37 o1 c32 r32^16 c32 r32^16^8^4
+; 25
+c32 r32^16^8
+@33 o3
+[ c r ]7
+r
+
