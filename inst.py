@@ -35,7 +35,7 @@ def doloop(inst, note, rate, start, loop, end, adsr=0xFFE0, suffix="", transpose
 		call(["sox", "-M", "tmp/tmp3.wav", "tmp/tmp4.wav", "tmp/tmp5.wav", "remix", "1v1,2v1"])
 		call(["sox", "tmp/tmp2.wav", "tmp/tmp5.wav", "tmp/tmp6.wav"])
 		call(["wine", "../smwhack/brrtools/brr_encoder.exe", "-l", "tmp/tmp6.wav", "tmp/tmp.brr"])
-		call(["wine", "../smwhack/brrtools/brr_decoder.exe", f"-s{rate}", "tmp/tmp.brr", "tmp/tmpout.wav"])
+		call(["wine", "../smwhack/brrtools/brr_decoder.exe", f"-s{rate}", "tmp/tmp.brr", f"tmp/out_{inst:02d}{suffix}.wav"])
 		with open(f"inst/ec-fm-{inst:02d}{suffix}.brr", "wb") as fpout, open("tmp/tmp.brr", "rb") as fpin:
 			fpout.write(struct.pack("<H", (loopatblocks + loopblocks + 1) * 9))
 			shutil.copyfileobj(fpin, fpout)
@@ -65,7 +65,7 @@ def donoloop(inst, note, rate, start, end, adsr=0xFFE0, suffix="", transpose=Non
 		call(["sox", f"out/inst{inst:02d}_{note:02d}.wav", "tmp/tmp1.wav", "trim", f"{start}s", "channels", "1", "vol", VOL, "rate", f"{rate}"])
 		call(["sox", "tmp/tmp1.wav", "tmp/tmp2.wav", "trim", "0s", f"{newsamp}s"])
 		call(["wine", "../smwhack/brrtools/brr_encoder.exe", "tmp/tmp2.wav", "tmp/tmp.brr"])
-		call(["wine", "../smwhack/brrtools/brr_decoder.exe", f"-s{rate}", "tmp/tmp.brr", "tmp/tmpout.wav"])
+		call(["wine", "../smwhack/brrtools/brr_decoder.exe", f"-s{rate}", "tmp/tmp.brr", f"tmp/out_{inst:02d}{suffix}.wav"])
 		with open(f"inst/ec-fm-{inst:02d}{suffix}.brr", "wb") as fpout, open("tmp/tmp.brr", "rb") as fpin:
 			fpout.write(struct.pack("<H", 0))
 			shutil.copyfileobj(fpin, fpout)
@@ -85,6 +85,12 @@ def main():
 	doloop(2, 45, 9216, 0, 23269, 24872, maxnote=89) # Would really like to up the bitrate here but needs to be this low to support the high pitches in main-theme
 	# No instruments 3 or 4 - are essentially the same as instrument 2
 	donoloop(5, 38, 16384, 0, 10252, transpose=60)
+	doloop(6, 45, 4096, 0, 36856, 43272, maxnote=58)
+	doloop(7, 80, 8192, 0, 8822, 9775, 0xCFF1, maxnote=106)
+	donoloop(8, 36, 8192, 0, 12000, transpose=60)
+	donoloop(9, 53, 8192, 0, 5400, transpose=60)
+	doloop(10, 71, 6144, 0, 11355, 12070, 0xCFF1, maxnote=75)
+	doloop(11, 78, 8192, 0, 25796, 26749, 0xAFED, maxnote=87)
 	doloop(12, 48, 8192, 0, 43819, 49218)
 	doloop(13, 70, 16384, 0, 14276, 15036)
 	doloop(14, 70, 16384, 0, 3027, 3406, 0xFFF0)

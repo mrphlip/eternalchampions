@@ -1,0 +1,326 @@
+#amk 2
+
+#SPC
+{ #game "Eternal Champions"
+  #title "Menu Theme"
+  #author "DMP Entertainment" }
+
+#path "eternalchampions"
+
+#samples
+{
+	#optimized
+	"ec-fm-06.brr"
+	"ec-fm-07.brr"
+	"ec-fm-08.brr"
+	"ec-fm-09.brr"
+	"ec-fm-10.brr"
+	"ec-fm-11.brr"
+	"square.brr"
+}
+
+#instruments
+{
+	"ec-fm-06.brr" $FF $E0 $00 $04 $A0
+	"ec-fm-07.brr" $CF $F1 $00 $01 $3A
+	"ec-fm-08.brr" $FF $E0 $00 $03 $E8
+	"ec-fm-09.brr" $FF $E0 $00 $03 $EF
+	"ec-fm-10.brr" $CF $F1 $00 $01 $80
+	"ec-fm-11.brr" $AF $ED $00 $01 $60
+	"square.brr" $FF $F5 $00 $04 $00
+}
+
+w191
+t49
+$EF $00 $00 $00
+$F0
+
+#0
+@30
+v192
+y10
+o2
+l8
+
+;1
+(1)[
+	e-4 e- r e-16 g-16 a-16 b-16 a- g-
+	e-4 e- r e-16 > e-16 d-16 < b-16 a- g-
+	e-4 e- r e-16 g-16 a-16 b-16 a- g-
+	e- > e- < g- > g- < a- > a- < b- > b- <
+]2
+;9
+(2)[
+	g- r g- r g-16 > d-16 e-16 g-16 e- d- <
+	a- r a- r a-16 > a-16 g-16 e-16 d- e- <
+]3
+(3)[ e- r ]8
+;17
+(1)2 (2)3 (3)8
+;33
+[
+	[[ e- r ]]7 e- > d-16 e-16 <
+]2
+[[ g- r ]]5 g- > g- < g- > e- < g- > d- <
+[[ e- r ]]4 e- > e- < g- > g- < a- > a- < b- > b- <
+;41
+(1)2 (2)3 (3)8
+;57
+
+#1
+@31
+v192
+y10
+l16
+
+;1
+(4)[
+	o5
+	d- d- d- d- < b- r16^4 a- a- a- a- b- r >
+	d- d- d- d- < b- r16^8^2 >
+	d- d- d- d- < b- r16^4 a- a- a- a- b- r >
+	r1
+]2
+;9
+(5)[
+	o4
+	r2 b- b- b- b- a- r a- r
+	g- r g- r a- r8.^2
+]
+(6)[
+	o4
+	> r2 d- d- d- r < b- r b- r
+	a- r a- r e- r8.^2
+]
+(5)
+(7)[
+	@35 o5
+	[[ e- < b- e- > ]]10 e- < b- >
+	@31
+]
+;17
+(4)2 (5) (6) (5) (7)
+;33
+[
+	o5
+	e- r r8 < e- r a- r r8 b- r r8 > e- r
+	r8 < e- r r8 a- r r8 b- r g- r e- r >
+]3
+e- r r8 < e- r a- r r8 b- r r8 > e- r
+< < e- g- b- > e- a- > d- g- b- > e- a- a- e- e- < b- g- g-
+;41
+(4)2 (5) (6) (5) (7)
+;57
+
+#2
+@31
+v192
+y10
+l16
+
+;1
+(8)[
+	o4
+	a- a- a- a- g- r16^4 e- e- e- e- g- r
+	a- a- a- a- g- r16^8^2
+	a- a- a- a- g- r16^4 e- e- e- e- g- r
+	r1
+]2
+;9
+(9)[
+	o4
+	r2 g- g- g- g- e- r e- r
+	d- r d- r e- r8.^2
+]
+(10)[
+	o4
+	r2 a- a- a- r g- r g- r
+	e- r e- r < b- > r8.^2
+]
+(9)
+r1 r1
+;17
+(8)2 (9) (10) (9) r1 r1
+;33
+@35
+o4
+[[ r8 d- r ]]4
+r8 < b- r r8 b-8^2 >
+[[ r8 d- r ]]4
+r8 e-8^4^2
+[[ r8 d- r ]]4
+r8 < b- r r8 b-8^2 >
+[[ r8 d- r ]]4
+@31
+o3
+r a- > d- g- b- > e- a- > d- g-
+; There should be an `o6 b-` here but that's literally one semitone too high for AMK to encode
+$FA $02 $01 a $FA $02 $00
+g- d- d- < a- a- e-
+;41
+(8)2 (9) (10) (9) r1 r1
+;57
+
+#3
+@34
+v192
+y10
+l4
+
+;1
+(11)[
+	o4
+	[[ r1 ]]3
+	e- d- < b- a-
+	e-8 r8^4
+	[[ r1 ]]5
+	r8 > e-8 d-8 < b-8
+	d-8 r2 r1 > e-8 d-8 < b-8
+	d-8 r2 r1 > e-8 d-8 < b-8 >
+	d-8 r8^4^2 r1
+]
+;17
+(11)
+;33
+@35
+o3
+l16
+[[ r8 a- r ]]4
+r8 g- r r8 g-8^2
+[[ r8 a- r ]]4
+r8 b-8^4^2
+[[ r8 a- r ]]4
+r8 g- r r8 g-8^2
+[[ r8 a- r ]]4
+r8 b-8^4^2
+;41
+@34
+l4
+(11)
+;57
+
+;NB: @33 is panned hard left
+
+#4
+@33
+v192
+y18
+l16
+o3
+
+[ c c c c ]156
+
+; just need one note for this, the only bar that has 4 simultaneous chimes
+@31
+y10
+r8 e-8^4^2
+
+@33
+y18
+[ c c c c ]64
+
+#5
+y10
+o3
+l8
+
+;1
+(12)[
+	@32 v192 c r
+	@36 v96 n10 c r
+	@32 v192 c r
+	@36 v96 n10 c r
+]
+(13)[
+	@32 v192 c r
+	@36 v96 n10 c r
+	@32 v192 c r16 c16
+	@36 v96 n10 c
+	@32 v192 c
+]
+(12)
+(14)[
+	@32 v192 c r
+	@36 v96 n10 c r
+	@32 v192 c r
+	@36 v96 n10 c c16 c16
+]
+[[ (12) (13) ]]2
+;9
+(12) (14)
+(12) (16)[
+	@32 v192 c r
+	@36 v96 n10 c c16 c16
+	@32 v192 c
+	@36 v96 n10 c16 c16
+	@32 v192 c
+	@36 v96 n10 c16 c16
+]
+(12) (13)
+(17)[
+	@32 v192 [[ c r ]]6 c
+	@36 v96 n10 [[ c16 ]]6
+]
+;17
+[[ (12) (13) ]]3
+(12)
+@32 v192 c r
+@36 v96 n10 c r
+@32 v192 c
+@36 v96 n10 c16 c16
+@32 v192 c
+@36 v96 n10 c16 c16
+;25
+(12) (13)
+(12) (15)[
+	@32 v192 c r
+	@36 v96 n10 c r
+	@32 v192 c
+	@36 v96 n10 c c c16 c16
+]
+(13)2
+@32 v192 [[ c r ]]4 c
+@36 v96 n10 [[ c16 ]]14
+;33
+@32 v192 [[ c r ]]7 c
+@36 v96 n10 c
+@32 v192 [[ c r ]]7 c
+@36 v96 n10 c16 c16
+@32 v192 [[ c r ]]6 c
+@36 v96 n10 c16 c16
+@32 v192 c
+@36 v96 n10 c16 c16
+@32 v192 [[ c r ]]6
+@36 v96 n10 c16
+@32 v192 c16 c 
+@36 v96 n10 c c16 c16
+;41
+(12) (13)
+(12) (15)
+(12) (13)
+(12)
+@32 v192 c r
+@36 v96 n10 c r c16
+@32 v192 c16 c
+@36 v96 n10 c c16 c16
+(12) (14)
+(12) (16)
+(12) (13)
+(17)
+
+#6
+@33
+v192
+y18
+l16
+o3
+
+;1
+(18)[
+	r1 r1 d r r4 r2 r1 d r
+]8
+;33
+r1 r1 r1 r2 r4 r8 d r
+r1 r1 r1 c c c c r c c c r8 r c r c d c
+;41
+(18)4
