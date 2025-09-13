@@ -1,0 +1,178 @@
+#amk 2
+
+#SPC
+{ #game "Eternal Champions"
+  #title "Main Theme"
+  #author "DMP Entertainment" }
+
+#path "eternalchampions"
+
+#samples
+{
+	#optimized
+	"ec-fm-00.brr"
+	"ec-fm-01.brr"
+	"ec-fm-02.brr"
+	"ec-fm-05.brr"
+	"square.brr"
+}
+
+#instruments
+{
+	"ec-fm-00.brr" $FF $E0 $00 $07 $D3
+	"ec-fm-01.brr" $FF $E0 $00 $0A $79
+	"ec-fm-02.brr" $FF $E0 $00 $0A $81
+	"ec-fm-05.brr" $FF $E0 $00 $07 $D4
+	"square.brr" $CF $60 $00 $04 $00
+}
+
+w191
+t54
+$EF $00 $00 $00
+$F0
+
+#0
+@31
+v192
+y10
+o2
+l16
+
+; 1
+(2)[
+	c r c r c c c < a- r a- a- r a- a- a- a-
+	b- r b- r b- b- b- g r g r g g b- > e- < b- >
+	c r c r c c c < a- r a- a- r a- a- a- a-
+	b- r b- r b- a a- g r g r g a- g g- g >
+]4
+; 17
+<
+(1)[
+	f r f r f f f f r f f r f f f f
+	e- r e- r e- e- e- e- r e- e- r e- e- e- e-
+	d r d r d d d d r d d r d d d d
+]
+c r c r c c c c r c c c c c e- e-
+(1)
+g r g r g g g g r g g r g g g g
+
+#1
+@32
+v192
+y10
+o3
+l16
+
+;1
+g4^8^16 > c4^8^16 d8
+e-8. f8. d8^2
+e-8. $DD $0C $0C f $DD $00 $0C e- d8. c8 d8. c8. < b-8
+p16,32 g2. p0,0 r4
+g4^8^16 > c4^8^16 d8
+e-8. f8. p16,32 g2 p0,0 e-8
+f8. g8. e-8 f8. d8. e-8
+p16,32 d2. p0,0 r4
+;9
+> c8 < b-4. > $DD $00 $24 c < $DD $00 $24 b- p16,32 ^2 p0,0
+> c < b- g g- f e- c f e- c < b- g g- f e- c16
+^4 c8 $DD $0C $0C c+ e- r f8. $DD $00 $12 f+ $DD $00 $12 f f8. $DD $00 $12 f+ $DD $00 $12 f e-8
+p16,32 f2. p0,0 r4
+> > c < b- g > d < b- g > c < b- g > d < b- g > c < b- g > d <
+b- g > e- < b- g > d < b- g > c < b- g > d < b- g > e- < b-
+g > f < b- g > e- < b- g > d < b- g > e- < b- g > d < b- g
+> c < b- g > c < b-2 $DD $00 $24 b $DD $00 $0C b- $DD $00 $0C b $DD $00 $0C b- $DD $00 $0C b $DD $00 $0C b- ^8 $DD $00 $0C b $DD $00 $0C b- r8
+;17
+< a2 > c8. f8 g8.
+g8. $DD $00 $0C g+ p16,32 g16^2 p0,0 f8 g8
+g2 $DD $00 $0C g+ $DD $1E $06 g $DD $00 $0C g+ $DD $1E $06 g ^4. f8
+g4. d2 $DD $00 $0C d+ $DD $24 $0C d $DD $00 $0C d+ $DD $00 $0C d ^8
+< a2 > c8. f8. g8
+g2 $DD $00 $0C g+ $DD $18 $0C g p16,32 ^4 p0,0 f4
+> p16,32 c1 p0,0
+< b > c < b a g a g f d f d c < b > c < b a
+
+#2
+@32
+v192
+y20
+o2
+
+;1
+(2)4
+; 17
+o1
+f1 e-1 d1 c1
+f1 e-1 d1 g1
+
+#3
+@32
+v192
+y0
+o2
+
+;1
+$FA $02 $07
+(2)4
+$FA $02 $00
+;17
+o2
+a1 b-1 a1 g1
+a1 b-1 a1 b1
+
+#4
+@34
+v128
+y10
+o4
+l16
+
+;1
+[
+	[[ e- ]]16
+	[[ d ]]16
+]8
+;17
+[[ c ]]16 < [[ b- ]]16 [[ a ]]16 > [[ c ]]32 < [[ b- ]]16 [[ a ]]16 [[ b ]]16
+
+#5
+@34
+v128
+y10
+o3
+l16
+
+;1
+[
+	[[ g ]]7 [[ e- ]]9
+	[[ f ]]7 [[ d ]]9
+]8
+;17
+[[ c ]]16 [[ e- ]]16 [[ d ]]16 [[ c ]]32 [[ e- ]]16 [[ d ]]32
+
+#6
+@34
+v128
+y10
+o3
+l16
+
+;1
+[
+	> [[ c ]]7 < [[ a- ]]9
+	[[ b- ]]7 [[ g ]]9
+]8
+;17
+[[ f ]]48 [[ g ]]16 [[ f ]]48 [[ g ]]16
+
+#7
+v192
+y10
+o3
+l16
+
+[
+	@30 c r @33 c r
+	@30 c c @33 c @30 c
+	r c @33 c r
+	@30 c c @33 c @30 c
+]24

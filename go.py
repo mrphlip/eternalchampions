@@ -12,10 +12,15 @@ from extract import extract_channels
 import midifile
 
 # seconds per quarter note
-SONGSPEED = [0.5] * 17
+SONGSPEED = [None] * 17
+SONGSPEED[1] = 1893362 / RATE / 6 / 16
+SONGSPEED[2] = 4839967 / RATE / 14 / 16
 SONGSPEED[3] = 73.942 / 6.5 / 4 / 4
 SONGSPEED[12] = 4961985 / RATE / 16 / 16
+TIMESIG = [(4,2)] * 17
 MIDI_TICKRATE = 192 # 96
+
+ALLFILES = False
 
 def process_songdata(hdr, commands):
 	ym = list(process_ym(hdr, commands))
@@ -28,13 +33,14 @@ def process_file(fn, dn, songnum):
 	#print(hdr)
 	ym, psg = process_songdata(hdr, commands)
 	#render_psg(hdr, psg, dn)
-	render_ym(hdr, ym, dn)
+	render_ym(hdr, ym, dn, ALLFILES)
 	render_midi(hdr, gd3, ym, psg, dn, songnum)
 
 def render_midi(hdr, gd3, ym, psg, dn, songnum):
 	track0 = [
 		midifile.TimedMidiEvent(0, midifile.MetaEvent(midifile.Events.TRACK_NAME, f"{gd3.track_english} - {gd3.game_english}".encode("utf-8"))),
 		midifile.TimedMidiEvent(0, midifile.MetaEvent(midifile.Events.COPYRIGHT, gd3.artist_english.encode("utf-8"))),
+		midifile.TimedMidiEvent(0, midifile.MetaEvent(midifile.Events.TIME_SIG, bytes([TIMESIG[songnum][0], TIMESIG[songnum][1], MIDI_TICKRATE, 8]))),
 		midifile.TimedMidiEvent(hdr.samplelen - hdr.loopsample, midifile.MetaEvent(midifile.Events.MARKER, "Loop start".encode("utf-8"))),
 		midifile.TimedMidiEvent(hdr.samplelen, midifile.MetaEvent(midifile.Events.MARKER, "Loop end".encode("utf-8"))),
 		midifile.TimedMidiEvent(hdr.samplelen, midifile.MetaEvent(midifile.Events.END_OF_TRACK, b"")),
@@ -42,7 +48,11 @@ def render_midi(hdr, gd3, ym, psg, dn, songnum):
 	tracks = [track0]
 	tracks.extend(ym_to_midi(hdr, ym))
 	tracks.extend(psg_to_midi(hdr, psg))
-	tracks = retime_midi(hdr, tracks, SONGSPEED[songnum])
+	speed = SONGSPEED[songnum]
+	if speed is None:
+		print(f"{songnum} - {hdr.loopsample}")
+		speed = 0.5
+	tracks = retime_midi(hdr, tracks, speed)
 	midi = midifile.MidiFile(midifile.MidiFileType.MULTITRACK, MIDI_TICKRATE, tracks)
 	#midi.pprint()
 	fn = os.path.join(dn, "output.mid")
@@ -77,13 +87,15 @@ def dofile(fn):
 	extract_channels(fn, dn)
 
 def main():
-	if 1:
+	if ALLFILES:
 		for i in sorted(glob.glob("[0-9][0-9]*.vgm")):
 			print(i)
 			dofile(i)
 	else:
+		#dofile("01 - Main Theme.vgm")
+		dofile("02 - Menu Theme.vgm")
 		#dofile("03 - Character Bios.vgm")
-		dofile("12 - Larcen's Stage.vgm")
+		#dofile("12 - Larcen's Stage.vgm")
 
 if __name__ == "__main__":
 	main()

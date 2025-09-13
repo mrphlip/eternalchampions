@@ -82,7 +82,8 @@ def process_ym(hdr, commands):
 			elif prev_enabled[ch]:
 				yield NoteOff(frame.num, ch)
 			elif enabled[ch]:
-				stereo = (regs[event.page][0xB8 + ch] & 0xC0) >> 6
+				page, pagech = divmod(ch, 3)
+				stereo = (regs[page][0xB4 + pagech] & 0xC0) >> 6
 				yield NoteOn(frame.num, ch, inst, freq, stereo)
 				prev_inst[ch] = inst
 				prev_freq[ch] = freq
@@ -107,14 +108,15 @@ def imap(inst):
 		song_instrumentnotes[inst] = []
 	return song_instrumentmap[inst]
 
-def render_ym(hdr, ym, dn):
+def render_ym(hdr, ym, dn, do_instruments=False):
 	reset_imap()
 	for event in ym:
 		if isinstance(event, NoteOn):
 			imap(event.inst)
 			song_instrumentnotes[event.inst].append(note(event.freq))
 
-	write_instruments(dn)
+	if do_instruments:
+		write_instruments(dn)
 
 def write_instruments(dn):
 	with open(os.path.join(dn, "instruments.txt"), "w") as fp:
@@ -284,7 +286,7 @@ def ym_to_midi(hdr, ym):
 			midifile.TimedMidiEvent(0, midifile.MetaEvent(midifile.Events.TRACK_NAME, f"FM {tr}".encode("utf-8"))),
 		])
 	for ch in range(6):
-		tracks[0].extend(midifile.TimedMidiEvent(0, ev) for ev in midifile.param_change(6, midifile.Params.PARAM_PITCH_BEND_SENSITIVITY, MAX_BEND, 0))
+		tracks[0].extend(midifile.TimedMidiEvent(0, ev) for ev in midifile.param_change(ch, midifile.Params.PARAM_PITCH_BEND_SENSITIVITY, MAX_BEND, 0))
 	curr_note = [None] * 6
 	for ev in ym:
 		if isinstance(ev, NoteOn):

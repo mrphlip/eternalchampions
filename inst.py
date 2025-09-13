@@ -8,12 +8,13 @@ import os
 
 ORIGRATE = 44100
 VOL = "10dB"
+MAXRATE = 16000
 
 def call(args):
 	print(">", shlex.join(args))
 	subprocess.check_call(args)
 
-def doloop(inst, note, rate, start, loop, end, adsr=0xFFE0, suffix="", transpose=None):
+def doloop(inst, note, rate, start, loop, end, adsr=0xFFE0, suffix="", transpose=None, maxnote=None):
 	# round rate so that the loop is a whole number of blocks
 	looplen = (end - loop) / ORIGRATE
 	loopsamp = looplen * rate
@@ -46,6 +47,11 @@ def doloop(inst, note, rate, start, loop, end, adsr=0xFFE0, suffix="", transpose
 	tuninga = floor(tuning)
 	tuningb = round((tuning - tuninga) * 256)
 
+	if maxnote is not None:
+		highfreq = 440 * 2**((maxnote - 69)/12) * tuning
+		if highfreq > MAXRATE:
+			raise ValueError(f"Sample rate {rate} for {inst:02d}{suffix} is too high! Reduce to {rate*MAXRATE/highfreq}")
+
 	print(f"\"ec-fm-{inst:02d}{suffix}.brr\" ${adsr>>8:02X} ${adsr&0xFF:02X} $00 ${tuninga:02X} ${tuningb:02X}")
 
 def donoloop(inst, note, rate, start, end, adsr=0xFFE0, suffix="", transpose=None):
@@ -74,6 +80,11 @@ def donoloop(inst, note, rate, start, end, adsr=0xFFE0, suffix="", transpose=Non
 	print(f"\"ec-fm-{inst:02d}{suffix}.brr\" ${adsr>>8:02X} ${adsr&0xFF:02X} $00 ${tuninga:02X} ${tuningb:02X}")
 
 def main():
+	donoloop(0, 36, 16384, 0, 7368, transpose=60)
+	doloop(1, 43, 8192, 0, 26126, 29736, maxnote=51)
+	doloop(2, 45, 9216, 0, 23269, 24872, maxnote=89) # Would really like to up the bitrate here but needs to be this low to support the high pitches in main-theme
+	# No instruments 3 or 4 - are essentially the same as instrument 2
+	donoloop(5, 38, 16384, 0, 10252, transpose=60)
 	doloop(12, 48, 8192, 0, 43819, 49218)
 	doloop(13, 70, 16384, 0, 14276, 15036)
 	doloop(14, 70, 16384, 0, 3027, 3406, 0xFFF0)
