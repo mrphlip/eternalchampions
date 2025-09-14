@@ -20,7 +20,7 @@ SONGSPEED[12] = 4961985 / RATE / 16 / 16
 TIMESIG = [(4,2)] * 17
 MIDI_TICKRATE = 192 # 96
 
-ALLFILES = False
+ALLFILES = True
 
 def process_songdata(hdr, commands):
 	ym = list(process_ym(hdr, commands))
