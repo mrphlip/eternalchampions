@@ -1,9 +1,12 @@
 #amk 2
 
 #SPC
-{ #game "Eternal Champions"
-  #title "Menu Theme"
-  #author "DMP Entertainment" }
+{
+	#game "Eternal Champions"
+	#title "Menu Theme"
+	#author "DMP Entertainment"
+	#length "4:34" ; single loop 1:50
+}
 
 #path "eternalchampions"
 

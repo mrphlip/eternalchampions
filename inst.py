@@ -48,6 +48,8 @@ def doloop(inst, note, rate, start, loop, end, adsr=0xFFE0, suffix="", transpose
 	tuningb = round((tuning - tuninga) * 256)
 
 	if maxnote is not None:
+		if transpose:
+			maxnote += transpose - note
 		highfreq = 440 * 2**((maxnote - 69)/12) * tuning
 		if highfreq > MAXRATE:
 			raise ValueError(f"Sample rate {rate} for {inst:02d}{suffix} is too high! Reduce to {rate*MAXRATE/highfreq}")
@@ -82,7 +84,9 @@ def donoloop(inst, note, rate, start, end, adsr=0xFFE0, suffix="", transpose=Non
 def main():
 	donoloop(0, 36, 16384, 0, 7368, transpose=60)
 	doloop(1, 43, 8192, 0, 26126, 29736, maxnote=51)
-	doloop(2, 45, 9216, 0, 23269, 24872, maxnote=89) # Would really like to up the bitrate here but needs to be this low to support the high pitches in main-theme
+	doloop(2, 45, 16384, 0, 23269, 24872, maxnote=80)
+	# duplicate of the instrument at a lower bitrate to use for higher notes
+	doloop(2, 45, 9216, 0, 23269, 24872, maxnote=89, transpose=33, suffix="-8va")
 	# No instruments 3 or 4 - are essentially the same as instrument 2
 	donoloop(5, 38, 16384, 0, 10252, transpose=60)
 	doloop(6, 45, 4096, 0, 36856, 43272, maxnote=58)

@@ -1,9 +1,12 @@
 #amk 2
 
 #SPC
-{ #game "Eternal Champions"
-  #title "Main Theme"
-  #author "DMP Entertainment" }
+{
+	#game "Eternal Champions"
+	#title "Main Theme"
+	#author "DMP Entertainment"
+	#length "1:47" ; single loop 0:43
+}
 
 #path "eternalchampions"
 
@@ -13,6 +16,7 @@
 	"ec-fm-00.brr"
 	"ec-fm-01.brr"
 	"ec-fm-02.brr"
+	"ec-fm-02-8va.brr"
 	"ec-fm-05.brr"
 	"square.brr"
 }
@@ -21,9 +25,10 @@
 {
 	"ec-fm-00.brr" $FF $E0 $00 $07 $D3
 	"ec-fm-01.brr" $FF $E0 $00 $0A $79
-	"ec-fm-02.brr" $FF $E0 $00 $0A $81
+	"ec-fm-02.brr" $FF $E0 $00 $12 $82
 	"ec-fm-05.brr" $FF $E0 $00 $07 $D4
 	"square.brr" $CF $60 $00 $04 $00
+	"ec-fm-02-8va.brr" $FF $E0 $00 $15 $02
 }
 
 w191
@@ -73,22 +78,26 @@ e-8. f8. p16,32 g2 p0,0 e-8
 f8. g8. e-8 f8. d8. e-8
 p16,32 d2. p0,0 r4
 ;9
-> c8 < b-4. > $DD $00 $24 c < $DD $00 $24 b- p16,32 ^2 p0,0
-> c < b- g g- f e- c f e- c < b- g g- f e- c16
+@35
+c8 < b-4. > $DD $00 $24 c < $DD $00 $24 b- p16,32 ^2 p0,0
+> c < b- g g- f e- c f e- c < b- g g- f e- @32 > c16
 ^4 c8 $DD $0C $0C c+ e- r f8. $DD $00 $12 f+ $DD $00 $12 f f8. $DD $00 $12 f+ $DD $00 $12 f e-8
 p16,32 f2. p0,0 r4
-> > c < b- g > d < b- g > c < b- g > d < b- g > c < b- g > d <
+@35
+> c < b- g > d < b- g > c < b- g > d < b- g > c < b- g > d <
 b- g > e- < b- g > d < b- g > c < b- g > d < b- g > e- < b-
 g > f < b- g > e- < b- g > d < b- g > e- < b- g > d < b- g
 > c < b- g > c < b-2 $DD $00 $24 b $DD $00 $0C b- $DD $00 $0C b $DD $00 $0C b- $DD $00 $0C b $DD $00 $0C b- ^8 $DD $00 $0C b $DD $00 $0C b- r8
 ;17
-< a2 > c8. f8 g8.
+@32
+a2 > c8. f8 g8.
 g8. $DD $00 $0C g+ p16,32 g16^2 p0,0 f8 g8
 g2 $DD $00 $0C g+ $DD $1E $06 g $DD $00 $0C g+ $DD $1E $06 g ^4. f8
 g4. d2 $DD $00 $0C d+ $DD $24 $0C d $DD $00 $0C d+ $DD $00 $0C d ^8
 < a2 > c8. f8. g8
 g2 $DD $00 $0C g+ $DD $18 $0C g p16,32 ^4 p0,0 f4
-> p16,32 c1 p0,0
+@35
+p16,32 c1 p0,0
 < b > c < b a g a g f d f d c < b > c < b a
 
 #2

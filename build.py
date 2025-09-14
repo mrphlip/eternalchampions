@@ -74,8 +74,8 @@ def get_instruments(song):
 def main():
 	init()
 	songs = get_songs()
-	#sizes = build_and_get_sizes(songs)
-	#write_sizes(songs, sizes)
+	sizes = build_and_get_sizes(songs)
+	write_sizes(songs, sizes)
 	write_zips(songs)
 
 if __name__ == "__main__":
