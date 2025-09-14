@@ -1,0 +1,364 @@
+Instrument 0: (19, 57, 114, 113, 15, 34, 14, 28, 19, 29, 27, 31, 11, 15, 3, 6, 27, 31, 29, 13, 15, 141, 11, 15, 0, 0, 0, 0, 0, 192, 12)
+Global count: 44
+Note count: 336
+Note spread: 81.00329767148537..81.99728345237534..84.99702248847552..88.99165919384701..89.99016016121816
+Note mean: 85.15
+Detune 0: +1
+Multiplier 0: 3x
+Volume 0: 15
+Attack 0: 19
+Decay 0: 11
+Sustain 0: 27
+Sustain level 0: 0
+Release 0: 15
+Detune 1: +3
+Multiplier 1: 9x
+Volume 1: 34
+Attack 1: 29
+Decay 1: 15
+Sustain 1: 31
+Sustain level 1: 8
+Release 1: 13
+Detune 2: -3
+Multiplier 2: 2x
+Volume 2: 14
+Attack 2: 27
+Decay 2: 3
+Sustain 2: 29
+Sustain level 2: 0
+Release 2: 11
+Detune 3: -3
+Volume 3: 28
+Attack 3: 31
+Decay 3: 6
+Sustain 3: 13
+Sustain level 3: 0
+Release 3: 15
+Algorithm: 0
+Ops enabled: C
+
+Instrument 1: (115, 0, 98, 1, 10, 15, 7, 12, 31, 30, 31, 31, 25, 19, 25, 15, 17, 23, 25, 31, 207, 191, 175, 143, 0, 0, 0, 0, 0, 192, 15)
+Global count: 45
+Note count: 64
+Note spread: 36.997022488475515..36.997022488475515..36.997022488475515..36.997022488475515..36.997022488475515
+Note mean: 37.00
+Detune 0: -3
+Multiplier 0: 3x
+Volume 0: 10
+Attack 0: 31
+Decay 0: 25
+Sustain 0: 17
+Sustain level 0: 12
+Release 0: 15
+Multiplier 1: 1/2x
+Volume 1: 15
+Attack 1: 30
+Decay 1: 19
+Sustain 1: 23
+Sustain level 1: 11
+Release 1: 15
+Detune 2: -2
+Multiplier 2: 2x
+Volume 2: 7
+Attack 2: 31
+Decay 2: 25
+Sustain 2: 25
+Sustain level 2: 10
+Release 2: 15
+Volume 3: 12
+Attack 3: 31
+Decay 3: 15
+Sustain 3: 31
+Sustain level 3: 8
+Release 3: 15
+Algorithm: 0
+Ops enabled: F
+
+Instrument 2: (15, 15, 15, 14, 3, 15, 5, 23, 31, 31, 31, 31, 0, 31, 17, 19, 0, 12, 16, 20, 42, 29, 45, 79, 0, 0, 0, 0, 0, 192, 15)
+Global count: 46
+Note count: 218
+Note spread: 75.00789432328493..75.00789432328493..75.00789432328493..75.00789432328493..75.00789432328493
+Note mean: 75.01
+Multiplier 0: 15x
+Volume 0: 3
+Attack 0: 31
+Decay 0: 0
+Sustain 0: 0
+Sustain level 0: 2
+Release 0: 10
+Multiplier 1: 15x
+Volume 1: 15
+Attack 1: 31
+Decay 1: 31
+Sustain 1: 12
+Sustain level 1: 1
+Release 1: 13
+Multiplier 2: 15x
+Volume 2: 5
+Attack 2: 31
+Decay 2: 17
+Sustain 2: 16
+Sustain level 2: 2
+Release 2: 13
+Multiplier 3: 14x
+Volume 3: 23
+Attack 3: 31
+Decay 3: 19
+Sustain 3: 20
+Sustain level 3: 4
+Release 3: 15
+Algorithm: 0
+Ops enabled: F
+
+Instrument 3: (19, 57, 114, 113, 15, 34, 14, 41, 19, 29, 27, 31, 11, 15, 3, 6, 27, 31, 29, 13, 15, 141, 11, 15, 0, 0, 0, 0, 0, 192, 12)
+Global count: 47
+Note count: 70
+Note spread: 75.00789432328493..75.00789432328493..81.99728345237534..84.99702248847552..87.00789432328493
+Note mean: 80.29
+Detune 0: +1
+Multiplier 0: 3x
+Volume 0: 15
+Attack 0: 19
+Decay 0: 11
+Sustain 0: 27
+Sustain level 0: 0
+Release 0: 15
+Detune 1: +3
+Multiplier 1: 9x
+Volume 1: 34
+Attack 1: 29
+Decay 1: 15
+Sustain 1: 31
+Sustain level 1: 8
+Release 1: 13
+Detune 2: -3
+Multiplier 2: 2x
+Volume 2: 14
+Attack 2: 27
+Decay 2: 3
+Sustain 2: 29
+Sustain level 2: 0
+Release 2: 11
+Detune 3: -3
+Volume 3: 41
+Attack 3: 31
+Decay 3: 6
+Sustain 3: 13
+Sustain level 3: 0
+Release 3: 15
+Algorithm: 0
+Ops enabled: C
+
+Instrument 4: (33, 32, 49, 20, 17, 36, 29, 42, 142, 149, 155, 148, 0, 0, 5, 128, 1, 2, 2, 2, 73, 25, 57, 9, 0, 0, 0, 0, 53, 195, 15)
+Global count: 48
+Note count: 20
+Note spread: 39.00789432328494..43.00610892605076..45.00329767148537..46.994374522103165..51.00789432328494
+Note mean: 44.60
+Detune 0: +2
+Volume 0: 17
+Rate scaling 0: 2
+Attack 0: 14
+Decay 0: 0
+Sustain 0: 1
+Sustain level 0: 4
+Release 0: 9
+Detune 1: +2
+Multiplier 1: 1/2x
+Volume 1: 36
+Rate scaling 1: 2
+Attack 1: 21
+Decay 1: 0
+Sustain 1: 2
+Sustain level 1: 1
+Release 1: 9
+Detune 2: +3
+Volume 2: 29
+Rate scaling 2: 2
+Attack 2: 27
+Decay 2: 5
+Sustain 2: 2
+Sustain level 2: 3
+Release 2: 9
+Detune 3: +1
+Multiplier 3: 4x
+Volume 3: 42
+Rate scaling 3: 2
+Attack 3: 20
+Modulation enabled 3
+Decay 3: 0
+Sustain 3: 2
+Sustain level 3: 0
+Release 3: 9
+Feedback 0: 6
+Algorithm: 5
+AM sensitivity 0
+FM sensitivity 3
+Ops enabled: F
+
+Instrument 5: (48, 80, 112, 0, 19, 35, 25, 10, 31, 31, 30, 30, 139, 31, 31, 27, 11, 0, 0, 0, 90, 61, 61, 45, 0, 0, 0, 0, 45, 210, 15)
+Global count: 49
+Note count: 200
+Note spread: 39.00789432328494..43.00610892605076..45.00329767148537..46.994374522103165..53.99016016121816
+Note mean: 45.12
+Detune 0: +3
+Multiplier 0: 1/2x
+Volume 0: 19
+Attack 0: 31
+Modulation enabled 0
+Decay 0: 11
+Sustain 0: 11
+Sustain level 0: 5
+Release 0: 10
+Detune 1: -1
+Multiplier 1: 1/2x
+Volume 1: 35
+Attack 1: 31
+Decay 1: 31
+Sustain 1: 0
+Sustain level 1: 3
+Release 1: 13
+Detune 2: -3
+Multiplier 2: 1/2x
+Volume 2: 25
+Attack 2: 30
+Decay 2: 31
+Sustain 2: 0
+Sustain level 2: 3
+Release 2: 13
+Multiplier 3: 1/2x
+Volume 3: 10
+Attack 3: 30
+Decay 3: 27
+Sustain 3: 0
+Sustain level 3: 2
+Release 3: 13
+Feedback 0: 5
+Algorithm: 5
+AM sensitivity 2
+FM sensitivity 2
+Ops enabled: F
+
+Instrument 6: (0, 0, 0, 2, 127, 127, 127, 17, 24, 19, 22, 142, 0, 2, 0, 128, 11, 20, 0, 6, 92, 180, 47, 40, 0, 0, 0, 0, 56, 246, 8)
+Global count: 50
+Note count: 29
+Note spread: 64.99165919384701..74.00770938359886..77.99016016121816..86.00770938359886..89.99016016121816
+Note mean: 78.76
+Multiplier 0: 1/2x
+Volume 0: 127
+Attack 0: 24
+Decay 0: 0
+Sustain 0: 11
+Sustain level 0: 5
+Release 0: 12
+Multiplier 1: 1/2x
+Volume 1: 127
+Attack 1: 19
+Decay 1: 2
+Sustain 1: 20
+Sustain level 1: 11
+Release 1: 4
+Multiplier 2: 1/2x
+Volume 2: 127
+Attack 2: 22
+Decay 2: 0
+Sustain 2: 0
+Sustain level 2: 2
+Release 2: 15
+Multiplier 3: 2x
+Volume 3: 17
+Rate scaling 3: 2
+Attack 3: 14
+Modulation enabled 3
+Decay 3: 0
+Sustain 3: 6
+Sustain level 3: 2
+Release 3: 8
+Feedback 0: 7
+Algorithm: 0
+AM sensitivity 6
+FM sensitivity 2
+Ops enabled: 8
+
+Instrument 7: (49, 116, 49, 1, 34, 53, 16, 28, 16, 16, 12, 139, 132, 137, 144, 10, 0, 0, 0, 0, 22, 6, 6, 6, 0, 0, 0, 0, 50, 195, 15)
+Global count: 38
+Note count: 32
+Note spread: 63.00789432328493..65.99016016121816..72.00448987756084..75.00789432328493..77.99016016121816
+Note mean: 70.25
+Detune 0: +3
+Volume 0: 34
+Attack 0: 16
+Modulation enabled 0
+Decay 0: 4
+Sustain 0: 0
+Sustain level 0: 1
+Release 0: 6
+Detune 1: -3
+Multiplier 1: 4x
+Volume 1: 53
+Attack 1: 16
+Modulation enabled 1
+Decay 1: 9
+Sustain 1: 0
+Sustain level 1: 0
+Release 1: 6
+Detune 2: +3
+Volume 2: 16
+Attack 2: 12
+Modulation enabled 2
+Decay 2: 16
+Sustain 2: 0
+Sustain level 2: 0
+Release 2: 6
+Volume 3: 28
+Rate scaling 3: 2
+Attack 3: 11
+Decay 3: 10
+Sustain 3: 0
+Sustain level 3: 0
+Release 3: 6
+Feedback 0: 6
+Algorithm: 2
+AM sensitivity 0
+FM sensitivity 3
+Ops enabled: F
+
+Instrument 8: (51, 49, 4, 1, 28, 0, 5, 18, 84, 91, 88, 20, 23, 27, 23, 16, 8, 6, 5, 22, 138, 171, 187, 108, 0, 0, 0, 0, 26, 196, 15)
+Global count: 51
+Note count: 24
+Note spread: 52.99165919384701..60.00448987756084..64.99165919384701..69.99728345237534..77.99016016121816
+Note mean: 64.42
+Detune 0: +3
+Multiplier 0: 3x
+Volume 0: 28
+Rate scaling 0: 1
+Attack 0: 20
+Decay 0: 23
+Sustain 0: 8
+Sustain level 0: 8
+Release 0: 10
+Detune 1: +3
+Volume 1: 0
+Rate scaling 1: 1
+Attack 1: 27
+Decay 1: 27
+Sustain 1: 6
+Sustain level 1: 10
+Release 1: 11
+Multiplier 2: 4x
+Volume 2: 5
+Rate scaling 2: 1
+Attack 2: 24
+Decay 2: 23
+Sustain 2: 5
+Sustain level 2: 11
+Release 2: 11
+Volume 3: 18
+Attack 3: 20
+Decay 3: 16
+Sustain 3: 22
+Sustain level 3: 6
+Release 3: 12
+Feedback 0: 3
+Algorithm: 2
+Ops enabled: F
+

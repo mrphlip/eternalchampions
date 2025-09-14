@@ -1,7 +1,5 @@
 __pycache__
 *.pyc
-/out
-/inst
 /tmp
 /vgmplay
 /build
