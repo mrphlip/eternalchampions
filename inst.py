@@ -5,10 +5,13 @@ from math import floor, ceil
 import shutil
 import struct
 import os
+import sys
 
 ORIGRATE = 44100
 VOL = "10dB"
 MAXRATE = 16000
+
+SKIPBUILD = False
 
 def call(args):
 	print(">", shlex.join(args))
@@ -24,7 +27,7 @@ def doloop(inst, note, rate, start, loop, end, adsr=0xFFE0, suffix="", transpose
 	newloop = loopatblocks * 16
 	newlooplen = loopblocks * 16
 
-	if not os.path.exists(f"inst/ec-fm-{inst:02d}{suffix}.brr"):
+	if not os.path.exists(f"inst/ec-fm-{inst:02d}{suffix}.brr") and not SKIPBUILD:
 		call(["sox", f"out/inst{inst:02d}_{note:02d}.wav", "tmp/tmp1.wav", "trim", f"{start}s", "channels", "1", "vol", VOL, "rate", f"{rate}"])
 		call(["sox", "tmp/tmp1.wav", "tmp/tmp2.wav", "trim", "0s", f"{newloop+newlooplen}s"])
 		#call(["sox", "tmp/tmp1.wav", "tmp/tmp3.wav", "trim", f"{newloop + newlooplen//4}s", f"{newlooplen*3//4}s"])
@@ -63,7 +66,7 @@ def donoloop(inst, note, rate, start, end, adsr=0xFFE0, suffix="", transpose=Non
 	rate = (16 * blocks) / fulllen
 	newsamp = blocks * 16
 
-	if not os.path.exists(f"inst/ec-fm-{inst:02d}{suffix}.brr"):
+	if not os.path.exists(f"inst/ec-fm-{inst:02d}{suffix}.brr") and not SKIPBUILD:
 		call(["sox", f"out/inst{inst:02d}_{note:02d}.wav", "tmp/tmp1.wav", "trim", f"{start}s", "channels", "1", "vol", VOL, "rate", f"{rate}"])
 		call(["sox", "tmp/tmp1.wav", "tmp/tmp2.wav", "trim", "0s", f"{newsamp}s"])
 		call(["wine", "../smwhack/brrtools/brr_encoder.exe", "tmp/tmp2.wav", "tmp/tmp.brr"])
@@ -107,4 +110,6 @@ def main():
 	donoloop(21, 38, 16384, 0, 7150, transpose=60)
 
 if __name__ == "__main__":
+	if "--skip" in sys.argv:
+		SKIPBUILD = True
 	main()

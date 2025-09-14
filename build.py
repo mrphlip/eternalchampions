@@ -46,12 +46,17 @@ def write_sizes(songs, sizes):
 			print(f"  Samples size: {samples}", file=fp)
 			print(file=fp)
 
-def write_zips(songs):
+def get_instrument_data():
+	os.chdir(TOP)
+	ret = subprocess.check_output(["./inst.py", "--skip"]).decode("utf-8")
+	return set(i.strip() for i in ret.split("\n") if i.strip())
+
+def write_zips(songs, inst_dat):
 	os.chdir(TOP)
 	for song in songs:
 		assert song.endswith(".txt")
 		zipfn = f"build/{song[:-4]}.zip"
-		insts = get_instruments(song)
+		insts = get_instruments(song, inst_dat)
 		with zipfile.ZipFile(zipfn, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as zfp:
 			zfp.write(f"txt/{song}", song)
 			zfp.write(f"{AMK}/SPCs/{song[:-4]}.spc", f"{song[:-4]}.spc")
@@ -59,24 +64,39 @@ def write_zips(songs):
 				instfn = "square.brr" if inst == "square.brr" else f"inst/{inst}"
 				zfp.write(instfn, f"eternalchampions/{inst}")
 
-re_samples = re.compile(r"\#samples\s*\{\s*(.*?)\s*\}", re.IGNORECASE | re.DOTALL)
-def get_instruments(song):
+re_samples = re.compile(r"\#samples\s*\{\s*([^{}]*?)\s*\}", re.IGNORECASE | re.DOTALL)
+re_instruments = re.compile(r"\#instruments\s*\{\s*([^{}]*?)\s*\}", re.IGNORECASE | re.DOTALL)
+def get_instruments(song, inst_dat):
 	with open(f"txt/{song}") as fp:
 		dat = fp.read()
+
 	match = re_samples.search(dat)
 	assert match
-	dat = match.group(1)
-	dat = dat.split()
-	dat.remove("#optimized")
-	assert all(i.startswith('"') and i.endswith('"') for i in dat)
-	return [i[1:-1] for i in dat]
+	samples = match.group(1)
+	samples = [i.strip() for i in samples.split("\n") if i.strip()]
+	samples.remove("#optimized")
+	assert all(i.startswith('"') and i.endswith('"') for i in samples)
+	samples = [i[1:-1] for i in samples]
+
+	match = re_instruments.search(dat)
+	assert match
+	instruments = match.group(1)
+	for i in instruments.split("\n"):
+		i = i.strip()
+		if not i or i.startswith('"square.brr"'):
+			continue
+		if i not in inst_dat:
+			raise ValueError(f"Incorrect values for {song} instrument {i}")
+
+	return samples
 
 def main():
 	init()
 	songs = get_songs()
 	sizes = build_and_get_sizes(songs)
 	write_sizes(songs, sizes)
-	write_zips(songs)
+	inst_dat = get_instrument_data()
+	write_zips(songs, inst_dat)
 
 if __name__ == "__main__":
 	main()
