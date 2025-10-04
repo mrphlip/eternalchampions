@@ -1,0 +1,28 @@
+FM0: bass line, 1 track
+FM1: percussion
+FM2: part of melody? bars 1-4 only (in the repeat, it's on FM3... are these the same instrument?)
+FM3: part of melody, bars 1-8: 1 track, 9-16: 2 tracks, 17-32: 1 track... bars 1-4 have _occasional_ double note
+FM4: 1 track, pretty sparse some double notes in 13-16 and 29-32
+FM5: percussion
+FM6: percussion
+FM7: melody double, 1 track, bars 5-16 only
+FM8: 5-33: 1 track, seems sparse, can probably interleave with something?
+FM9: 21-33: 1 track
+PSG: 17-21: 1 track
+1+5+6 percussion: mostly 1 track, occasional doubled notes during 1-5 (and 33-37)
+
+fold FM2 and FM3 into the same instrument
+	this also gets rid of the intro section
+
+FM5 is an reused instrument, ec-fm-19.brr, which is a note instrument
+	meanwhile the other percussions, FM1 and FM6 are unpitched instruments at `o3 c`
+
+(blocks of 4 bars)
+0: 000000000
+1: 2777P999-
+2: 333333333
+3: 444444444
+4: -8888888-
+5: percussion
+6: extra notes from 3, 4, percussion
+7: unused?

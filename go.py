@@ -15,7 +15,8 @@ import midifile
 SONGSPEED = [None] * 17
 SONGSPEED[1] = 1893362 / RATE / 6 / 16
 SONGSPEED[2] = 4839967 / RATE / 14 / 16
-SONGSPEED[3] = 73.942 / 6.5 / 4 / 4
+SONGSPEED[3] = 73.942 / 6.5 / 4 / 4 # can't use the beat count for this one b/c of the ritardando
+SONGSPEED[4] = 3211212 / RATE / 8 / 16
 SONGSPEED[12] = 4961985 / RATE / 16 / 16
 TIMESIG = [(4,2)] * 17
 MIDI_TICKRATE = 192 # 96

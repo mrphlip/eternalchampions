@@ -1,0 +1,46 @@
+#amk 2
+
+#SPC
+{
+	#game "Eternal Champions"
+	#title "Shadow's Stage"
+	#author "DMP Entertainment"
+	#length "3:03" ; single loop 1:13
+}
+
+#path "eternalchampions"
+
+#samples
+{
+	#optimized
+	"ec-fm-22.brr"
+	"ec-fm-23.brr"
+	"ec-fm-25.brr"
+	"ec-fm-26.brr"
+	"ec-fm-19.brr"
+	"ec-fm-27.brr"
+	"ec-fm-28.brr"
+	"ec-fm-29.brr"
+	"ec-fm-30.brr"
+	"square.brr"
+}
+
+#instruments
+{
+	"ec-fm-22.brr" $FF $E0 $00 $07 $6F
+	"ec-fm-23.brr" $FF $E0 $00 $03 $E7
+	"ec-fm-25.brr" $FF $E0 $00 $05 $01
+	"ec-fm-26.brr" $FF $EB $00 $04 $02
+	"ec-fm-19.brr" $FF $E0 $00 $07 $E2
+	"ec-fm-27.brr" $FF $E0 $00 $07 $D2
+	"ec-fm-28.brr" $FF $EB $00 $04 $41
+	"ec-fm-29.brr" $FF $E0 $00 $04 $61
+	"ec-fm-30.brr" $FF $EE $00 $04 $81
+	"square.brr" $CF $60 $00 $04 $00
+}
+
+w191
+t42
+$EF $00 $00 $00
+$F0
+

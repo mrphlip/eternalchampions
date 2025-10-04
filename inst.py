@@ -8,16 +8,24 @@ import os
 import sys
 
 ORIGRATE = 44100
-VOL = "10dB"
+VOL = 5
 MAXRATE = 16000
 
 SKIPBUILD = False
 
 def call(args):
 	print(">", shlex.join(args))
-	subprocess.check_call(args)
+	if args[0] != "sox":
+		subprocess.check_call(args)
+		return
+	try:
+		res = subprocess.check_output(args, stderr=subprocess.STDOUT).decode("utf-8")
+	finally:
+		print(res)
+	if "sox WARN" in res:
+		raise Exception("sox warning")
 
-def doloop(inst, note, rate, start, loop, end, adsr=0xFFE0, suffix="", transpose=None, maxnote=None):
+def doloop(inst, note, rate, start, loop, end, adsr=0xFFE0, suffix="", transpose=None, maxnote=None, vol=VOL):
 	# round rate so that the loop is a whole number of blocks
 	looplen = (end - loop) / ORIGRATE
 	loopsamp = looplen * rate
@@ -28,7 +36,7 @@ def doloop(inst, note, rate, start, loop, end, adsr=0xFFE0, suffix="", transpose
 	newlooplen = loopblocks * 16
 
 	if not os.path.exists(f"inst/ec-fm-{inst:02d}{suffix}.brr") and not SKIPBUILD:
-		call(["sox", f"out/inst{inst:02d}_{note:02d}.wav", "tmp/tmp1.wav", "trim", f"{start}s", "channels", "1", "vol", VOL, "rate", f"{rate}"])
+		call(["sox", f"out/inst{inst:02d}_{note:02d}.wav", "tmp/tmp1.wav", "trim", f"{start}s", "channels", "1", "vol", f"{vol}dB", "rate", f"{rate}"])
 		call(["sox", "tmp/tmp1.wav", "tmp/tmp2.wav", "trim", "0s", f"{newloop+newlooplen}s"])
 		#call(["sox", "tmp/tmp1.wav", "tmp/tmp3.wav", "trim", f"{newloop + newlooplen//4}s", f"{newlooplen*3//4}s"])
 		#call(["sox", "tmp/tmp1.wav", "tmp/tmp4.wav", "trim", f"{newloop + newlooplen}s", f"{newlooplen*3//4}s"])
@@ -59,7 +67,7 @@ def doloop(inst, note, rate, start, loop, end, adsr=0xFFE0, suffix="", transpose
 
 	print(f"\"ec-fm-{inst:02d}{suffix}.brr\" ${adsr>>8:02X} ${adsr&0xFF:02X} $00 ${tuninga:02X} ${tuningb:02X}")
 
-def donoloop(inst, note, rate, start, end, adsr=0xFFE0, suffix="", transpose=None):
+def donoloop(inst, note, rate, start, end, adsr=0xFFE0, suffix="", transpose=None, maxnote=None, vol=VOL):
 	fulllen = (end - start) / ORIGRATE
 	samp = fulllen * rate
 	blocks = round(samp / 16)
@@ -67,7 +75,7 @@ def donoloop(inst, note, rate, start, end, adsr=0xFFE0, suffix="", transpose=Non
 	newsamp = blocks * 16
 
 	if not os.path.exists(f"inst/ec-fm-{inst:02d}{suffix}.brr") and not SKIPBUILD:
-		call(["sox", f"out/inst{inst:02d}_{note:02d}.wav", "tmp/tmp1.wav", "trim", f"{start}s", "channels", "1", "vol", VOL, "rate", f"{rate}"])
+		call(["sox", f"out/inst{inst:02d}_{note:02d}.wav", "tmp/tmp1.wav", "trim", f"{start}s", "channels", "1", "vol", f"{vol}dB", "rate", f"{rate}"])
 		call(["sox", "tmp/tmp1.wav", "tmp/tmp2.wav", "trim", "0s", f"{newsamp}s"])
 		call(["wine", "../smwhack/brrtools/brr_encoder.exe", "tmp/tmp2.wav", "tmp/tmp.brr"])
 		call(["wine", "../smwhack/brrtools/brr_decoder.exe", f"-s{rate}", "tmp/tmp.brr", f"tmp/out_{inst:02d}{suffix}.wav"])
@@ -81,6 +89,13 @@ def donoloop(inst, note, rate, start, end, adsr=0xFFE0, suffix="", transpose=Non
 	tuning = rate / notefreq / 8
 	tuninga = floor(tuning)
 	tuningb = round((tuning - tuninga) * 256)
+
+	if maxnote is not None:
+		if transpose:
+			maxnote += transpose - note
+		highfreq = 440 * 2**((maxnote - 69)/12) * tuning
+		if highfreq > MAXRATE:
+			raise ValueError(f"Sample rate {rate} for {inst:02d}{suffix} is too high! Reduce to {rate*MAXRATE/highfreq}")
 
 	print(f"\"ec-fm-{inst:02d}{suffix}.brr\" ${adsr>>8:02X} ${adsr&0xFF:02X} $00 ${tuninga:02X} ${tuningb:02X}")
 
@@ -108,6 +123,15 @@ def main():
 	doloop(19, 36, 4096, 0, 6744, 17520)
 	doloop(20, 57, 16384, 0, 7715, 8518, 0xFFEE)
 	donoloop(21, 38, 16384, 0, 7150, transpose=60)
+	doloop(22, 44, 6144, 0, 27658, 34058, maxnote=51)
+	donoloop(23, 36, 8192, 0, 14856, transpose=60)
+	# No instrument 24, is essentially the same as 25
+	doloop(25, 68, 16384, 0, 13358, 14207, maxnote=93)
+	doloop(26, 72, 16384, 0, 1769, 2442, 0xFFEB, maxnote=86)
+	donoloop(27, 61, 16384, 0, 6250, transpose=60)
+	doloop(28, 71, 16384, 0, 10000, 10714, 0xFFEB, maxnote=82)
+	donoloop(29, 70, 16384, 0, 5356, maxnote=74)
+	doloop(30, 70, 16384, 0, 21840, 22596, 0xFFEE, maxnote=82)
 
 if __name__ == "__main__":
 	if "--skip" in sys.argv:
