@@ -36,7 +36,7 @@
 	"ec-fm-28.brr" $FF $EB $00 $04 $41
 	"ec-fm-29.brr" $FF $E0 $00 $04 $61
 	"ec-fm-30.brr" $FF $EE $00 $04 $81
-	"square.brr" $CF $60 $00 $04 $00
+	"square.brr" $FF $F2 $00 $04 $00
 }
 
 w191
@@ -44,3 +44,105 @@ t42
 $EF $00 $00 $00
 $F0
 
+#0
+@30
+v192
+y10
+l8
+
+;1
+(1)[
+	o2
+	c r16 c16 r c < g16 b-16 r b- g16 b-16 >
+	c r16 c16 r c < r16 g16 b-16 r16 f g
+	g r16 g16 r g r d f d16 f16
+	g r16 g16 r g r16 d16 f16 r16 f > e-
+]2
+;9
+(2)[
+	o1 f r16 f16 f g r g f r16 f16
+	f g r16 g16 g g r16 b-16 > c < b-
+	o1 f r16 f16 f g r g f r16 f16
+	f g r g16 r16 g b-16 > c16 < b- > d <
+	o1 f r16 f16 f g r g f r16 f16
+	f g r16 g16 g g r b- > c <
+	o1 f r16 f16 f g r g f r16 f16
+	g r16 g16 g b-16 r16 b- > c16 < b-16 > e-16 r16 d16 r16
+]
+;17
+(1)2
+;25
+(2)
+;33
+
+#1
+v192
+y10
+l8
+
+;1
+@32
+y17
+o3
+c r16 c r16 c r16 c r16 d e-
+c r16 c r16 c r16 c r16 d e-
+d r16 d r16 d r16 d r16 e- f
+d r16 < g r16 g r16 g r16 b- > d
+;5
+@36
+l16
+(3)[
+	o4
+	r c < g > r c < g > r c < g > r c < g b- g e- f >
+	r c < g > r c < g > r c < g > r c < g b- g e- f
+	r g d r g d r g d r g d a- e- < b- > c
+	r g d r g d r g d r g d a- e- < b- > c
+]
+;9
+(4)[
+	o4
+	l8
+	c4. d4. c4. f d4 d < b- > c r
+	c4. d4. c4 f d4 d16 r16 d4 r4
+]
+;13
+(5)[
+	o4
+	l16
+	r8 f d g r f d g r f d g r f d
+	g r f r g r f d g r f d < b- r > c r
+	r8 f d g r f d g r f d g r f d
+	g r f d g r f d g r f d b- r a r
+]
+;17
+@39
+v96
+y10
+(3)
+;21
+@38
+v192
+(3)
+;25
+$FA $02 $F4 ; pitch down an octave
+(4)
+$FA $02 $00
+;29
+(5)
+;33
+
+#2
+@32
+v192
+y3
+
+;1
+(3)
+;5
+o3
+l8
+c r16 c r16 c r16 c r16 d e-
+c r16 c r16 c r16 c r16 d e-
+< g r16 g r16 g r16 g r16 b- > c
+< g r16 g r16 g r16 g r16 b- > c
+;9
