@@ -1,0 +1,48 @@
+#amk 2
+
+#SPC
+{
+	#game "Eternal Champions"
+	#title "RAX's Stage"
+	#author "DMP Entertainment"
+	#length "2:39" ; single loop 1:04
+}
+
+#path "eternalchampions"
+
+#samples
+{
+	#optimized
+	"ec-fm-31.brr"
+	"ec-fm-06.brr"
+	"ec-fm-09.brr"
+	"ec-fm-08.brr"
+	"ec-fm-32.brr"
+	"ec-fm-33.brr"
+	"square.brr"
+}
+
+#instruments
+{
+	"ec-fm-31.brr" $FF $E0 $00 $0D $43
+	"ec-fm-06.brr" $FF $E0 $00 $04 $A0
+	"ec-fm-09.brr" $FF $E0 $00 $03 $EF
+	"ec-fm-08.brr" $FF $E0 $00 $03 $E8
+	"ec-fm-32.brr" $FF $E0 $00 $03 $41
+	"ec-fm-33.brr" $FF $E0 $00 $01 $81
+	"square.brr" $FF $F2 $00 $04 $00
+}
+
+w191
+t43
+$EF $00 $00 $00
+$F0
+
+#0
+@31
+v192
+y10
+o2
+l16
+
+c1

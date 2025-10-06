@@ -107,7 +107,7 @@ def main():
 	doloop(2, 45, 9216, 0, 23269, 24872, maxnote=89, transpose=33, suffix="-8va")
 	# No instruments 3 or 4 - are essentially the same as instrument 2
 	donoloop(5, 38, 16384, 0, 10252, transpose=60)
-	doloop(6, 45, 4096, 0, 36856, 43272, maxnote=58)
+	doloop(6, 45, 4096, 0, 36856, 43272, maxnote=62)
 	doloop(7, 80, 8192, 0, 8822, 9775, 0xCFF1, maxnote=106)
 	donoloop(8, 36, 8192, 0, 12000, transpose=60)
 	donoloop(9, 53, 8192, 0, 5400, transpose=60)
@@ -132,6 +132,9 @@ def main():
 	doloop(28, 71, 16384, 0, 10000, 10714, 0xFFEB, maxnote=82)
 	donoloop(29, 70, 16384, 0, 5356, maxnote=74)
 	doloop(30, 70, 16384, 0, 21840, 22596, 0xFFEE, maxnote=82)
+	doloop(31, 51, 16384, 0, 17885, 20151, maxnote=77)
+	doloop(32, 63, 8192, 0, 29866, 30998, maxnote=67)
+	doloop(33, 76, 8192, 54626, 54626, 54893, maxnote=83)
 
 if __name__ == "__main__":
 	if "--skip" in sys.argv:
