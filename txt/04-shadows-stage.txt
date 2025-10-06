@@ -146,3 +146,176 @@ c r16 c r16 c r16 c r16 d e-
 < g r16 g r16 g r16 g r16 b- > c
 < g r16 g r16 g r16 g r16 b- > c
 ;9
+r16 c16 r c d r4 r16 c16 r
+c d r4 d r < b- > r
+r16 c16 r c d r4 r16 c16 r
+c d r2 < g r
+< f16 > > c16 r c d r4 r16 c16 r
+c d r4 d4 < e-4
+< f16 > > c16 r c d r4 r16 c16 r
+c d r2 < e- d
+;17
+o4
+g4. e-4 c f4. g e- c f4 g r
+d4. < b-4 g > c4 d4 < g4. b-16 > c16 d c4.
+e-4 d c e-4 d c f4 g4 e-4
+d4. g4. b-4. g4 > d c < b- > c4
+;25
+c < b-16 > c < b-16 > d r < g g4
+b- g16 b- > c < r16 g f g r
+> c < b-16 > c < b-16 > c d f f d16 f
+g r16 g f b- a g r <
+;29
+b- g16 b- r16 > c < r16 g r16 g r
+f d g r f d16 c16 < b- g
+b- g16 b- r16 > c r16 < b- r16 > c d
+f g b- > c d f g < g
+;33
+
+#3
+@33
+v192
+y0
+l8
+; sometimes the transpose doesn't get properly reset at the end of the track before it loops
+; so reset it at the top, too
+$FA $02 $00
+
+;1
+(6)[
+	o3
+	[[ r g16 > c < r16 g r16 g16 > c < r g ]]2
+	[[ r g16 > d < r16 g r16 g16 > d < r g ]]2
+]2
+;9
+(5)
+;13
+$FA $02 $F9 ; pitch down a fifth
+(4)
+$FA $02 $00
+;17
+(6)2
+(5)
+$FA $02 $F9
+(4)
+$FA $02 $00
+;33
+
+#4
+@37
+v192
+y20
+l8
+
+;1
+[ r1 ]4
+;5
+(8)[
+	o3
+	r16 g16 r g16 r g16 r8. g16 a b-16 r
+	g16 r g16 r g16 r8. g16 a b-16 r
+	d16 r d16 r d16 r8. d16 f g16 r
+	d16 r d16 r d16 r8. d16 f g16 r16
+]
+;9
+(9)[
+	o4
+	r c16 c16 r4. d16 r8. c16 c16
+	r d16 r8. d16 r8. d16 r8. d16 d16
+	r c16 c16 r4. d16 r8. c16 c16
+	r d16 r8. d16 r8. d16 d16 r d16 d16
+	;13
+	r c16 c16 r4. d16 r8. c16 c16
+	r4. d16 r16 r4. d16 r16
+	r c16 c16 r4. d16 r8. c16 c16
+	r d16 r8. d16 r8. d16 r16 r4
+]
+;17
+(8)2 (9)
+;33
+
+#5
+v192
+y10
+l8
+o3
+
+;1
+(10)[
+	@31 c r @35 c r @31 c r @35 c r
+	@31 c r @35 c r @31 c r @35 c c
+	r4 c r @31 c r @35 c r
+	@31 c r @35 c r @31 r16 c16 @35 c c c16 c16
+	; 5
+	@31 c r @35 c r @31 c r @35 c r
+	@31 c r @35 c r @31 c r @35 c c
+	@31 c r @35 c r @31 c r @35 c r
+	@31 c r @35 c r @31 c @35 c c16 c16 c
+]
+;9
+@31 c r @35 c @31 c r c @35 c r
+@31 c r16 c16 @35 c @31 c c r @35 c r
+@31 c r16 c16 @35 c @31 c r c @35 c r
+@31 c r @35 c @31 c @35 c16 c16 @31 c @35 c r
+;13
+@31 c r16 c16 @35 c @31 c r c @35 c r
+@31 c r16 c16 @35 c r @31 c c @35 c c
+@31 c r16 c16 @35 c @31 c r16 c16 c @35 c r
+@31 c r16 c16 @35 c @31 c @35 c16 c16 @31 c @35 c c16 c16
+;17
+(10)
+;25
+@31 c r @35 c r @31 c r16 c16 @35 c r
+@31 c r @35 c r @31 c @35 c c16 c16 c
+@31 c r @35 c r @31 c r @35 c r
+@31 c r @35 c r @31 c16 @35 c16 c c c16 c16
+;29
+@31 c r @35 c r @31 c r @35 c r
+@31 c r @35 c r @31 c r @35 c c
+@31 c r @35 c r @31 c r @35 c r
+@31 c @35 c @31 r16 c16 @35 c c c16 @31 c @35 c16 c
+
+#6
+v192
+;1
+@34
+y10
+[
+	o3
+	[[ r4 c16 r8. r2 ]]2
+	[[ r4 d16 r8. r2 ]]2
+]2
+;9
+@32
+y3
+o3
+r16 f16 r f g r4 r16 f16 r
+f g r4 g r f r
+r16 f16 r f g r4 r16 f16 r
+f g r2 e- r
+r16 f16 r f g r4 r16 f16 r
+f g r4 g4 < b-4 >
+r16 f16 r f g r4 r16 f16 r
+f g r2 < b- a
+;17
+[ r1 ]16
+;33
+
+#7
+@33
+v192
+y0
+l8
+
+[
+	;1
+	[[ r1 ]]12
+	;13
+	o4
+	r8. g16 r > d16 r < f16 r4 r16 g16
+	r > d16 r < f16 r4. g16 r4.
+	g16 r > d16 r < f16 r4 r16 g16
+	r > d16 r d16 r r2
+	;17
+]2
+;33
