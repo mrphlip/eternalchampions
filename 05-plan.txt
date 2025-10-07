@@ -1,4 +1,4 @@
-FM0: melody - 2 tracks
+FM0: melody - 2 tracks {{done}}
 FM1: bass riff - 1 track
 FM2: cymbals - 1 track
 FM3: drum - 1 track - cannot interleave with cymbals
