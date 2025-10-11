@@ -123,6 +123,12 @@ def write_instruments(dn):
 		for i, inst in enumerate(song_instrumentlist):
 			write_instrument(fp, i, inst, dn)
 
+	# I want this instrument in parallel fifths for Blade's Stage
+	inst = (1, 3, 18, 97, 21, 28, 24, 17, 150, 26, 216, 21, 1, 1, 6, 131, 3, 1, 1, 13, 63, 47, 15, 15, 0, 0, 0, 0, 61, 210, 15)
+	if inst in all_instrumentmap:
+		gen_instrument_wav(all_instrumentmap[inst], inst, [40, 47], dn)
+
+
 def write_instrument(fp, ix, inst, dn):
 	print(f"Instrument {ix}: {inst!r}", file=fp)
 	print(f"Global count: {all_instrumentmap[inst]}", file=fp)
@@ -181,90 +187,102 @@ def write_instrument(fp, ix, inst, dn):
 	print(f"Ops enabled: {ops:01X}", file=fp)
 	print(file=fp)
 
-	gen_instrument_wav(all_instrumentmap[inst], inst, dn)
+	noteval = round(sum(song_instrumentnotes[inst])/len(song_instrumentnotes[inst]))
+	gen_instrument_wav(all_instrumentmap[inst], inst, [noteval], dn)
 
 SLOTS = [[3], [3], [3], [3], [1,3], [1,2,3], [1,2,3], [0,1,2,3]]
 
-def gen_instrument_wav(ix, inst, dn):
+def gen_instrument_wav(ix, inst, notevals, dn):
 	with open("__tmpinst.vgm", "wb") as fp:
-		noteval = round(sum(song_instrumentnotes[inst])/len(song_instrumentnotes[inst]))
 		fp.write(struct.pack("<4sLLLLLLLLLHBBLLLLL", b"Vgm ", 0, 0x150, 0, 0, 0, RATE * 7, 0, 0, 0, 0, 0, 0, 7670453, 0, 0, 0, 0))
 		# Reset
-		fp.write(bytes((0x52, 0x22, 0x00)))
-		fp.write(bytes((0x52, 0x27, 0x00)))
+		for ch in range(3):
+			fp.write(bytes((0x52, 0x22+ch, 0x00)))
+			fp.write(bytes((0x52, 0x27+ch, 0x00)))
+			fp.write(bytes((0x52, 0x2B+ch, 0x00)))
 		fp.write(bytes((0x52, 0x28, 0x00)))
 		fp.write(bytes((0x52, 0x28, 0x01)))
 		fp.write(bytes((0x52, 0x28, 0x02)))
 		fp.write(bytes((0x52, 0x28, 0x04)))
 		fp.write(bytes((0x52, 0x28, 0x05)))
 		fp.write(bytes((0x52, 0x28, 0x06)))
-		fp.write(bytes((0x52, 0x2B, 0x00)))
 		# Set up instrument
-		for i in range(28):
-			fp.write(bytes((0x52, 0x30 + 4*i, inst[i])))
-		fp.write(bytes((0x52, 0xB0, inst[28])))
-		fp.write(bytes((0x52, 0xB4, inst[29])))
+		for ch in range(3):
+			for i in range(28):
+				fp.write(bytes((0x52, 0x30 + 4*i + ch, inst[i])))
+			fp.write(bytes((0x52, 0xB0+ch, inst[28])))
+			fp.write(bytes((0x52, 0xB4+ch, inst[29])))
 		# Set up frequency
 		#freq = round(BASE_NOTE)
 		#octave = 4
 		#fp.write(bytes((0x52, 0xA4, (freq & 0x300)>>8 | octave<<3)))
 		#fp.write(bytes((0x52, 0xA0, freq&0x0FF)))
-		freq = from_note(noteval)
-		fp.write(bytes((0x52, 0xA4, (freq & 0x3F00)>>8)))
-		fp.write(bytes((0x52, 0xA0, freq&0x0FF)))
+		for ch, noteval in enumerate(notevals):
+			freq = from_note(noteval)
+			fp.write(bytes((0x52, 0xA4+ch, (freq & 0x3F00)>>8)))
+			fp.write(bytes((0x52, 0xA0+ch, freq&0x0FF)))
 		# Play note
-		fp.write(bytes((0x52, 0x28, inst[30] << 4)))
+		for ch in range(len(notevals)):
+			fp.write(bytes((0x52, 0x28, inst[30] << 4 | ch)))
 		fp.write(struct.pack("<bH", 0x61, RATE))
 		fp.write(struct.pack("<bH", 0x61, RATE))
 		fp.write(struct.pack("<bH", 0x61, RATE))
-		fp.write(bytes((0x52, 0x28, 0x00)))
+		for ch in range(len(notevals)):
+			fp.write(bytes((0x52, 0x28, ch)))
 		fp.write(struct.pack("<bH", 0x61, RATE))
 		# Reset ADSR to peak volume only
 		alg = inst[28] & 0x07
 		voladjust = max(min(inst[4+i] & 0x7F for i in range(4) if i in SLOTS[alg]) - 0x10, 0)
-		for i in range(4):
-			vol = inst[4+i]
-			if i in SLOTS[alg]:
-				vol -= voladjust
-			fp.write(bytes((0x52, 0x40 + 4*i, vol)))
-		fp.write(bytes((0x52, 0x50, 0x1F)))
-		fp.write(bytes((0x52, 0x54, 0x1F)))
-		fp.write(bytes((0x52, 0x58, 0x1F)))
-		fp.write(bytes((0x52, 0x5C, 0x1F)))
-		fp.write(bytes((0x52, 0x60, 0x1F)))
-		fp.write(bytes((0x52, 0x64, 0x1F)))
-		fp.write(bytes((0x52, 0x68, 0x1F)))
-		fp.write(bytes((0x52, 0x6C, 0x1F)))
-		fp.write(bytes((0x52, 0x70, 0x00)))
-		fp.write(bytes((0x52, 0x74, 0x00)))
-		fp.write(bytes((0x52, 0x78, 0x00)))
-		fp.write(bytes((0x52, 0x7C, 0x00)))
-		fp.write(bytes((0x52, 0x80, 0x2F)))
-		fp.write(bytes((0x52, 0x84, 0x2F)))
-		fp.write(bytes((0x52, 0x88, 0x2F)))
-		fp.write(bytes((0x52, 0x8C, 0x2F)))
+		for ch in range(3):
+			for i in range(4):
+				vol = inst[4+i]
+				if i in SLOTS[alg]:
+					vol -= voladjust
+				fp.write(bytes((0x52, 0x40 + 4*i + ch, vol)))
+			fp.write(bytes((0x52, 0x50+ch, 0x1F)))
+			fp.write(bytes((0x52, 0x54+ch, 0x1F)))
+			fp.write(bytes((0x52, 0x58+ch, 0x1F)))
+			fp.write(bytes((0x52, 0x5C+ch, 0x1F)))
+			fp.write(bytes((0x52, 0x60+ch, 0x1F)))
+			fp.write(bytes((0x52, 0x64+ch, 0x1F)))
+			fp.write(bytes((0x52, 0x68+ch, 0x1F)))
+			fp.write(bytes((0x52, 0x6C+ch, 0x1F)))
+			fp.write(bytes((0x52, 0x70+ch, 0x00)))
+			fp.write(bytes((0x52, 0x74+ch, 0x00)))
+			fp.write(bytes((0x52, 0x78+ch, 0x00)))
+			fp.write(bytes((0x52, 0x7C+ch, 0x00)))
+			fp.write(bytes((0x52, 0x80+ch, 0x2F)))
+			fp.write(bytes((0x52, 0x84+ch, 0x2F)))
+			fp.write(bytes((0x52, 0x88+ch, 0x2F)))
+			fp.write(bytes((0x52, 0x8C+ch, 0x2F)))
 		# Play note
-		fp.write(bytes((0x52, 0x28, inst[30] << 4)))
+		for ch in range(len(notevals)):
+			fp.write(bytes((0x52, 0x28, inst[30] << 4 | ch)))
 		fp.write(struct.pack("<bH", 0x61, RATE))
-		fp.write(bytes((0x52, 0x28, 0x00)))
+		for ch in range(len(notevals)):
+			fp.write(bytes((0x52, 0x28, ch)))
 		fp.write(struct.pack("<bH", 0x61, RATE))
 		# Set volume to sustain level
 		voladjust = max(min((inst[20+i] & 0xF0)>>1 for i in range(4) if i in SLOTS[alg]) - 0x10, 0)
-		for i in range(4):
-			vol = (inst[20+i] & 0xF0)>>1
-			if i in SLOTS[alg]:
-				vol -= voladjust
-			fp.write(bytes((0x52, 0x40 + 4*i, vol)))
+		for ch in range(3):
+			for i in range(4):
+				vol = (inst[20+i] & 0xF0)>>1
+				if i in SLOTS[alg]:
+					vol -= voladjust
+				fp.write(bytes((0x52, 0x40 + 4*i + ch, vol)))
 		# Play note
-		fp.write(bytes((0x52, 0x28, inst[30] << 4)))
+		for ch in range(len(notevals)):
+			fp.write(bytes((0x52, 0x28, inst[30] << 4 | ch)))
 		fp.write(struct.pack("<bH", 0x61, RATE))
-		fp.write(bytes((0x52, 0x28, 0x00)))
+		for ch in range(len(notevals)):
+			fp.write(bytes((0x52, 0x28, ch)))
 		# EOF
 		fp.write(bytes((0x66,)))
 		flen = fp.tell()
 		fp.seek(4)
 		fp.write(struct.pack("<L", flen - 4))
-	extract_channel("__tmpinst.vgm", dn, f"../inst{ix:02d}_{noteval}", 1, 0)
+	strnotevals = "+".join(map(str, notevals))
+	extract_channel("__tmpinst.vgm", dn, f"../inst{ix:02d}_{strnotevals}", 7, 0)
 	os.unlink("__tmpinst.vgm")
 
 BASE_NOTE = 643.833003155359

@@ -1,0 +1,47 @@
+#amk 2
+
+#SPC
+{
+	#game "Eternal Champions"
+	#title "Blade's Stage"
+	#author "DMP Entertainment"
+	#length "2:20" ; single loop 0:56
+}
+
+#path "eternalchampions"
+
+#samples
+{
+	#optimized
+	"ec-fm-08.brr"
+	"ec-fm-09.brr"
+	"ec-fm-06.brr"
+	"ec-fm-31.brr"
+	"ec-fm-31-fifths.brr"
+	"square.brr"
+}
+
+#instruments
+{
+	"ec-fm-08.brr" $FF $E0 $00 $03 $E8
+	"ec-fm-09.brr" $FF $E0 $00 $03 $EF
+	"ec-fm-06.brr" $FF $E0 $00 $04 $A0
+	"ec-fm-31.brr" $FF $E0 $00 $0D $43
+	"ec-fm-31-fifths.brr" $FF $E0 $00 $0C $60
+	"square.brr" $FF $E0 $00 $04 $00
+	"square.brr" $FF $F4 $00 $04 $00
+}
+
+w191
+t41
+$EF $00 $00 $00
+$F0
+
+#0
+@30
+v192
+y10
+o2
+l16
+
+c4

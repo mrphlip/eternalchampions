@@ -25,7 +25,7 @@ def call(args):
 	if "sox WARN" in res:
 		raise Exception("sox warning")
 
-def doloop(inst, note, rate, start, loop, end, adsr=0xFFE0, suffix="", transpose=None, maxnote=None, vol=VOL):
+def doloop(inst, note, rate, start, loop, end, adsr=0xFFE0, insuffix="", suffix="", transpose=None, maxnote=None, vol=VOL):
 	# round rate so that the loop is a whole number of blocks
 	looplen = (end - loop) / ORIGRATE
 	loopsamp = looplen * rate
@@ -36,7 +36,7 @@ def doloop(inst, note, rate, start, loop, end, adsr=0xFFE0, suffix="", transpose
 	newlooplen = loopblocks * 16
 
 	if not os.path.exists(f"inst/ec-fm-{inst:02d}{suffix}.brr") and not SKIPBUILD:
-		call(["sox", f"out/inst{inst:02d}_{note:02d}.wav", "tmp/tmp1.wav", "trim", f"{start}s", "channels", "1", "vol", f"{vol}dB", "rate", f"{rate}"])
+		call(["sox", f"out/inst{inst:02d}_{note:02d}{insuffix}.wav", "tmp/tmp1.wav", "trim", f"{start}s", "channels", "1", "vol", f"{vol}dB", "rate", f"{rate}"])
 		call(["sox", "tmp/tmp1.wav", "tmp/tmp2.wav", "trim", "0s", f"{newloop+newlooplen}s"])
 		#call(["sox", "tmp/tmp1.wav", "tmp/tmp3.wav", "trim", f"{newloop + newlooplen//4}s", f"{newlooplen*3//4}s"])
 		#call(["sox", "tmp/tmp1.wav", "tmp/tmp4.wav", "trim", f"{newloop + newlooplen}s", f"{newlooplen*3//4}s"])
@@ -133,6 +133,8 @@ def main():
 	donoloop(29, 70, 16384, 0, 5356, maxnote=74)
 	doloop(30, 70, 16384, 0, 21840, 22596, 0xFFEE, maxnote=82)
 	doloop(31, 51, 16384, 0, 17885, 20151, maxnote=77)
+	# instrument 31 in parallel fifths, for Blade's Stage
+	doloop(31, 40, 8192, 0, 18338, 26901, insuffix="+47", suffix="-fifths", maxnote=43, vol=-1)
 	doloop(32, 63, 8192, 0, 29866, 30998, maxnote=67)
 	doloop(33, 76, 8192, 54626, 54626, 54893, maxnote=83)
 
