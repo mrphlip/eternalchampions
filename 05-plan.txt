@@ -1,10 +1,11 @@
 FM0: melody - 2 tracks {{done}}
 FM1: bass riff - 1 track {{done}}
-FM2: cymbals - 1 track
-FM3: drum - 1 track - cannot interleave with cymbals
+FM2: cymbals - 1 track {{done}}
+FM3: drum - 1 track - cannot interleave with cymbals {{done}}
 FM4: 1 track {{done}}
 FM5: 1 track, brief {{done}}
-PSG: noise percussion - 1 track - can be interleaved with drums in most places, or with cymbals in others
+PSG: noise percussion - 1 track - can be interleaved with drums in most places, or with cymbals in others {{done}}
+	* interleave with cymbals in: 20, parts of 22, 28, end of 32, 38
 
 0: melody top
 1: melody bottom
