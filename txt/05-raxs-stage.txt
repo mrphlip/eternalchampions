@@ -24,7 +24,7 @@
 
 #instruments
 {
-	"ec-fm-31.brr" $FF $E0 $00 $0D $43
+	"ec-fm-31.brr" $FF $E0 $00 $0C $03
 	"ec-fm-06.brr" $FF $E0 $00 $04 $A0
 	"ec-fm-09.brr" $FF $E0 $00 $03 $EF
 	"ec-fm-08.brr" $FF $E0 $00 $03 $E8
