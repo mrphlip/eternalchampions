@@ -27,7 +27,7 @@
 	"ec-fm-09.brr" $FF $E0 $00 $03 $EF
 	"ec-fm-06.brr" $FF $E0 $00 $04 $A0
 	"ec-fm-31.brr" $FF $E0 $00 $0C $03
-	"ec-fm-31-fifths.brr" $FF $E5 $00 $0C $60
+	"ec-fm-31-fifths.brr" $FF $E0 $00 $06 $30
 	"square.brr" $FF $E0 $00 $04 $00
 	"square.brr" $FF $F4 $00 $04 $00
 }
@@ -84,7 +84,7 @@ p0,0
 @34
 v192
 y10
-o1
+o2
 
 ;1
 e1^1^1^1

@@ -133,8 +133,8 @@ def main():
 	donoloop(29, 70, 16384, 0, 5356, maxnote=74)
 	doloop(30, 70, 16384, 0, 21840, 22596, 0xFFEE, maxnote=82)
 	doloop(31, 51, 15000, 0, 17885, 20151, maxnote=88)
-	# instrument 31 in parallel fifths, for Blade's Stage
-	doloop(31, 40, 8192, 0, 18338, 26901, insuffix="+47", suffix="-fifths", maxnote=43, vol=-1)
+	# instrument 31 in parallel fifths, for Blade's Stage and Jetta's Stage
+	doloop(31, 40, 8192, 0, 18338, 26901, insuffix="+47", suffix="-fifths", maxnote=43, vol=-1, transpose=52)
 	doloop(32, 63, 8192, 0, 29866, 30998, maxnote=67)
 	doloop(33, 76, 8192, 54626, 54626, 54893, maxnote=83)
 

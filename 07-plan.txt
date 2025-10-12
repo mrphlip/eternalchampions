@@ -1,12 +1,12 @@
-FM0: drum, 1 track, pan centre
-FM1: cymbal, 1 track, pan left
-FM2: rhythm, 1 track, pan centre
+FM0: drum, 1 track, pan centre {{done}}
+FM1: cymbal, 1 track, pan left {{done}}
+FM2: rhythm, 1 track, pan centre {{done}}
 FM3: multi
-	* chords, 2 tracks, pan centre
+	* chords, 2 tracks, pan centre {{done}}
 		* can use the same parallel-fifths instrument from Blade to pack this into 1 track
-	* melody, 2 tracks, pan centre, has pitch bends
-PSG0+1+2: chords, 3 tracks, pan centre
-PSG3: snare, 1 track, pan centre, interleave with FM0
+	* melody, 2 tracks, pan centre, has pitch bends {{done}}
+PSG0+1+2: chords, 3 tracks, pan centre {{done}}
+PSG3: snare, 1 track, pan centre, interleave with FM0 {{done}}
 
 that's 9 tracks even with the chord packing
 	* trying to pack the melody into one track would require samples for parallel fourths, thirds, minor thirds... and more? not viable
