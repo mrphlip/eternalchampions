@@ -1,13 +1,13 @@
-FM0: bass drum, 1 track, 1-16 only, pan centre
-FM1: cymbal, 1 track, 1-16 only, pan left
+FM0: bass drum, 1 track, 1-16 only, pan centre {{done}}
+FM1: cymbal, 1 track, 1-16 only, pan left {{done}}
 FM2: rhythm, 1 track, pan centre {{done}}
 FM3: multiple
 	* chords, 2 tracks, pan centre {{done}}
 		* can pack this into one track if I make a sample of this instrument doubled in fifths
 	* melody, 1 track 4-14, 2 tracks 17-24, has pitch bends, pan centre {{done}}
-PSG1: rhythm, 1 track, pan centre
-PSG0+2: more harmony, 2 tracks, 5-24
-PSG3: more percussion, 1 track 1-16 and 24
+PSG1: rhythm, 1 track, pan centre {{done}}
+PSG0+2: more harmony, 2 tracks, 5-24 {{done}}
+PSG3: more percussion, 1 track 1-16 and 24 {{done}}
 
 turnaround seems identical, can ignore 25-28
 
