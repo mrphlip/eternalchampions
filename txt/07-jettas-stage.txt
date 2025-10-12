@@ -1,0 +1,58 @@
+#amk 2
+
+#SPC
+{
+	#game "Eternal Champions"
+	#title "Jetta's Stage"
+	#author "DMP Entertainment"
+	#length "2:40" ; single loop 1:04
+}
+
+#path "eternalchampions"
+
+#samples
+{
+	#optimized
+	"ec-fm-08.brr"
+	"ec-fm-09.brr"
+	"ec-fm-06.brr"
+	"ec-fm-31.brr"
+	"ec-fm-31-fifths.brr"
+	"square-0-5-8.brr"
+	"square-0-4-9.brr"
+	"square-0-2-4.brr"
+	"square-0-4-4.brr"
+	"square-0-5-9.brr"
+	"square-0-4-7.brr"
+	"square.brr"
+}
+
+#instruments
+{
+	"ec-fm-08.brr" $FF $E0 $00 $03 $E8
+	"ec-fm-09.brr" $FF $E0 $00 $03 $EF
+	"ec-fm-06.brr" $FF $E0 $00 $04 $A0
+	"ec-fm-31.brr" $FF $E0 $00 $0C $03
+	"ec-fm-31-fifths.brr" $FF $E5 $00 $0C $60
+	"square-0-5-8.brr" $EF $F1 $00 $04 $00
+	"square-0-4-9.brr" $EF $F1 $00 $04 $00
+	"square-0-2-4.brr" $EF $F1 $00 $04 $00
+	"square-0-4-4.brr" $EF $F1 $00 $04 $00
+	"square-0-5-9.brr" $EF $F1 $00 $04 $00
+	"square-0-4-7.brr" $EF $F1 $00 $04 $00
+	"square.brr" $FF $F4 $00 $04 $00
+}
+
+w191
+t42
+$EF $00 $00 $00
+$F0
+
+#0
+@32
+v192
+y10
+o3
+l16
+
+c4

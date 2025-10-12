@@ -19,6 +19,7 @@ SONGSPEED[3] = 73.942 / 6.5 / 4 / 4 # can't use the beat count for this one b/c 
 SONGSPEED[4] = 3211212 / RATE / 8 / 16
 SONGSPEED[5] = 2801090 / RATE / 9.5 / 12
 SONGSPEED[6] = 2476961 / RATE / 12 / 8
+SONGSPEED[7] = 2841502 / RATE / 14 / 8
 SONGSPEED[12] = 4961985 / RATE / 16 / 16
 TIMESIG = [(4,2)] * 17
 TIMESIG[5] = (3,2)
