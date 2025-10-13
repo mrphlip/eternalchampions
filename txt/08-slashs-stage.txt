@@ -1,0 +1,52 @@
+#amk 2
+
+#SPC
+{
+	#game "Eternal Champions"
+	#title "Slash's Stage"
+	#author "DMP Entertainment"
+	#length "2:42" ; single loop 1:05
+}
+
+#path "eternalchampions"
+
+#samples
+{
+	#optimized
+	"ec-fm-06.brr"
+	"ec-fm-08.brr"
+	"ec-fm-34.brr"
+	"ec-fm-35.brr"
+	"ec-fm-36.brr"
+	"ec-fm-37.brr"
+	"ec-fm-38.brr"
+	"ec-fm-39.brr"
+	"ec-fm-41.brr"
+}
+
+#instruments
+{
+	"ec-fm-06.brr" $FF $E0 $00 $04 $A0
+	"ec-fm-08.brr" $FF $E0 $00 $03 $E8
+	"ec-fm-34.brr" $FF $EE $00 $02 $A0
+	"ec-fm-35.brr" $FF $E0 $00 $06 $40
+	"ec-fm-36.brr" $FF $E0 $00 $03 $E1
+	"ec-fm-37.brr" $BF $A0 $00 $07 $80
+	"ec-fm-38.brr" $F9 $E0 $00 $03 $00
+	"ec-fm-39.brr" $FB $E0 $00 $01 $01
+	"ec-fm-41.brr" $F1 $EC $00 $08 $40
+}
+
+w191
+t56
+$EF $00 $00 $00
+$F0
+
+#0
+@38
+v192
+y10
+o2
+l16
+
+b1^1^1

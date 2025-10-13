@@ -20,10 +20,13 @@ SONGSPEED[4] = 3211212 / RATE / 8 / 16
 SONGSPEED[5] = 2801090 / RATE / 9.5 / 12
 SONGSPEED[6] = 2476961 / RATE / 12 / 8
 SONGSPEED[7] = 2841502 / RATE / 14 / 8
+SONGSPEED[8] = 2884115 / RATE / 38 / 4
 SONGSPEED[12] = 4961985 / RATE / 16 / 16
 TIMESIG = [(4,2)] * 17
 TIMESIG[5] = (3,2)
 MIDI_TICKRATE = 192 # 96
+SONGDELAY = [0] * 17
+SONGDELAY[8] = 23
 
 ALLFILES = True
 
@@ -57,23 +60,28 @@ def render_midi(hdr, gd3, ym, psg, dn, songnum):
 	if speed is None:
 		print(f"{songnum} - {hdr.loopsample}")
 		speed = 0.5
-	tracks = retime_midi(hdr, tracks, speed)
+	tracks = retime_midi(hdr, tracks, speed, SONGDELAY[songnum])
 	midi = midifile.MidiFile(midifile.MidiFileType.MULTITRACK, MIDI_TICKRATE, tracks)
 	#midi.pprint()
 	fn = os.path.join(dn, "output.mid")
 	with open(fn, "wb") as fp:
 		midifile.write_midi_file(fp, midi)
 
-def retime_midi(hdr, tracks, songspeed):
+def retime_midi(hdr, tracks, songspeed, delay):
 	#samp_per_note = hdr.loopsample / songlen
 	#samp_per_tick = samp_per_note / MIDI_TICKRATE
 	#usec_per_note = samp_per_note * 1e6 / RATE
 	samp_per_note = songspeed * RATE
 	samp_per_tick = samp_per_note / MIDI_TICKRATE
 	usec_per_note = round(songspeed * 1e6)
+	def newtime(ev):
+		newtime = round(ev.time / samp_per_tick)
+		if newtime > 0 or not isinstance(ev.event, midifile.MetaEvent):
+			newtime += delay
+		return newtime
 	newtracks = [
 		[
-			midifile.TimedMidiEvent(round(ev.time / samp_per_tick), ev.event)
+			midifile.TimedMidiEvent(newtime(ev), ev.event)
 			for ev in track
 		]
 		for track in tracks

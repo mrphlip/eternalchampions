@@ -61,8 +61,7 @@ def write_zips(songs, inst_dat):
 			zfp.write(f"txt/{song}", song)
 			zfp.write(f"{AMK}/SPCs/{song[:-4]}.spc", f"{song[:-4]}.spc")
 			for inst in insts:
-				instfn = "square.brr" if inst == "square.brr" else f"inst/{inst}"
-				zfp.write(instfn, f"eternalchampions/{inst}")
+				zfp.write(f"inst/{inst}", f"eternalchampions/{inst}")
 
 re_samples = re.compile(r"\#samples\s*\{\s*([^{}]*?)\s*\}", re.IGNORECASE | re.DOTALL)
 re_instruments = re.compile(r"\#instruments\s*\{\s*([^{}]*?)\s*\}", re.IGNORECASE | re.DOTALL)
@@ -83,7 +82,7 @@ def get_instruments(song, inst_dat):
 	instruments = match.group(1)
 	for i in instruments.split("\n"):
 		i = i.strip()
-		if not i or i.startswith('"square.brr"'):
+		if not i or i.startswith('"square'):
 			continue
 		if i not in inst_dat:
 			raise ValueError(f"Incorrect values for {song} instrument {i}")

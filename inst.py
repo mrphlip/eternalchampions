@@ -34,6 +34,7 @@ def doloop(inst, note, rate, start, loop, end, adsr=0xFFE0, insuffix="", suffix=
 	loopatblocks = ceil((loop - start) / ORIGRATE * rate / 16)
 	newloop = loopatblocks * 16
 	newlooplen = loopblocks * 16
+	looppoint = loopatblocks + loopblocks + 1
 
 	if not os.path.exists(f"inst/ec-fm-{inst:02d}{suffix}.brr") and not SKIPBUILD:
 		call(["sox", f"out/inst{inst:02d}_{note:02d}{insuffix}.wav", "tmp/tmp1.wav", "trim", f"{start}s", "channels", "1", "vol", f"{vol}dB", "rate", f"{rate}"])
@@ -46,9 +47,9 @@ def doloop(inst, note, rate, start, loop, end, adsr=0xFFE0, insuffix="", suffix=
 		call(["sox", "-M", "tmp/tmp3.wav", "tmp/tmp4.wav", "tmp/tmp5.wav", "remix", "1v1,2v1"])
 		call(["sox", "tmp/tmp2.wav", "tmp/tmp5.wav", "tmp/tmp6.wav"])
 		call(["wine", "../smwhack/brrtools/brr_encoder.exe", "-l", "tmp/tmp6.wav", "tmp/tmp.brr"])
-		call(["wine", "../smwhack/brrtools/brr_decoder.exe", f"-s{rate}", "tmp/tmp.brr", f"tmp/out_{inst:02d}{suffix}.wav"])
+		call(["wine", "../smwhack/brrtools/brr_decoder.exe", f"-s{rate}", f"-l{looppoint}", f"-m2", "tmp/tmp.brr", f"tmp/out_{inst:02d}{suffix}.wav"])
 		with open(f"inst/ec-fm-{inst:02d}{suffix}.brr", "wb") as fpout, open("tmp/tmp.brr", "rb") as fpin:
-			fpout.write(struct.pack("<H", (loopatblocks + loopblocks + 1) * 9))
+			fpout.write(struct.pack("<H", looppoint * 9))
 			shutil.copyfileobj(fpin, fpout)
 		if not os.path.exists(f"/home/phlip/smwhack/AddmusicK_1.0.6/samples/eternalchampions/ec-fm-{inst:02d}{suffix}.brr"):
 			os.symlink(f"/home/phlip/eternalchampions/inst/ec-fm-{inst:02d}{suffix}.brr", f"/home/phlip/smwhack/AddmusicK_1.0.6/samples/eternalchampions/ec-fm-{inst:02d}{suffix}.brr")
@@ -107,7 +108,7 @@ def main():
 	doloop(2, 45, 9216, 0, 23269, 24872, maxnote=89, transpose=33, suffix="-8va")
 	# No instruments 3 or 4 - are essentially the same as instrument 2
 	donoloop(5, 38, 16384, 0, 10252, transpose=60)
-	doloop(6, 45, 4096, 0, 36856, 43272, maxnote=62)
+	doloop(6, 45, 4096, 0, 36856, 43272, maxnote=63)
 	doloop(7, 80, 8192, 0, 8822, 9775, 0xCFF1, maxnote=106)
 	donoloop(8, 36, 8192, 0, 12000, transpose=60)
 	donoloop(9, 53, 8192, 0, 5400, transpose=60)
@@ -137,6 +138,14 @@ def main():
 	doloop(31, 40, 8192, 0, 18338, 26901, insuffix="+47", suffix="-fifths", maxnote=43, vol=-1, transpose=52)
 	doloop(32, 63, 8192, 0, 29866, 30998, maxnote=67)
 	doloop(33, 76, 8192, 54626, 54626, 54893, maxnote=83)
+	doloop(34, 79, 16384, 0, 5735, 6635, 0xFFEE, maxnote=83)
+	doloop(35, 64, 16384, 0, 11502, 12572, maxnote=77)
+	doloop(36, 60, 8192, 0, 6737, 9432, maxnote=71)
+	doloop(37, 61, 16384, 8277, 8277, 9550, 0xBFA0, maxnote=77)
+	doloop(38, 77, 16384, 7198, 7198, 7703, 0xF9E0, maxnote=89)
+	doloop(39, 81, 8192, 1352, 1352, 1552, 0xFBE0, maxnote=91)
+	# instrument 40 is the same sample as 38
+	doloop(41, 59, 16384, 104292, 104292, 107150, 0xF1EC, maxnote=59)
 
 if __name__ == "__main__":
 	if "--skip" in sys.argv:
