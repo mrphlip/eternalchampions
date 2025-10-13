@@ -178,13 +178,14 @@ MIDI_INSTRUMENT = 80
 DRUM_CHANNEL = 9
 SNARE_DRUM = 40
 
-MERGE_CHANNELS = True
+MERGE_CHANNELS = False
 
 def psg_to_midi(hdr, psg):
 	if MERGE_CHANNELS:
 		channels = [[] for ch in range(2)]
 	else:
 		channels = [[] for ch in range(4)]
+	has_notes = [False] * len(channels)
 
 	def add_event(ch, ev):
 		if MERGE_CHANNELS:
@@ -195,24 +196,27 @@ def psg_to_midi(hdr, psg):
 			return
 		add_event(ch, midifile.MetaEvent(midifile.Events.END_OF_TRACK, b""))
 	def add_noteon(ch, tone, volume, stereo_l, stereo_r):
-		midich, midinote = key(ch, tone)
+		midich, midinote, tune = key(ch, tone)
 		add_event(ch, midifile.Control(midich, 10, [64, 127, 0, 64][stereo_r * 2 + stereo_l]))
+		if tune != None:
+			add_event(ch, midifile.Wheel(midich, round((tune + 1) * 8192)))
 		add_event(ch, midifile.NoteOn(midich, midinote, PSG_VELOCITIES[volume]))
+		has_notes[ch] = True
 	def add_noteoff(ch, tone):
-		midich, midinote = key(ch, tone)
+		midich, midinote, tune = key(ch, tone)
 		add_event(ch, midifile.NoteOff(midich, midinote, 0))
 	def add_volchange(ch, tone, volume):
-		midich, midinote = key(ch, tone)
+		midich, midinote, tune = key(ch, tone)
 		add_event(ch, midifile.NoteAftertouch(midich, midinote, PSG_VELOCITIES[volume]))
 	def key(ch, tone):
 		if ch == 3:
-			return DRUM_CHANNEL, SNARE_DRUM
+			return DRUM_CHANNEL, SNARE_DRUM, None
 		else:
 			freq = hdr.sn76489 / 32 / tone
 			note = 12 * log2(freq / 440.0) + 69
 			#if abs(note - round(note)) > 0.05:
 			#	print(note)
-			return BASE_CHANNEL + ch, round(note)
+			return BASE_CHANNEL + ch, round(note), note - round(note)
 
 	framenum = 0
 	if MERGE_CHANNELS:
@@ -223,6 +227,8 @@ def psg_to_midi(hdr, psg):
 			add_event(ch, midifile.MetaEvent(midifile.Events.TRACK_NAME, f"PSG {ch}".encode("utf-8")))
 	for ch in range(3):
 		add_event(ch, midifile.Program(BASE_CHANNEL + ch, MIDI_INSTRUMENT))
+		for ev in midifile.param_change(BASE_CHANNEL + ch, midifile.Params.PARAM_PITCH_BEND_SENSITIVITY, 1, 0):
+			add_event(ch, ev)
 
 	prev_state = [PSGState(15, 0, True, True, False) for ch in range(4)]
 	for framenum, state in psg:
@@ -250,4 +256,4 @@ def psg_to_midi(hdr, psg):
 				add_noteon(ch, state[ch].value, state[ch].volume, state[ch].stereo_l, state[ch].stereo_r)
 		prev_state = state
 
-	return channels
+	return [channel for channel, enable in zip(channels, has_notes) if enable]
