@@ -43,10 +43,248 @@ $EF $00 $00 $00
 $F0
 
 #0
-@38
+@30
 v192
 y10
-o2
+o1
 l16
 
-b1^1^1
+;1
+[ e r8. e e r8 f r8 f r f r8 ]2
+[ e r8. e e r8 f r8 f r f f r ]2
+;5
+(1)[ e r8. e e r8 e r8 e r e r8 ]
+(2)[ f r8. f f r8 f r8 f r f r8 ]2
+(1) (2)2 (1) (2)
+e r8. e e r8 e r8 e r e e r
+f r8. f f r8 f r8 f r f f r
+;15
+(3)[ b r8. b b r8 b r8 b r b8 r ]
+(4)[ a+ r8. a+ a+ r8 a+ r8 a+ r a+8 r ]2
+(3) (4)2
+;21
+(5)[ g+ r8. g+ g+ r8 g+ r8 g+ r g+ r8 ]
+(2) (5) (2)
+;25
+(1) (2)2 (1) (2)2
+;31
+l8
+> d c+ d g g+ d+ d < a
+a+ > d+ e a g+ a a+ > d+
+d < a g+ d+ f+ f c c+
+d < a g+ > c+ c f f+ b
+a+ f e a g+ d+ g d
+c+ f+ f c e < b > e a
+a+ f g+ a e d+ d g
+f+ c+ c < g > c d+ e < b
+;39
+
+#1
+@31
+v192
+y10
+o3
+l16
+
+;1
+(6)[ c r g r c c g r c r g c r c g r ]
+(7)[ c r g r c c g c c r g c r c g r ]
+(6)
+(8)[ c g g c g c c g c g g c g c c g ]
+;5
+[[ (6) (7)2 (6) (7)2 (6) (7) (6) (8) ]]3
+;35
+(6) (7) (6) (8)
+;39
+
+#2
+v192
+y10
+
+;1
+[[ r1 ]]2
+;3
+@32
+o4
+; yay, wacky timings _and_ wacky tunings, my favourites
+$EE $00 b=36 b=30 $EE $CF a+=30 $EE $96 a+=30 $EE $54 a+=30 $EE $38 a+=30 $EE $00 a+=30 $EE $9E a=30 
+$EE $62 a=96 $DD $00 $60 a- ^=96 $DD $00 $60 g ^=24 $EE $00 r=114
+;6
+[[ r1 ]]5
+;11
+@34
+o2
+l2
+y20
+(11)[ b > b a f e < b a+1 ]
+y10
+;15
+(13)[
+	@35
+	o3
+	l4
+	{ f+ f+ f+ f+ f+ f+ }
+	f4. $DD $00 $48 e
+]
+@37
+o3
+l32
+e b > d+ g { a+16 > f+16 < a+16 } g d+ < { b16 e16 b16 } > d+ g a+ r > f+ r
+(15)[ r16. f+16 g f+16 g < r16. f+16 g f+16 g > r f+16 g f+16 g r r8. ]
+;18
+(13)
+@37
+o5
+l32
+(16)[ f+16 < r g f+16 g16 f+ > r16. g16 f+ g f+16 r16 ]
+r16 f+ r < a+ { g d+ < b } r e r { b > d+ g } a+ r > f+ < r a+ g d+ < b r e r16 r4
+;21
+@35
+(17)[
+	o3
+	l16
+	e r d e f r8 g+ r b a+ r8 b > c+ d
+	e r d e f r8 d r < a+ f d e f g+ b
+]2
+;25
+@33
+o2
+l2
+(9)[ b > b f1^2. r4 b > e f1^2. r4 ]
+;31
+(18)[
+	@35
+	o2
+	l8
+	d c+ d g g+ d+ r < a
+	a+ > r e a r4 a+ > d+
+	r < a r4. f c c+
+	d r2 f f+ b
+	a+ f e r4 d+ g d
+	r4. c e < b > r4
+	a+ f g+ r e d+ d r
+	f+ c+ r < g > c d+ e < b
+]
+;39
+
+#3
+v192
+y10
+$FA $02 $00
+
+;1
+[[ r1 ]]2
+;3
+@32
+o4
+$EE $00 e=36 e=30 $EE $CF d+=30 $EE $96 d+=30 $EE $54 d+=30 $EE $38 d+=30 $EE $00 d+=30 $EE $9E d=30 
+$EE $62 d=96 $DD $00 $60 d- ^=96 $DD $00 $60 c ^=24 $EE $00 r=114
+;6
+[[ r1 ]]5
+;11
+@34
+o2
+l2
+y17
+(12)[ e > e d < a+ b e f1 ]
+y10
+;15
+(14)[
+	@35
+	o2
+	l4
+	{ b b b b b b }
+	a+4. $DD $00 $48 a
+]
+@36
+o5
+l32
+y3
+r8 r2
+(15)
+y10
+;18
+(14)
+@36
+o5
+l32
+y3
+(16)
+r1
+;21
+(17)
+$FA $02 $0C
+(17)
+$FA $02 $00
+y10
+;25
+@33
+o2
+l2
+(10)[ e > e < a+1^2. r4 > e b a+1^2. r4 ]
+;31
+$FA $02 $07
+(18)
+$FA $02 $00
+;39
+
+#4
+v192
+y10
+
+;1
+[[ r1 ]]4
+;5
+@33
+(9) (11)
+;15
+@36
+o4
+l2
+r f f+1^1
+r f e1^1
+[[ r1 ]]2
+;23
+y3
+$FA $02 $09
+(17)
+$FA $02 $00
+y10
+;25
+@36
+o3
+l2
+r4 b4 > b f1^1
+b > e f1^1
+;31
+[[ r1 ]]8
+;39
+
+#5
+v192
+y10
+
+;1
+[[ r1 ]]4
+;5
+@33
+(10) (12)
+;15
+@36
+o4
+l2
+r d+ d1^1
+r c+ c1^1
+;21
+@38
+o2
+b1^1^1 r1
+;25
+@36
+o3
+l2
+r4 e4 > e < a+1^1
+> e b a+1^1
+;31
+[[ r1 ]]8
+;39
