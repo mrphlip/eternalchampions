@@ -3,6 +3,7 @@ import glob
 import struct
 import os
 import subprocess
+import sys
 
 from constants import RATE
 from vgm import read_file
@@ -22,9 +23,11 @@ SONGSPEED[6] = 2476961 / RATE / 12 / 8
 SONGSPEED[7] = 2841502 / RATE / 14 / 8
 SONGSPEED[8] = 2884115 / RATE / 38 / 4
 SONGSPEED[9] = 1970535 / RATE / 24 / 4
+SONGSPEED[10] = 3092158 / RATE / (22*6 + 8 + 7 + 3*6)
 SONGSPEED[12] = 4961985 / RATE / 16 / 16
-TIMESIG = [(4,2)] * 17
-TIMESIG[5] = (3,2)
+TIMESIG = [[(4,2)]] * 17  # 4/4
+TIMESIG[5] = [(3,2)]  # 3/4
+TIMESIG[10] = [(6,2,22), (4,2,3), (3,2,1), (6,2)]  # 6/4 for 22 bars, then 3x 4/4, 1x 3/4 then back to 6/4
 MIDI_TICKRATE = 192 # 96
 SONGDELAY = [0] * 17
 SONGDELAY[8] = 23
@@ -50,7 +53,6 @@ def render_midi(hdr, gd3, ym, psg, dn, songnum):
 	track0 = [
 		midifile.TimedMidiEvent(0, midifile.MetaEvent(midifile.Events.TRACK_NAME, f"{gd3.track_english} - {gd3.game_english}".encode("utf-8"))),
 		midifile.TimedMidiEvent(0, midifile.MetaEvent(midifile.Events.COPYRIGHT, gd3.artist_english.encode("utf-8"))),
-		midifile.TimedMidiEvent(0, midifile.MetaEvent(midifile.Events.TIME_SIG, bytes([TIMESIG[songnum][0], TIMESIG[songnum][1], MIDI_TICKRATE, 8]))),
 		midifile.TimedMidiEvent(hdr.samplelen - hdr.loopsample, midifile.MetaEvent(midifile.Events.MARKER, "Loop start".encode("utf-8"))),
 		midifile.TimedMidiEvent(hdr.samplelen, midifile.MetaEvent(midifile.Events.MARKER, "Loop end".encode("utf-8"))),
 		midifile.TimedMidiEvent(hdr.samplelen, midifile.MetaEvent(midifile.Events.END_OF_TRACK, b"")),
@@ -63,11 +65,25 @@ def render_midi(hdr, gd3, ym, psg, dn, songnum):
 		print(f"{songnum} - {hdr.loopsample}")
 		speed = 0.5
 	tracks = retime_midi(hdr, tracks, speed, SONGDELAY[songnum])
+	# add the timesig _after_ retiming, since we're calculating their position based on the new timescale
+	tracks[0][3:3] = [
+		midifile.TimedMidiEvent(ts, midifile.MetaEvent(midifile.Events.TIME_SIG, bytes([num, denom, MIDI_TICKRATE, 8])))
+		for ts, num, denom in get_timesig(songnum)
+	]
 	midi = midifile.MidiFile(midifile.MidiFileType.MULTITRACK, MIDI_TICKRATE, tracks)
 	#midi.pprint()
 	fn = os.path.join(dn, "output.mid")
 	with open(fn, "wb") as fp:
 		midifile.write_midi_file(fp, midi)
+
+def get_timesig(songnum):
+	ts = 0
+	for i in TIMESIG[songnum]:
+		num = i[0]
+		denom = i[1]
+		yield ts, num, denom
+		if len(i) >= 3:
+			ts += (i[2] * MIDI_TICKRATE * 4 * num) >> denom
 
 def retime_midi(hdr, tracks, songspeed, delay):
 	#samp_per_note = hdr.loopsample / songlen
@@ -102,15 +118,17 @@ def dofile(fn):
 	extract_channels(fn, dn)
 
 def main():
-	if ALLFILES:
+	args = sys.argv[1:]
+	if not args:
 		for i in sorted(glob.glob("[0-9][0-9]*.vgm")):
 			print(i)
 			dofile(i)
 	else:
-		#dofile("01 - Main Theme.vgm")
-		dofile("02 - Menu Theme.vgm")
-		#dofile("03 - Character Bios.vgm")
-		#dofile("12 - Larcen's Stage.vgm")
+		global ALLFILES
+		ALLFILES = False
+		for i in args:
+			print(i)
+			dofile(i)
 
 if __name__ == "__main__":
 	main()

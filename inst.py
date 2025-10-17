@@ -148,6 +148,14 @@ def main():
 	doloop(41, 59, 16384, 104292, 104292, 107150, 0xF1EC, maxnote=59)
 	doloop(42, 56, 16384, 22916, 22916, 26318, 0x8460, maxnote=83)
 	# 43 is the same instrument as 42
+	doloop(44, 85, 16384, 0, 6648, 6807, 0xCFF4, maxnote=90)
+	donoloop(45, 37, 8192, 0, 11736, transpose=60)
+	donoloop(46, 75, 16384, 0, 4739, transpose=60)
+	doloop(47, 80, 16384, 0, 8447, 8659, 0xCFF4, maxnote=87)
+	doloop(48, 45, 8192, 0, 32662, 35866, maxnote=51)
+	doloop(49, 45, 6144, 0, 34453, 37662, maxnote=54)
+	doloop(50, 79, 8192, 3486, 3486, 3542, maxnote=90)
+	donoloop(51, 64, 8192, 0, 6967, maxnote=78)
 
 if __name__ == "__main__":
 	if "--skip" in sys.argv:

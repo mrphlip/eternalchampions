@@ -1,0 +1,53 @@
+#amk 2
+
+#SPC
+{
+	#game "Eternal Champions"
+	#title "Xavier's Stage"
+	#author "DMP Entertainment"
+	#length "2:57" ; single loop 1:11
+}
+
+#path "eternalchampions"
+
+#samples
+{
+	#optimized
+	"ec-fm-44.brr"
+	"ec-fm-45.brr"
+	"ec-fm-46.brr"
+	"ec-fm-47.brr"
+	"ec-fm-48.brr"
+	"ec-fm-49.brr"
+	"ec-fm-50.brr"
+	"ec-fm-38.brr"
+	"ec-fm-51.brr"
+	"square.brr"
+}
+
+#instruments
+{
+	"ec-fm-44.brr" $CF $F4 $00 $02 $00
+	"ec-fm-45.brr" $FF $E0 $00 $03 $E8
+	"ec-fm-46.brr" $FF $E0 $00 $07 $D3
+	"ec-fm-47.brr" $CF $F4 $00 $02 $81
+	"ec-fm-48.brr" $FF $E0 $00 $09 $42
+	"ec-fm-49.brr" $FF $E0 $00 $06 $FF
+	"ec-fm-50.brr" $FF $E0 $00 $02 $02
+	"ec-fm-38.brr" $F9 $E0 $00 $03 $00
+	"ec-fm-51.brr" $FF $E0 $00 $03 $1C
+	"square.brr" $FF $F4 $00 $04 $00
+}
+
+w191
+t56
+$EF $00 $00 $00
+$F0
+
+#0
+@30
+v192
+y10
+o3
+
+c4
