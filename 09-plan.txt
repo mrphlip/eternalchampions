@@ -11,9 +11,23 @@ PSG3: snare, can interleave with FM2
 
 0: FM0 drone
 1: FM0 melody
-2: FM1 drone
+2: FM1 drone + FM0 spare note
 3: FM2
 4: PSG3
 5: PSG0+1+2
 6: FM3
 7: unused
+
+On closer inspection, the PSG does have some repetition...
+
+         1         2
+123456789012345678901234
+ABCDEFGHIJKLMNGHABCDEFGH
+
+So:
+	(1)[ six bars ]
+	(2)[ two bars ]
+	six bars
+	(2) (1) (2)
+
+still an absolute mess, and I'm gonna want to auto generate this I think
