@@ -66,6 +66,7 @@ def gen_brr(samples):
 def main():
 	# basic square wave
 	gen_squares(0)
+	gen_squares(12) # 8va
 	# for 07 Jetta's Stage
 	gen_squares(0, 5, 8)  # F# B D
 	gen_squares(0, 4, 9)  # G B E

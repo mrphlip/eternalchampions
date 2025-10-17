@@ -146,6 +146,8 @@ def main():
 	doloop(39, 81, 8192, 1352, 1352, 1552, 0xFBE0, maxnote=91)
 	# instrument 40 is the same sample as 38
 	doloop(41, 59, 16384, 104292, 104292, 107150, 0xF1EC, maxnote=59)
+	doloop(42, 56, 16384, 22916, 22916, 26318, 0x8460, maxnote=83)
+	# 43 is the same instrument as 42
 
 if __name__ == "__main__":
 	if "--skip" in sys.argv:

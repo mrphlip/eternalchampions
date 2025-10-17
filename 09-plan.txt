@@ -1,0 +1,19 @@
+FM0: multiple
+	* drone, 1 track, hard left
+	* melody, 1 track, doubled note at the end, hard right
+FM1: second drone, 1 track, hard right
+FM2: drum, 1 track, centre
+FM3: cymbal, 1 track, hard left
+PSG0+1+2: wtf, 1 track (if there's doubles idc no-one will notice if I skip them), centre, w/ pitch bends
+	* but, and I say again, WTF
+	* highest note is a o6b, which is higher than AMK supports (o6a), need an 8va version of the square wave instrument
+PSG3: snare, can interleave with FM2
+
+0: FM0 drone
+1: FM0 melody
+2: FM1 drone
+3: FM2
+4: PSG3
+5: PSG0+1+2
+6: FM3
+7: unused

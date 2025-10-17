@@ -1,0 +1,43 @@
+#amk 2
+
+#SPC
+{
+	#game "Eternal Champions"
+	#title "Trident's Stage"
+	#author "DMP Entertainment"
+	#length "1:53" ; single loop 0:45
+}
+
+#path "eternalchampions"
+
+#samples
+{
+	#optimized
+	"ec-fm-42.brr"
+	"ec-fm-08.brr"
+	"ec-fm-09.brr"
+	"square-12.brr"
+}
+
+#instruments
+{
+	"ec-fm-42.brr" $84 $60 $00 $09 $DD
+	"ec-fm-08.brr" $FF $E0 $00 $03 $E8
+	"ec-fm-09.brr" $FF $E0 $00 $03 $EF
+	"square-12.brr" $EF $80 $00 $04 $00
+	"square-12.brr" $DF $40 $00 $04 $00
+}
+
+w191
+t51
+$EF $00 $00 $00
+$F0
+
+#0
+@30
+v192
+y10
+o1
+l16
+
+c4
