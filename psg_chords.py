@@ -3,7 +3,7 @@ import os
 import math
 import itertools
 
-THRESHOLD=0.1  # 10 cents
+THRESHOLD=0.1  # let notes be 10 cents out of tune
 
 def gen_squares(*pitches):
 	if pitches == (0,):
@@ -74,6 +74,25 @@ def main():
 	gen_squares(0, 4, 4)  # G B B (doubled note = doubled volume in the chord)
 	gen_squares(0, 5, 9)  # G C E
 	gen_squares(0, 4, 7)  # F# A# C#
+	# for 11 Midnight's Stage
+	gen_squares(0, 4, 9)  # Eb G C
+	gen_squares(0, 5, 9)  # Eb Ab C
+	gen_squares(0, 4, 8)  # E Ab C
+	gen_squares(0, 5, 7)  # F Bb C
+	gen_squares(0, 4, 6)  # Gb Bb C
+	gen_squares(0, 3, 6)  # Gb A C
+	gen_squares(0, 4, 7)  # Bb D F
+	gen_squares(0, 4, 9)  # Bb D G
+	gen_squares(0, 3, 8)  # C Eb Ab
+	gen_squares(0, 3, 12)  # C Eb C
+	gen_squares(0, 2, 12)  # Db Eb Db
+	gen_squares(0, 2, 11)  # Db Eb C
+	gen_squares(0, 5, 12)  # Bb Eb Bb
+	gen_squares(0, 4, 8)  # B Eb G
+	gen_squares(0, 3, 7)  # C Eb G
+	gen_squares(0, 3, 8)  # D F Bb
+	gen_squares(0, 5, 9)  # Db Gb Bb
+	gen_squares(0, 3, 10)  # C Eb Bb
 
 if __name__ == "__main__":
 	main()

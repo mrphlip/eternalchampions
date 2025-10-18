@@ -1,0 +1,77 @@
+#amk 2
+
+#SPC
+{
+	#game "Eternal Champions"
+	#title "Midknight's Stage"
+	#author "DMP Entertainment"
+	#length "2:04" ; single loop 0:50
+}
+
+#path "eternalchampions"
+
+#samples
+{
+	#optimized
+	"ec-fm-23.brr"
+	"ec-fm-09.brr"
+	"ec-fm-06.brr"
+	"ec-fm-31.brr"
+	"ec-fm-31-fifths.brr"
+	"square-0-4-9.brr"
+	"square-0-5-9.brr"
+	"square-0-4-8.brr"
+	"square-0-5-7.brr"
+	"square-0-4-6.brr"
+	"square-0-3-6.brr"
+	"square-0-4-7.brr"
+	"square-0-3-8.brr"
+	"square-0-3-12.brr"
+	"square-0-2-12.brr"
+	"square-0-2-11.brr"
+	"square-0-5-12.brr"
+	"square-0-3-7.brr"
+	"square-0-3-10.brr"
+	"square.brr"
+}
+
+#instruments
+{
+	"ec-fm-23.brr" $FF $E0 $00 $03 $E7
+	"ec-fm-09.brr" $FF $E0 $00 $03 $EF
+	"ec-fm-06.brr" $FF $E0 $00 $04 $A0
+	"ec-fm-31.brr" $FF $E0 $00 $0C $03
+	"ec-fm-31-fifths.brr" $FF $E0 $00 $06 $30
+	"square-0-4-9.brr" $FF $E0 $00 $04 $00
+	"square-0-5-9.brr" $FF $E0 $00 $04 $00
+	"square-0-4-8.brr" $FF $E0 $00 $04 $00
+	"square-0-5-7.brr" $FF $E0 $00 $04 $00
+	"square-0-4-6.brr" $FF $E0 $00 $04 $00
+	"square-0-3-6.brr" $FF $E0 $00 $04 $00
+	"square-0-4-7.brr" $FF $E0 $00 $04 $00
+	"square-0-3-8.brr" $FF $E0 $00 $04 $00
+	"square-0-3-12.brr" $FF $E0 $00 $04 $00
+	"square-0-2-12.brr" $FF $E0 $00 $04 $00
+	"square-0-2-11.brr" $FF $E0 $00 $04 $00
+	"square-0-5-12.brr" $FF $E0 $00 $04 $00
+	"square-0-3-7.brr" $FF $E0 $00 $04 $00
+	"square-0-3-10.brr" $FF $E0 $00 $04 $00
+	"square.brr" $CF $40 $00 $04 $00
+}
+
+w191
+t46
+$EF $00 $00 $00
+$F0
+
+#0
+@30
+v192
+y10
+o5
+l8
+
+[[ r4. ]]11 r4
+[[ r2^4. ]]8
+[[ r1 ]]8
+

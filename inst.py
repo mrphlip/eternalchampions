@@ -108,7 +108,7 @@ def main():
 	doloop(2, 45, 9216, 0, 23269, 24872, maxnote=89, transpose=33, suffix="-8va")
 	# No instruments 3 or 4 - are essentially the same as instrument 2
 	donoloop(5, 38, 16384, 0, 10252, transpose=60)
-	doloop(6, 45, 4096, 0, 36856, 43272, maxnote=63)
+	doloop(6, 45, 4096, 0, 36856, 43272, maxnote=73)
 	doloop(7, 80, 8192, 0, 8822, 9775, 0xCFF1, maxnote=106)
 	donoloop(8, 36, 8192, 0, 12000, transpose=60)
 	donoloop(9, 53, 8192, 0, 5400, transpose=60)
