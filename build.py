@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import sys
 import glob
 import os.path
 import subprocess
@@ -38,13 +39,17 @@ def build_and_get_sizes(songs):
 
 def write_sizes(songs, sizes):
 	os.chdir(TOP)
+	do_write_sizes(songs, sizes, sys.stdout)
 	with open("build/sizes.txt", "w") as fp:
-		for song in songs:
-			insert, samples = sizes[song]
-			print(song, file=fp)
-			print(f"  Insert size: {insert}", file=fp)
-			print(f"  Samples size: {samples}", file=fp)
-			print(file=fp)
+		do_write_sizes(songs, sizes, fp)
+
+def do_write_sizes(songs, sizes, fp):
+	for song in songs:
+		insert, samples = sizes[song]
+		print(song, file=fp)
+		print(f"  Insert size: {insert}", file=fp)
+		print(f"  Samples size: {samples}", file=fp)
+		print(file=fp)
 
 def get_instrument_data():
 	os.chdir(TOP)
@@ -58,8 +63,8 @@ def write_zips(songs, inst_dat):
 		zipfn = f"build/{song[:-4]}.zip"
 		insts = get_instruments(song, inst_dat)
 		with zipfile.ZipFile(zipfn, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as zfp:
-			zfp.write(f"txt/{song}", song)
-			zfp.write(f"{AMK}/SPCs/{song[:-4]}.spc", f"{song[:-4]}.spc")
+			zfp.write(f"txt/{song}", f"eternalchampions-{song}")
+			zfp.write(f"{AMK}/SPCs/{song[:-4]}.spc", f"eternalchampions-{song[:-4]}.spc")
 			for inst in insts:
 				zfp.write(f"inst/{inst}", f"eternalchampions/{inst}")
 
