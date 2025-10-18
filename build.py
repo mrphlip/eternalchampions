@@ -18,37 +18,46 @@ def get_songs():
 	os.chdir(TOP)
 	return sorted(os.path.basename(i) for i in glob.glob("txt/*.txt"))
 
-re_songline = re.compile(r"^(.*\.txt) total size: (0x[0-9A-F]*) bytes", re.IGNORECASE)
-re_sampleline = re.compile(r"Space used by samples: (0x[0-9A-F]*) bytes", re.IGNORECASE)
-def build_and_get_sizes(songs):
+def build_songs(songs):
 	os.chdir(AMK)
-	ret = subprocess.check_output(["wine", "AddmusicK.exe", "-v", "-noblock", "-norom", *(f"eternalchampions/{i}" for i in songs)]).decode("utf-8")
-	lastsong = None
-	songdata = {}
-	for line in ret.split("\n"):
-		if match := re_songline.search(line):
-			lastsong = match.group(1)
-			songdata[lastsong] = [match.group(2), None]
-		elif match := re_sampleline.search(line):
-			assert lastsong is not None
-			songdata[lastsong][1] = match.group(1)
-			lastsong = None
-	songdata = {os.path.basename(k): v for k, v in songdata.items() if k.startswith("eternalchampions/")}
-	assert all(i in songdata and songdata[i][1] for i in songs)
-	return songdata
+	subprocess.check_call(["wine", "AddmusicK.exe", "-v", "-noblock", "-norom", *(f"eternalchampions/{i}" for i in songs)])
 
-def write_sizes(songs, sizes):
-	os.chdir(TOP)
-	do_write_sizes(songs, sizes, sys.stdout)
-	with open("build/sizes.txt", "w") as fp:
-		do_write_sizes(songs, sizes, fp)
-
-def do_write_sizes(songs, sizes, fp):
+def read_stats(songs):
+	os.chdir(AMK)
+	stats = {}
 	for song in songs:
-		insert, samples = sizes[song]
+		stats[song] = read_stats_file(song)
+	return stats
+
+def read_stats_file(song):
+	stats = {}
+	with open(f"stats/{song}") as fp:
+		for line in fp:
+			if line.strip():
+				key, val = line.split(":")
+				stats[key.strip()] = val.strip()
+	lengths = [int(stats[f"CHANNEL {i} TICKS"]) for i in range(8)]
+	lengths_set = set(lengths)
+	if 0 in lengths_set:
+		lengths_set.remove(0)
+	if len(lengths_set) != 1:
+		raise ValueError(f"Conflicting track lengths for {song}: {lengths}")
+	length, = lengths_set
+	return int(stats["SONG TOTAL DATA SIZE"], 16), int(stats["SAMPLES SIZE"], 16), length
+
+def write_stats(songs, stats):
+	os.chdir(TOP)
+	do_write_stats(songs, stats, sys.stdout)
+	with open("build/stats.txt", "w") as fp:
+		do_write_stats(songs, stats, fp)
+
+def do_write_stats(songs, stats, fp):
+	for song in songs:
+		insert, samples, length = stats[song]
 		print(song, file=fp)
 		print(f"  Insert size: {insert}", file=fp)
 		print(f"  Samples size: {samples}", file=fp)
+		print(f"  Length: {length}", file=fp)
 		print(file=fp)
 
 def get_instrument_data():
@@ -97,8 +106,9 @@ def get_instruments(song, inst_dat):
 def main():
 	init()
 	songs = get_songs()
-	sizes = build_and_get_sizes(songs)
-	write_sizes(songs, sizes)
+	build_songs(songs)
+	stats = read_stats(songs)
+	write_stats(songs, stats)
 	inst_dat = get_instrument_data()
 	write_zips(songs, inst_dat)
 
