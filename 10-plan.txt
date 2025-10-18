@@ -5,8 +5,8 @@ FM3: Bell - 1 track, 2,6,15,20,27, centre {{done}}
 FM4: Bass - 1 track, 3-33, centre {{done}}
 FM5: Bass 2 - 1 track, 3-33, centre {{done}}
 FM6: Sine - 1 track, 5-22, centre {{done}}
-FM7: Lead - 2 tracks, 23-26, centre
-FM8: Piano hit - 2 tracks, 24,26, can mostly interleave with FM7, centre
+FM7: Lead - 2 tracks, 23-26, centre {{done}}
+FM8: Piano hit - 2 tracks, 24,26, can mostly interleave with FM7, centre {{done}}
 PSG3: Snare - 1 track, can interleave with FM1 (and possibly FM2 if super necessary), centre {{done}}
 
 main loop is 1-29, 30-33 is the turnaround but is actually different to 1-4 this time so I need to use it for once
