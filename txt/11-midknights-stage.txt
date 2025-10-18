@@ -72,6 +72,41 @@ o5
 l8
 
 [[ r4. ]]11 r4
+[[ r4. ]]11 r4
 [[ r2.. ]]8
 [[ r1 ]]8
 
+#4
+v80
+y10
+o3
+q3F ; only play notes half as long
+l16
+
+;1
+[[
+	(1)[
+		@35 e- e- e- e- e- e-
+		@36 e- e- e- e- e- e-
+		@37 e e e e e e
+		@38 f f f f f f
+		@39 g- g- g- g- g- g-
+		@40 g- g- g- g-
+	] g- g-
+	(1)
+]]2
+;25
+[[
+	< @41 [ b- ]12 @35 b- b-
+	> @42 [ c ]12 @43 c c
+	@44 [ d- ]12 @45 d- d-
+	< @46 [ b- ]12 @37 b @47 > c
+]]2
+;33
+[[
+	@42 d r d r d d r d r d d d d d d r
+	@36 d- r d- r d- d- r d- r d- d- d- d- d- d- r
+	@48 c r c r c c r c r c c c c c c r
+	@42 d r d r d d r d r d d d d d d r
+]]2
+;41

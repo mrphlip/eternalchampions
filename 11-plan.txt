@@ -4,7 +4,7 @@ FM2: Bass, 1 track, centre
 FM3: multiple
 	* melody, 1 track, centre, has pitch bends
 	* chords/rhythm, 3 tracks, centre
-PSG0+1+2: more chords, 3 tracks, centre
+PSG0+1+2: more chords, 3 tracks, centre {{done}}
 PSG3: Snare, 1 track, centre, interleave with FM0
 
 Need to pack PSG0+1+2 chords down to 1 track with square wave chord instruments again
@@ -19,3 +19,30 @@ Can mostly pack FM3 chords down with ec-fm-31-fifths.brr, too, except bar 40
 5: FM0+PSG3
 6: FM1; bar 40: bottom of FM3 chord
 7: unused; bar 40: FM1
+
+instruments:
+FM0 = @30
+FM1 = @31
+FM2 = @32
+FM3 = @33
+FM3 fifths = @34
+PSG3 = @49 n18
+PSG0+1+2:
+	0-4-9 - Eb G C    @35
+	0-5-9 - Eb Ab C   @36
+	0-4-8 - E Ab C    @37
+	0-5-7 - F Bb C    @38
+	0-4-6 - Gb Bb C   @39
+	0-3-6 - Gb A C    @40
+	0-4-7 - Bb D F    @41
+	0-4-9 - Bb D G    @35
+	0-3-8 - C Eb Ab   @42
+	0-3-12 - C Eb C   @43
+	0-2-12 - Db Eb Db @44
+	0-2-11 - Db Eb C  @45
+	0-5-12 - Bb Eb Bb @46
+	0-4-8 - B Eb G    @37
+	0-3-7 - C Eb G    @47
+	0-3-8 - D F Bb    @42
+	0-5-9 - Db Gb Bb  @36
+	0-3-10 - C Eb Bb  @48
