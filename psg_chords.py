@@ -20,8 +20,8 @@ def gen_squares(*pitches):
 		for dat in brr:
 			fp.write(dat)
 
-	if not os.path.exists(f"/home/phlip/smwhack/AddmusicK_1.0.6/samples/eternalchampions/{fn}"):
-		os.symlink(f"/home/phlip/eternalchampions/inst/{fn}", f"/home/phlip/smwhack/AddmusicK_1.0.6/samples/eternalchampions/{fn}")
+	if not os.path.exists(f"/home/phlip/smwhack/AddmusicK_1.0.11/samples/eternalchampions/{fn}"):
+		os.symlink(f"/home/phlip/eternalchampions/inst/{fn}", f"/home/phlip/smwhack/AddmusicK_1.0.11/samples/eternalchampions/{fn}")
 
 def gen_samples(pitches):
 	samplen, periods = find_samplen(pitches)

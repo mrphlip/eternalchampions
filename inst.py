@@ -51,8 +51,8 @@ def doloop(inst, note, rate, start, loop, end, adsr=0xFFE0, insuffix="", suffix=
 		with open(f"inst/ec-fm-{inst:02d}{suffix}.brr", "wb") as fpout, open("tmp/tmp.brr", "rb") as fpin:
 			fpout.write(struct.pack("<H", looppoint * 9))
 			shutil.copyfileobj(fpin, fpout)
-		if not os.path.exists(f"/home/phlip/smwhack/AddmusicK_1.0.6/samples/eternalchampions/ec-fm-{inst:02d}{suffix}.brr"):
-			os.symlink(f"/home/phlip/eternalchampions/inst/ec-fm-{inst:02d}{suffix}.brr", f"/home/phlip/smwhack/AddmusicK_1.0.6/samples/eternalchampions/ec-fm-{inst:02d}{suffix}.brr")
+		if not os.path.exists(f"/home/phlip/smwhack/AddmusicK_1.0.11/samples/eternalchampions/ec-fm-{inst:02d}{suffix}.brr"):
+			os.symlink(f"/home/phlip/eternalchampions/inst/ec-fm-{inst:02d}{suffix}.brr", f"/home/phlip/smwhack/AddmusicK_1.0.11/samples/eternalchampions/ec-fm-{inst:02d}{suffix}.brr")
 
 	notefreq = 440 * 2**(((transpose or note)-69)/12)
 	tuning = rate / notefreq / 8
@@ -83,8 +83,8 @@ def donoloop(inst, note, rate, start, end, adsr=0xFFE0, suffix="", transpose=Non
 		with open(f"inst/ec-fm-{inst:02d}{suffix}.brr", "wb") as fpout, open("tmp/tmp.brr", "rb") as fpin:
 			fpout.write(struct.pack("<H", 0))
 			shutil.copyfileobj(fpin, fpout)
-		if not os.path.exists(f"/home/phlip/smwhack/AddmusicK_1.0.6/samples/eternalchampions/ec-fm-{inst:02d}{suffix}.brr"):
-			os.symlink(f"/home/phlip/eternalchampions/inst/ec-fm-{inst:02d}{suffix}.brr", f"/home/phlip/smwhack/AddmusicK_1.0.6/samples/eternalchampions/ec-fm-{inst:02d}{suffix}.brr")
+		if not os.path.exists(f"/home/phlip/smwhack/AddmusicK_1.0.11/samples/eternalchampions/ec-fm-{inst:02d}{suffix}.brr"):
+			os.symlink(f"/home/phlip/eternalchampions/inst/ec-fm-{inst:02d}{suffix}.brr", f"/home/phlip/smwhack/AddmusicK_1.0.11/samples/eternalchampions/ec-fm-{inst:02d}{suffix}.brr")
 
 	notefreq = 440 * 2**(((transpose or note)-69)/12)
 	tuning = rate / notefreq / 8

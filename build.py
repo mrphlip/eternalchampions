@@ -7,7 +7,7 @@ import re
 import zipfile
 
 TOP=os.path.dirname(__file__)
-AMK="/home/phlip/smwhack/AddmusicK_1.0.6"
+AMK="/home/phlip/smwhack/AddmusicK_1.0.11"
 
 def init():
 	os.chdir(TOP)
