@@ -5,7 +5,7 @@
 	#game "Eternal Champions"
 	#title "RAX's Stage"
 	#author "DMP Entertainment"
-	#length "2:39" ; single loop 1:04
+	#length "2:07" ; single loop 1:03.6
 }
 
 #path "eternalchampions"

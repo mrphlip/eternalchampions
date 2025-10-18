@@ -5,7 +5,7 @@
 	#game "Eternal Champions"
 	#title "Shadow's Stage"
 	#author "DMP Entertainment"
-	#length "3:03" ; single loop 1:13
+	#length "2:26" ; single loop 1:13.1
 }
 
 #path "eternalchampions"

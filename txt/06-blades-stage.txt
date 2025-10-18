@@ -5,7 +5,7 @@
 	#game "Eternal Champions"
 	#title "Blade's Stage"
 	#author "DMP Entertainment"
-	#length "2:20" ; single loop 0:56
+	#length "1:52" ; single loop 0:56.2
 }
 
 #path "eternalchampions"

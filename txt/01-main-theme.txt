@@ -5,7 +5,7 @@
 	#game "Eternal Champions"
 	#title "Main Theme"
 	#author "DMP Entertainment"
-	#length "1:47" ; single loop 0:43
+	#length "1:25" ; single loop 0:42.7
 }
 
 #path "eternalchampions"

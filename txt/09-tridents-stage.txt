@@ -5,7 +5,7 @@
 	#game "Eternal Champions"
 	#title "Trident's Stage"
 	#author "DMP Entertainment"
-	#length "1:53" ; single loop 0:45
+	#length "1:30" ; single loop 0:45.2
 }
 
 #path "eternalchampions"

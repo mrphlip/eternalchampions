@@ -5,7 +5,7 @@
 	#game "Eternal Champions"
 	#title "Midknight's Stage"
 	#author "DMP Entertainment"
-	#length "2:04" ; single loop 0:50
+	#length "1:39" ; single loop 0:49.6
 }
 
 #path "eternalchampions"

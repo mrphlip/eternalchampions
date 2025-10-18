@@ -5,7 +5,7 @@
 	#game "Eternal Champions"
 	#title "Character Bios"
 	#author "DMP Entertainment"
-	#length "3:20" ; single loop 1:20
+	#length "2:40" ; single loop ~1:20
 }
 
 #path "eternalchampions"

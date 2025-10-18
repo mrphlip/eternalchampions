@@ -5,7 +5,7 @@
 	#game "Eternal Champions"
 	#title "Jetta's Stage"
 	#author "DMP Entertainment"
-	#length "2:40" ; single loop 1:04
+	#length "2:08" ; single loop 1:04.0
 }
 
 #path "eternalchampions"

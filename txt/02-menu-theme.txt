@@ -5,7 +5,7 @@
 	#game "Eternal Champions"
 	#title "Menu Theme"
 	#author "DMP Entertainment"
-	#length "4:34" ; single loop 1:50
+	#length "3:39" ; single loop 1:49.7
 }
 
 #path "eternalchampions"
