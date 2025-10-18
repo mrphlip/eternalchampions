@@ -87,7 +87,7 @@ def get_instruments(song, inst_dat):
 	instruments = match.group(1)
 	for i in instruments.split("\n"):
 		i = i.strip()
-		if not i or i.startswith('"square'):
+		if not i or i.startswith('"square') or "nocheck" in i:
 			continue
 		if i not in inst_dat:
 			raise ValueError(f"Incorrect values for {song} instrument {i}")

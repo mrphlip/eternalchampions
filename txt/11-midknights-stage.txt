@@ -57,6 +57,7 @@
 	"square-0-3-7.brr" $FF $E0 $00 $04 $00
 	"square-0-3-10.brr" $FF $E0 $00 $04 $00
 	"square.brr" $CF $40 $00 $04 $00
+	"ec-fm-31.brr" $FF $E0 $00 $06 $02  ; nocheck: octave below
 }
 
 w191
@@ -65,22 +66,119 @@ $EF $00 $00 $00
 $F0
 
 #0
-@30
+@33
 v192
 y10
-o5
+o4
+q7F
+$FA $02 $00
+
+;1
+c4. p8,20 ^4. p0,0 ^2. p8,40 ^1. p8,20 ^4. p0,0 ^2.^4
+;13
+p8,32 c4. p0,0 e-4. < a-4. > d4. p8,20 c4. c4.
+p0,0 c4. p8,20 e-4. p0,0 < a-4. > d4. p8,32 c4 p0,0
+q5F l16 < c e- f g b- > c q7F
+;25
+l8
+[[
+	d4. < c p8,32 f4 p0,0 b-
+	> p8,40 e-2.. p0,0
+	d-4. < d- p8,32 a-4 p0,0 > f
+	p8,40 e-2.. p0,0
+]]2
+;33
+d1^1^1^1
+< b-2 $DD $30 $0C a $DD $00 $0C b-
+	^2 $DD $00 $0C a $DD $00 $0C b- $DD $1E $0C a- $DD $00 $0C b-
+	^2 $DD $06 $0C a- $DD $00 $0C b-
+	^1.
+$FA $02 $0C
+(3)[ l16 q5F o4 d- < b- a- f e- d- < b- a- f e- d- < b- a- f e- d- ]
+$FA $02 $00
+
+#1
+@32
+v192
+y10
+o2
+l8
+q5F
+
+;1
+[[
+	(2)[ c c c < a-4 a- e e e b-4 b- a- a- a- d-4 ] d-
+	(2)
+]]2
+;25
+q7F
+l16
+[[
+	b-4. r b-8 r b- r8.
+	a-4. r a-8 r a- r8.
+	> d-4. r d-8 r d- r8.
+	< e-4. r e-8 r e- r f r
+]]2
+;33
+q5F
+[[
+	r8 b- r b- b- r b- r b- r f b- a- f d-
+	r8 b- r b- b- r b- r b- r f a- > d- < b- r
+]]3
+r8 b- r b- b- r b- r b- r f b- a- f d-
+(3)
+;41
+
+#2
+@33
+v192
+y10
+o1
+q3F
 l8
 
-[[ r4. ]]11 r4
-[[ r4. ]]11 r4
-[[ r2.. ]]8
-[[ r1 ]]8
+;1
+[[
+	(4)[ > c c c < a- a- a- b b b b- b- b- a- a- a- ] a a a
+	(4) a4
+]]2
+;25
+@50
+o1
+q7F
+(6)[ b-2.. a-2.. > d-2.. < e-2. f16 r16 ]2
+;33
+l16
+b-1^1^1. > r f a- f a- > d- < b- r <
+b-1^1^1
+@33
+(3)
+;40
+
+#3
+@34
+v255
+y10
+o2
+q5F
+
+;1
+[[
+	(5)[ c4. a-4. e4. b-4. a-4. ] d4.
+	(5) d4
+]]2
+;25
+q7F
+$FA $02 $0C (6)2 $FA $02 $00
+;33
+b-1^1^1. @33 v192 r f a- f a- > d- < b- r
+@34 v255 b-1^1^1 @33 v192 > a-2 g2
 
 #4
 v80
 y10
 o3
-q3F ; only play notes half as long
+q3F
 l16
 
 ;1
@@ -109,4 +207,77 @@ l16
 	@48 c r c r c c r c r c c c c c c r
 	@42 d r d r d d r d r d d d d d d r
 ]]2
+;41
+
+#5
+@49
+n18
+v80
+y10
+o3
+l8
+
+;1
+[[
+	[ c r ]17 c16 c16
+]]2
+;25
+l4
+[[
+	r c r c16 c16
+	r c r c8
+]]4
+;33
+l8
+(8)[ r4 c r4. c r4. c r4. c r16 c r8. c r4. c r ] r4 c r4. c16 c16 c16 c16
+(8)
+;40
+@33 v192 y10 o3
+f2 e-2
+;41
+
+
+#6
+@31
+v255
+y17
+o3
+l8
+
+;1
+[[ c ]]70
+;25
+[[
+	c r c c c c c
+	c r c c r c c
+]]2
+c r c c c c c
+c r8^2 c
+c r c r4. c
+c r c c r c c
+;33
+(7)[ r c16 c16 ]32
+;41
+
+
+#7
+@30
+v255
+y10
+o3
+l8
+
+;1
+[[
+	[ c r r c r c ]5 c r r c c
+]]2
+;25
+[[ c4 r8. c8. c16 c16 r8 ]]8
+;33
+[[
+	c r4^16 c r16 c r4
+	c r4^16 c16 c c r4
+]]3
+c r4^16 c r16 c r4
+r1
 ;41
