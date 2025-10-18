@@ -80,7 +80,7 @@ l16
 (4)[
 	o5
 	d- d- d- d- < b- r16^4 a- a- a- a- b- r >
-	d- d- d- d- < b- r16^8^2 >
+	d- d- d- d- < b- r8.^2 >
 	d- d- d- d- < b- r16^4 a- a- a- a- b- r >
 	r1
 ]2
@@ -125,7 +125,7 @@ l16
 (8)[
 	o4
 	a- a- a- a- g- r16^4 e- e- e- e- g- r
-	a- a- a- a- g- r16^8^2
+	a- a- a- a- g- r8.^2
 	a- a- a- a- g- r16^4 e- e- e- e- g- r
 	r1
 ]2
@@ -150,7 +150,7 @@ o4
 [[ r8 d- r ]]4
 r8 < b- r r8 b-8^2 >
 [[ r8 d- r ]]4
-r8 e-8^4^2
+r8 e-2..
 [[ r8 d- r ]]4
 r8 < b- r r8 b-8^2 >
 [[ r8 d- r ]]4
@@ -175,12 +175,12 @@ l4
 	o4
 	[[ r1 ]]3
 	e- d- < b- a-
-	e-8 r8^4
+	e-8 r4.
 	[[ r1 ]]5
 	r8 > e-8 d-8 < b-8
 	d-8 r2 r1 > e-8 d-8 < b-8
 	d-8 r2 r1 > e-8 d-8 < b-8 >
-	d-8 r8^4^2 r1
+	d-8 r2.. r1
 ]
 ;17
 (11)
@@ -191,11 +191,11 @@ l16
 [[ r8 a- r ]]4
 r8 g- r r8 g-8^2
 [[ r8 a- r ]]4
-r8 b-8^4^2
+r8 b-2..
 [[ r8 a- r ]]4
 r8 g- r r8 g-8^2
 [[ r8 a- r ]]4
-r8 b-8^4^2
+r8 b-2..
 ;41
 @34
 l4
@@ -216,7 +216,7 @@ o3
 ; just need one note for this, the only bar that has 4 simultaneous chimes
 @31
 y10
-r8 e-8^4^2
+r8 e-2..
 
 @33
 y18
