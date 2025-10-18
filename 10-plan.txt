@@ -1,13 +1,13 @@
-FM0: Arpeggio - 1 track, 1-22 and 28-33, centre
-FM1: Bass drum - 1 track, centre
-FM2: Cymbal - 1 track, hard left
-FM3: Bell - 1 track, 2,6,15,20,27, centre
-FM4: Bass - 1 track, 3-33, centre
-FM5: Bass 2 - 1 track, 3-33, centre
-FM6: Sine - 1 track, 5-22, centre
+FM0: Arpeggio - 1 track, 1-22 and 28-33, centre {{done}}
+FM1: Bass drum - 1 track, centre {{done}}
+FM2: Cymbal - 1 track, hard left {{done}}
+FM3: Bell - 1 track, 2,6,15,20,27, centre {{done}}
+FM4: Bass - 1 track, 3-33, centre {{done}}
+FM5: Bass 2 - 1 track, 3-33, centre {{done}}
+FM6: Sine - 1 track, 5-22, centre {{done}}
 FM7: Lead - 2 tracks, 23-26, centre
 FM8: Piano hit - 2 tracks, 24,26, can mostly interleave with FM7, centre
-PSG3: Snare - 1 track, can interleave with FM1 (and possibly FM2 if super necessary), centre
+PSG3: Snare - 1 track, can interleave with FM1 (and possibly FM2 if super necessary), centre {{done}}
 
 main loop is 1-29, 30-33 is the turnaround but is actually different to 1-4 this time so I need to use it for once
 
