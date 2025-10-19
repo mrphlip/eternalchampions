@@ -1,0 +1,51 @@
+#amk 2
+
+#SPC
+{
+	#game "Eternal Champions"
+	#title "Larcen's Stage"
+	#author "DMP Entertainment"
+	#length "3:48" ; single loop 1:53.8
+}
+
+#path "eternalchampions"
+
+#samples
+{
+	#optimized
+	"ec-fm-08.brr"
+	"ec-fm-15.brr"
+	"ec-fm-06.brr"
+	"ec-fm-52.brr"
+	"ec-fm-53.brr"
+	"ec-fm-54.brr"
+	"ec-fm-55.brr"
+	"ec-fm-31.brr"
+	"square.brr"
+}
+
+#instruments
+{
+	"ec-fm-08.brr" $FF $E0 $00 $03 $E8
+	"ec-fm-15.brr" $FF $E0 $00 $07 $CB
+	"ec-fm-06.brr" $FF $E0 $00 $04 $A0
+	"ec-fm-52.brr" $FF $E0 $00 $05 $8D
+	"ec-fm-53.brr" $FF $E0 $00 $07 $CD
+	"ec-fm-54.brr" $FF $E0 $00 $05 $87
+	"ec-fm-55.brr" $AF $C0 $00 $08 $81
+	"ec-fm-31.brr" $FF $E0 $00 $0C $03
+	"square.brr" $DF $40 $00 $04 $00
+}
+
+w191
+t54
+$EF $00 $00 $00
+$F0
+
+#0
+@30
+v192
+y10
+o3
+
+c4

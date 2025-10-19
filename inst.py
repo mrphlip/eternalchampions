@@ -20,8 +20,10 @@ def call(args):
 		return
 	try:
 		res = subprocess.check_output(args, stderr=subprocess.STDOUT).decode("utf-8")
-	finally:
-		print(res)
+	except subprocess.CalledProcessError as ex:
+		print(ex.output.decode("utf-8"))
+		raise
+	print(res)
 	if "sox WARN" in res:
 		raise Exception("sox warning")
 
@@ -156,6 +158,10 @@ def main():
 	doloop(49, 45, 6144, 0, 34453, 37662, maxnote=54)
 	doloop(50, 79, 8192, 3486, 3486, 3542, maxnote=90)
 	donoloop(51, 64, 8192, 0, 6967, maxnote=78)
+	donoloop(52, 66, 16384, 0, 5581, maxnote=67)
+	donoloop(53, 60, 16384, 0, 3543, transpose=60)
+	donoloop(54, 66, 16384, 0, 7981, maxnote=79)
+	doloop(55, 59, 16384, 0, 4911, 5625, 0xAFC0, maxnote=74)
 
 if __name__ == "__main__":
 	if "--skip" in sys.argv:

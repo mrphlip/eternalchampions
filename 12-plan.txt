@@ -1,0 +1,16 @@
+FM0: Bass drum, 1 track
+FM1: Cymbal, 1 track, hard left
+FM2: Bass, 1 track
+FM3: String pluck, 1 track
+FM4: Clicks, 1 track, hard right, interleave with FM1
+FM5: Ting, 1 track, somewhat sparse, might be interleavable
+FM6: multi
+	* Melody, 1 track, has pitch bends
+	* Bonus chords, 2 tracks, super intermittent, 21-24 and 53-56, must be interleavable
+FM7: Melody mirror, 1 track, has pitch bends
+PSG: multi
+	* Melody mirror, 1 track
+	* More chords, 2 tracks
+PSG3: Snare, 1 track
+
+that's way too many tracks, need to keep planning
