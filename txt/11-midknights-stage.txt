@@ -57,7 +57,7 @@
 	"square-0-3-7.brr" $FF $E0 $00 $04 $00
 	"square-0-3-10.brr" $FF $E0 $00 $04 $00
 	"square.brr" $CF $40 $00 $04 $00
-	"ec-fm-31.brr" $FF $E0 $00 $06 $02  ; nocheck: octave below
+	"ec-fm-31.brr" $FF $E0 $00 $06 $02  ; octave below
 }
 
 w191

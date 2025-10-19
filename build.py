@@ -55,8 +55,8 @@ def do_write_stats(songs, stats, fp):
 	for song in songs:
 		insert, samples, length = stats[song]
 		print(song, file=fp)
-		print(f"  Insert size: {insert}", file=fp)
-		print(f"  Samples size: {samples}", file=fp)
+		print(f"  Insert size: 0x{insert:04X} ({insert:,})", file=fp)
+		print(f"  Samples size: 0x{samples:04X} ({samples:,})", file=fp)
 		print(f"  Length: {length}", file=fp)
 		print(file=fp)
 
@@ -96,7 +96,7 @@ def get_instruments(song, inst_dat):
 	instruments = match.group(1)
 	for i in instruments.split("\n"):
 		i = i.strip()
-		if not i or i.startswith('"square') or "nocheck" in i:
+		if not i or i.startswith('"square') or ";" in i:
 			continue
 		if i not in inst_dat:
 			raise ValueError(f"Incorrect values for {song} instrument {i}")
