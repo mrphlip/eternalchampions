@@ -77,6 +77,11 @@ def render_midi(hdr, gd3, ym, psg, dn, songnum):
 	fn = os.path.join(dn, "output.mid")
 	with open(fn, "wb") as fp:
 		midifile.write_midi_file(fp, midi)
+	for track in tracks:
+		track[:] = [ev._replace(event=ev.event._replace(channel=0)) if hasattr(ev.event, 'channel') else ev for ev in track]
+	fn = os.path.join(dn, "output_noch.mid")
+	with open(fn, "wb") as fp:
+		midifile.write_midi_file(fp, midi)
 
 def get_timesig(songnum):
 	ts = 0
