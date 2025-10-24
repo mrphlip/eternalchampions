@@ -93,6 +93,11 @@ def main():
 	gen_squares(0, 3, 8)  # D F Bb
 	gen_squares(0, 5, 9)  # Db Gb Bb
 	gen_squares(0, 3, 10)  # C Eb Bb
+	# for 12 Larcen's Stage
+	gen_squares(0, 7)  # G D
+	gen_squares(0, 8)  # G Eb
+	gen_squares(0, 9)  # G E
+	gen_squares(0, 5)  # Bb Eb
 
 if __name__ == "__main__":
 	main()

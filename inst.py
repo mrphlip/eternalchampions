@@ -162,6 +162,7 @@ def main():
 	donoloop(53, 60, 16384, 0, 3543, transpose=60)
 	donoloop(54, 66, 16384, 0, 7981, maxnote=79)
 	doloop(55, 59, 16384, 0, 4911, 5625, 0xAFC0, maxnote=74)
+	doloop(31, 59, 16384, 0, 23466, 24179, insuffix="_inst55+square", suffix="-55-square", vol=0, maxnote=82)
 
 if __name__ == "__main__":
 	if "--skip" in sys.argv:

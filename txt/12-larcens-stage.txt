@@ -21,6 +21,11 @@
 	"ec-fm-54.brr"
 	"ec-fm-55.brr"
 	"ec-fm-31.brr"
+	"ec-fm-31-55-square.brr"
+	"square-0-5.brr"
+	"square-0-7.brr"
+	"square-0-8.brr"
+	"square-0-9.brr"
 	"square.brr"
 }
 
@@ -34,6 +39,11 @@
 	"ec-fm-54.brr" $FF $E0 $00 $05 $87
 	"ec-fm-55.brr" $AF $C0 $00 $08 $81
 	"ec-fm-31.brr" $FF $E0 $00 $0C $03
+	"ec-fm-31-55-square.brr" $FF $E0 $00 $08 $84
+	"square-0-5.brr" $DF $40 $00 $04 $00
+	"square-0-7.brr" $DF $40 $00 $04 $00
+	"square-0-8.brr" $DF $40 $00 $04 $00
+	"square-0-9.brr" $DF $40 $00 $04 $00
 	"square.brr" $DF $40 $00 $04 $00
 }
 

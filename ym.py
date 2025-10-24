@@ -127,7 +127,10 @@ def write_instruments(dn):
 	inst = (1, 3, 18, 97, 21, 28, 24, 17, 150, 26, 216, 21, 1, 1, 6, 131, 3, 1, 1, 13, 63, 47, 15, 15, 0, 0, 0, 0, 61, 210, 15)
 	if inst in all_instrumentmap:
 		gen_instrument_wav(all_instrumentmap[inst], inst, [40, 47], dn)
-
+	# Also want it at this specific note so I can mix it with a different instrument
+	# for Larcen's Stage
+	if inst in all_instrumentmap:
+		gen_instrument_wav(all_instrumentmap[inst], inst, [59], dn)
 
 def write_instrument(fp, ix, inst, dn):
 	print(f"Instrument {ix}: {inst!r}", file=fp)
