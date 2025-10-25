@@ -1,0 +1,48 @@
+#amk 2
+
+#SPC
+{
+	#game "Eternal Champions"
+	#title "Eternal Champion's Stage"
+	#author "DMP Entertainment"
+	#length "2:20" ; single loop 1:10.0
+}
+
+#path "eternalchampions"
+
+#samples
+{
+	#optimized
+	"ec-fm-56.brr"
+	"ec-fm-57.brr"
+	"ec-fm-08.brr"
+	"ec-fm-58.brr"
+	"ec-fm-07-square.brr"
+	"square.brr"
+}
+
+#instruments
+{
+	"ec-fm-56.brr" $FF $E0 $00 $0B $7E
+	"ec-fm-57.brr" $AF $ED $00 $09 $C0
+	"ec-fm-08.brr" $FF $E0 $00 $03 $E8
+	"ec-fm-58.brr" $FF $E0 $00 $03 $00
+	"ec-fm-07-square.brr" $CF $F1 $00 $01 $3A
+	"square.brr" $DF $C0 $00 $04 $00
+	"square.brr" $DF $80 $00 $04 $00
+}
+
+#halvetempo
+w191
+t72
+$EF $00 $00 $00
+$F0
+
+#0
+@30
+v192
+y10
+o3
+l8
+
+c4

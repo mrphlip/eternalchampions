@@ -26,14 +26,17 @@ SONGSPEED[9] = 1970535 / RATE / 24 / 4
 SONGSPEED[10] = 3092158 / RATE / (22*6 + 8 + 7 + 3*6)
 SONGSPEED[11] = 2199690 / RATE / ((3*11 + 2 + 3*11 + 2 + 7*8 + 8*8)/2)
 SONGSPEED[12] = 4961985 / RATE / 16 / 16
+SONGSPEED[13] = 3099494 / RATE / 105 / 2
 TIMESIG = [[(4,2)]] * 17  # 4/4
 TIMESIG[5] = [(3,2)]  # 3/4
 TIMESIG[10] = [(6,2,22), (4,2,3), (3,2,1), (6,2)]  # 6/4 for 22 bars, then 3x 4/4, 1x 3/4 then back to 6/4
 TIMESIG[11] = [(3,3,11), (2,3,1), (3,3,11), (2,3,1), (7,3,8), (4,2,8)]  # what a mess
+TIMESIG[13] = [(4,2,29), (6,2,1), (4,2)]
 MIDI_TICKRATE = 192 # 96
 SONGDELAY = [0] * 17
 SONGDELAY[8] = 23
 SONGDELAY[9] = 23
+SONGDELAY[13] = 10
 
 ALLFILES = True
 

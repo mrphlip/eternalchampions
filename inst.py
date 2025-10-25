@@ -163,6 +163,11 @@ def main():
 	donoloop(54, 66, 16384, 0, 7981, maxnote=79)
 	doloop(55, 59, 16384, 0, 4911, 5625, 0xAFC0, maxnote=74)
 	doloop(31, 59, 16384, 0, 23466, 24179, insuffix="_inst55+square", suffix="-55-square", vol=0, maxnote=82)
+	doloop(56, 53, 16384, 0, 21479, 22490, maxnote=83)
+	doloop(57, 44, 8192, 0, 19538, 22936, 0xAFED, maxnote=54)
+	doloop(58, 76, 16384, 0, 14058, 14593, maxnote=88)
+	# 59 is the same sample as 56
+	doloop(7, 80, 8192, 0, 8822, 9775, 0xCFF1, insuffix="_square", suffix="-square", maxnote=89)
 
 if __name__ == "__main__":
 	if "--skip" in sys.argv:
