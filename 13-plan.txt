@@ -1,12 +1,12 @@
-FM0: Melody 1, 2 tracks, everywhere except 30, 43-44, 47-48, 51-52
-FM1: Bass, 1 track
-FM2: Bass drum, 1 track
-FM3: Melody 2, 1 track, 6-12, 15-30, 36-40, hard left, with pitch bends
-FM4: Mirror of FM3, hard right
-FM5: Melody 3, 2 tracks, 43-44, 47-48, 51-52
-PSG0: Extra bass, 1 track, 41-52
-PSG1+2: Mirror of FM5
-PSG3: Snare, interleave with FM2
+FM0: Melody 1, 2 tracks, everywhere except 30, 43-44, 47-48, 51-52 {{done}}
+FM1: Bass, 1 track {{done}}
+FM2: Bass drum, 1 track {{done}}
+FM3: Melody 2, 1 track, 6-12, 15-30, 36-40, hard left, with pitch bends {{done}}
+FM4: Mirror of FM3, hard right {{done}}
+FM5: Melody 3, 2 tracks, 43-44, 47-48, 51-52 {{done}}
+PSG0: Extra bass, 1 track, 41-52 {{done}}
+PSG1+2: Mirror of FM5 {{done}}
+PSG3: Snare, interleave with FM2 {{done}}
 
 FM0 and FM4 are the same instrument
 Can mix FM5 with square wave to share with PSG1+2
@@ -14,10 +14,10 @@ Can mix FM5 with square wave to share with PSG1+2
 0: FM0 High; FM5+PSG1+2 High
 1: FM0 Low; FM5+PSG1+2 Low
 2: FM1
-3: FM3
+3: FM3; PSG0
 4: FM4
-5: PSG0
-6: FM2+PSG3
+5: PSG3
+6: FM2
 7: Unused
 
 FM0: @30

@@ -42,7 +42,262 @@ $F0
 @30
 v192
 y10
+o2
+l8
+
+;1
+(1)[
+	a4 r > c < r a r > c4
+	c c c c < b r a4
+	r4 > c < r a r > c4
+	c c c c < b r [[ g4.
+	r b- r g r
+	b-1^1 ]]2 ^8
+]2
+;21
+c4 r c4. r c4. r c2 r
+c4 r c c4. r
+a- g g- f r f4.
+d-4 r d-8^2
+c4 r c2 r
+f4. f2 r
+e4. e8^1.
+r1.
+;31
+(1)
+;41
+(3)[
+	@30
+	o2
+	e4 r g r e r g4
+	g g g g f+ r4
+	@34
+	o4
+	r g g g g f+ r4
+	d r d r f+4. r
+]
+@30
+o2
+d4 r f r d r f4
+f f f f e r4
+@34
+o4
+r a b- > d e4 f e
+d4 < b-4 a4. r
+(3)
+;53
+
+#1
+@30
+v192
+y10
+o2
+l8
+
+;1
+(2)[
+	e4 r g r e r g4
+	g g g g f+ r e4
+	r4 g r e r g4
+	g g g g f+ r [[ d4.
+	r e- r d r
+	d-1^1 ]]2 ^8
+]2
+;21
+< g4 r g4. r g4. r g2 r
+g4 r g g4. r
+> e- d d- c r c4.
+< a-4 r a-8^2
+g4 r g2 r
+> c4. c2 r
+< b4. b8^1.
+r1.
+;31
+(2)
+;41
+(4)[
+	@30
+	o1
+	b4 r > d r < b r > d4
+	d d d d c+ r4
+	@34
+	o4
+	r d d d d c+ r4
+	< a r a r > c+4. r
+]
+@30
+o1
+a4 r > c r < a r > c4
+c c c c < b r4
+@34
+o4
+r e f a b-4 > c < b-
+a4 f4 e4. r
+(4)
+;53
+
+#2
+@31
+v192
+y10
+o1
+l8
+
+;1
+(5)[
+	[[ a ]]15 a4
+	[[ a ]]14 [[ g4
+	g g g4 g g b16 > c16
+	d-4 d- d-4 d-4 d-
+	d-4 < d- d-4 f4 ]]2 ^8
+]2
+;21
+> c4 r c c4 r
+c4. r c c4. r
+c4 r c c4 < a+ g+
+f4 r f4 g+ a+ > c
+d-4 r d- d-2
+c4 r c c4 r c
+< f4 r f4 f r f
+e4 r e4 e r e
+> e4 < b4 g+4 e4
+> f+ e r c < r b f+ e r > c < r b
+;31
+(5)
+;41
+(6)[ e4 r e e r4 e4 r4 e e4 r4 ]2
+[ d4 r d d r4 d4 r4 d d4 r4 ]2
+(6)2
+;53
+
+#3
+@33
+v192
+y20
+o4
+l16
+
+;1
+r1 r1 r1 r1 r1
+(7)[
+	a+ f c+ f a+ f c+ f a f c+ f a f c+ f
+	g+ f c+ f g+ f c+ f g d+ < a+ > d+ g d+ < a+ > d+
+	< g8 a+4 > d4 g4 a8
+	a+ f c+ f a+ f c+ f a f c+ f a f c+ f
+	g+ f c+ f g+ f c+ f g d+ < a+ > d+ g d+ < a+ > d+
+]
+;11
+e2 $DD $30 $18 d $DD $00 $18 e ^1^4 r4
+r1 r1
+< a+4. $DD $18 $18 g+ $DD $00 $18 a+ > d4. $DD $18 $18 c $DD $00 $18 d g4
+(7)
+;21
+l8
+g4. < a a+ > d e
+f+2 < a a+ > d e r
+f2 e2
+d+ d c+ c4 r4.
+c2^8 < g+ > c f
+g1
+c2^8 < g+ > c f
+g+4. { ^16 g16 f+16 } e2
+e { < g+16 b16 > e16 } g+ { < b16 > e16 g+16 } b { e16 g+16 b16 } > e4
+< f+ e r c < r b f+ e r c < r b 
+;31
+r1 r1 r1 r1 r1
+(7)
+;41
+@35
+v80
+y10
+o2
+l8
+[[ e ]]32
+[[ d ]]32
+[[ e ]]32
+;53
+
+#4
+@30
+v192
+y0
+o3
+l16
+
+;1
+r1 r1 r1 r1 r1
+(8)[
+	> c < a+ f a+ > c < a+ f a+ > c < a f a > c < a f a
+	> c < g+ f g+ > c < g+ f g+ > c < a+ g a+ > c < a+ g a+
+	< a+8 > d4 g4 a+4 > c8 <
+	> c < a+ f a+ > c < a+ f a+ > c < a f a > c < a f a
+	> c < g+ f g+ > c < g+ f g+ > c < a+ g a+ > c < a+ g a+
+]
+;11
+> c2 < $DD $30 $18 b- > $DD $00 $18 c ^1^4 r4
+r1 r1
+< g4. $DD $18 $18 f $DD $00 $18 g a+4. $DD $18 $18 g+ $DD $00 $18 a+ > d4
+(8)
+;21
+l8
+< g2.. f+8
+^1
+f2 e2
+g+ g f+ f4 r4.
+f2^8 c+ f g+
+> c1
+< f2^8 c+ f g+
+b4. { ^16 a+16 a16 } g+2
+b { e16 g+16 b16 } > e { < g+16 b16 > e16 } g+ { < b16 > e16 g+16 } b4
+f+ e r c < r b f+ e r c < r b 
+;31
+r1 r1 r1 r1 r1
+(8)
+;41
+[[ r1 ]]12
+;53
+
+#5
+@36
+n18
+v80
+y10
+q5F
+o3
+
+;1
+[[ r4 c4 ]]56
+r1
+c4 r2 c4 r2
+;31
+[[ r4 c4 ]]20
+;41
+r8
+[[ r4 c4 ]]23
+c16 c16 c8 c8
+;53
+
+#6
+@32
+v192
+y10
 o3
 l8
 
-c4
+;1
+[[
+	(9)[ c r4 c c c r c ]
+	(10)[ r c r c c c r c ]
+	(11)[ c r4 c c r4 c ]
+	(10)2
+	(9) (11) (10)2 (11)
+]]2
+;21
+(9) (10) (11) (10)5
+c r c r c r c r
+r c r c r c r c r c r c
+;31
+(9) (10) (11) (10)2 (9) (11) (10)2 (11)
+;41
+[[ c r4. ]]24
+;53
