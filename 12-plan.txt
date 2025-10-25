@@ -1,17 +1,17 @@
 FM0: Bass drum, 1 track {{done}}
 FM1: Cymbal, 1 track, hard left {{done}}
-FM2: Bass, 1 track
+FM2: Bass, 1 track {{done}}
 FM3: String pluck, 1 track {{done}}
 FM4: Clicks, 1 track, hard right, interleave with FM1 {{done}}
-FM5: Ting, 1 track, somewhat sparse, might be interleavable
+FM5: Ting, 1 track, somewhat sparse, might be interleavable {{done}}
 FM6: multi
 	* Melody, 1 track, has pitch bends {{done}}
-	* Bonus chords, 2 tracks, super intermittent, 21-24 and 53-56, must be interleavable
+	* Bonus chords, 2 tracks, super intermittent, 21-24 and 53-56, must be interleavable {{done}}
 FM7: Melody mirror, 1 track, has pitch bends {{done}}
 PSG: multi
 	* Melody mirror, 1 track {{done}}
 	* More chords, 2 tracks {{done}}
-PSG3: Snare, 1 track
+PSG3: Snare, 1 track {{done}}
 
 that's way too many tracks, need to keep planning
 * can theoretically interleave FM0, FM5, PSG3 into two channels with some shuffling
