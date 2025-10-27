@@ -1,0 +1,29 @@
+FM0: Bass drum, 1 track, tuneless
+FM1: Bass, 1 track
+FM2: Rhythm, 1 track
+FM3: Single note right at the start, hard left
+FM4: Click, 1 track, tuneless, hard right
+FM5: Rhythm 2, 1 track
+FM6: Melody, 1 track, hard left, pitch bends
+FM7: Cymbal, 1 track, tuneless, centre
+FM8: Bass hit, 1 track, tuneless, centre
+FM9: Accompaniment, 1 track, sparseish? hard left
+PSG: 1 track 1-4, 2 tracks 5-20, 3 tracks 21-32, 2 tracks, 33-36
+
+Song has an intro, 12 bars, then a 24-bar loop
+
+FM3 and FM9 are the same instrument
+FM0+4+7+8 are percussion, can all interleave together
+This is still 10 tracks, more packing needed
+
+FM0: @30
+FM1: @31
+FM2: @31
+FM3: @38
+FM4: @33
+FM5: @34
+FM6: @35
+FM7: @36
+FM8: @37
+FM9: @38
+PSG: @39
