@@ -14,7 +14,16 @@ Song has an intro, 12 bars, then a 24-bar loop
 
 FM3 and FM9 are the same instrument
 FM0+4+7+8 are percussion, can all interleave together
-This is still 10 tracks, more packing needed
+PSG 3-note chords need to be instruments, but 2-note parts are separate tracks
+
+0: FM6
+1: FM1
+2: FM2
+3: FM5
+4: FM3+FM9
+5: PSG high/chords
+6: PSG low
+7: FM0+4+7+8
 
 FM0: @30
 FM1: @31
@@ -27,3 +36,4 @@ FM7: @36
 FM8: @37
 FM9: @38
 PSG: @39
+PSG chords: @40, @41, @42 - minor chord in root, 1st inv, 2nd inv

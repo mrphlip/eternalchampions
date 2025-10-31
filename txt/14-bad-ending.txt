@@ -23,6 +23,9 @@
 	"ec-fm-66.brr"
 	"ec-fm-67.brr"
 	"square.brr"
+	"square-0-3-7.brr"
+	"square-0-4-9.brr"
+	"square-0-5-8.brr"
 }
 
 #instruments
@@ -37,6 +40,9 @@
 	"ec-fm-66.brr" $FF $F3 $00 $03 $FF
 	"ec-fm-67.brr" $FF $E0 $00 $04 $00
 	"square.brr" $DF $60 $00 $04 $00
+	"square-0-3-7.brr" $DF $60 $00 $04 $00
+	"square-0-4-9.brr" $DF $60 $00 $04 $00
+	"square-0-5-8.brr" $DF $60 $00 $04 $00
 }
 
 w191
