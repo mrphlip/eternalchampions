@@ -172,6 +172,60 @@ o3
 d- r e r g r g r g r f+ r g r a r
 ;37
 
+#5
+@39
+v80
+y10
+o4
+l2
+q7F
+
+;1
+r e- d c < b- a g f+4 r4
+;5
+q5F
+l1
+b- a a g g g g g2 f+4 r4
+/
+;13
+b- a a g g g g f+
+;21
+v100
+q2F
+l4
+[[
+	r2 @42 g g @41 e- e- @40 c c
+	r2 @40 g g @42 d d @41 < b- b- >
+]]3
+@39
+v80
+q5F
+l2
+g b- g r > d e- d c4 r4
+;37
+
+#6
+@39
+v80
+y10
+o4
+l2
+
+;1
+r1 r1 r1 r1
+;5
+q5F
+l1
+g f+ f e e- d d- d
+/
+;13
+g f+ f e e- d d- d
+;21
+[[ r1 ]]12
+l2
+e g e e4 r4 b- a g f+4 r4
+;37
+
 #7
 v192
 o3

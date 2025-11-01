@@ -8,7 +8,7 @@ FM6: Melody, 1 track, hard left, pitch bends {{done}}
 FM7: Cymbal, 1 track, tuneless, centre {{done}}
 FM8: Bass hit, 1 track, tuneless, centre {{done}}
 FM9: Accompaniment, 1 track, sparseish? hard left {{done}}
-PSG: 1 track 1-4, 2 tracks 5-20, 3 tracks 21-32, 2 tracks, 33-36
+PSG: 1 track 1-4, 2 tracks 5-20, 3 tracks 21-32, 2 tracks, 33-36 {{done}}
 
 Song has an intro, 12 bars, then a 24-bar loop
 
