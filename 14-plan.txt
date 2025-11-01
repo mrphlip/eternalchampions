@@ -1,13 +1,13 @@
-FM0: Bass drum, 1 track, tuneless
-FM1: Bass, 1 track
-FM2: Rhythm, 1 track
-FM3: Single note right at the start, hard left
-FM4: Click, 1 track, tuneless, hard right
-FM5: Rhythm 2, 1 track
-FM6: Melody, 1 track, hard left, pitch bends
-FM7: Cymbal, 1 track, tuneless, centre
-FM8: Bass hit, 1 track, tuneless, centre
-FM9: Accompaniment, 1 track, sparseish? hard left
+FM0: Bass drum, 1 track, tuneless {{done}}
+FM1: Bass, 1 track {{done}}
+FM2: Rhythm, 1 track {{done}}
+FM3: Single note right at the start, hard left {{done}}
+FM4: Click, 1 track, tuneless, hard right {{done}}
+FM5: Rhythm 2, 1 track {{done}}
+FM6: Melody, 1 track, hard left, pitch bends {{done}}
+FM7: Cymbal, 1 track, tuneless, centre {{done}}
+FM8: Bass hit, 1 track, tuneless, centre {{done}}
+FM9: Accompaniment, 1 track, sparseish? hard left {{done}}
 PSG: 1 track 1-4, 2 tracks 5-20, 3 tracks 21-32, 2 tracks, 33-36
 
 Song has an intro, 12 bars, then a 24-bar loop
@@ -27,7 +27,7 @@ PSG 3-note chords need to be instruments, but 2-note parts are separate tracks
 
 FM0: @30
 FM1: @31
-FM2: @31
+FM2: @32
 FM3: @38
 FM4: @33
 FM5: @34

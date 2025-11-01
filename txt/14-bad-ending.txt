@@ -51,10 +51,138 @@ $EF $00 $00 $00
 $F0
 
 #0
-@30
+@35
+v192
+y17
+o4
+l4
+q7F
+
+;1
+r2 c2 < b-2 a2 g2 f+2 e-2 d r >
+;5
+d g a b-8 a2 $DD $0C $06 b- $DD $00 $06 a ^8 g2
+d2 a g d2. r
+< a b- > d e-8 d2 $DD $0C $06 e- $DD $00 $06 d ^8 < b-2
+a2 g2 g2 f+ r
+/
+;13
+> d g a b-8 a2^8 g r
+d2 a g d2. r
+< a b- > d e-8 d2 $DD $00 $06 e- $DD $00 $06 d ^8 < b-2
+a2 > c+2 d2 r2
+;21
+q2F
+[[
+	o5
+	r1 r1
+	r2 d d < b- b- g g
+]]3
+;33
+q7F
+o4
+e2 g2 b-2 b-2
+b-2 a2 g2 f+ r
+;37
+
+#1
+v192
+@31
+y10
+o1
+q7F
+
+;1
+d1. r4 a4 d1. r2
+;5
+q5F
+l1
+g f+ f e e- d a d
+/
+;13
+g f+ f e e- d a d
+;21
+q7F
+[[ > c1. r2 < g1. r2 ]]3 a1. r2 d1. r2
+;37
+
+#2
+@32
 v192
 y10
-o2
-l8
+o3
+l2
 
-c4
+;1
+d > e- d c < b- a g f+
+(2)[
+	g d f+ d f d e c
+	e- c d < b- > d- < a ] > g f+
+/
+;13
+(2) d2. r4
+;21
+[[ e- g a g d1. r ]]3
+d- e a g g d f+ r
+;37
+
+#3
+@34
+v192
+y10
+o4
+l2
+
+;1
+r f+ f e- d c < b- a
+q5F
+l1
+(3)[ b- a a g g g d-2 f2 d2. r4 ]
+/
+;13
+(3)
+;21
+q7F o4 l2
+[[ e- g a g d1. r ]]3
+e2. r4 d-2. r4 d1. r2
+;37
+
+#4
+@38
+v192
+y20
+o3
+l4
+q7F
+
+;1
+d r1.. r1 r1
+q4F
+(4)[
+	> d g a b- a r g r
+	d r a g d r c r
+	< a b- > d e- d r < b- r
+	a r ] g r b- r a r
+/
+;13
+(4) > e r f+ r2.
+;21
+o3
+[[ e- r g r a r g r d r1.. ]]3
+d- r e r g r g r g r f+ r g r a r
+;37
+
+#7
+v192
+o3
+q3F
+l4
+
+(1)[
+	@30 y10 c r @33 y0 c @30 y10 c
+	c r @33 y0 c @36 y10 c
+	@30 y10 c r @33 y0 c @30 y10 c
+	c r @33 y0 c @37 y10 c
+]3
+/
+(1)6
