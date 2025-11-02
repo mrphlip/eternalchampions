@@ -1,0 +1,18 @@
+FM0: bass drum, 1 track, tuneless {{done}}
+FM1: bass, 1 track {{done}}
+FM2: cymbal, 1 track, hard left, tuneless {{done}}
+FM3: chords, 2 tracks, intermittent {{done}}
+FM4: melody, 1 track, hard right {{done}}
+PSG0: arpeggios, 1 track {{done}}
+PSG3: snare, 1 track, interleave with FM0 {{done}}
+
+12 bars intro, 26 bars of loop
+
+0: FM4
+1: FM1
+2: FM3 high
+3: FM3 low
+4: PSG0
+5: FM0+PSG3
+6: FM2
+7: unused

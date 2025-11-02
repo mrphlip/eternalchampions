@@ -1,0 +1,221 @@
+#amk 2
+
+#SPC
+{
+	#game "Eternal Champions"
+	#title "Battle Room"
+	#author "DMP Entertainment"
+	#length "1:58" ; lead-in 0:22.2, single loop 0:48.0
+}
+
+#path "eternalchampions"
+
+#samples
+{
+	#optimized
+	"ec-fm-08.brr"
+	"ec-fm-06.brr"
+	"ec-fm-09.brr"
+	"ec-fm-37.brr"
+	"ec-fm-68.brr"
+	"square.brr"
+}
+
+#instruments
+{
+	"ec-fm-08.brr" $FF $E0 $00 $03 $E8
+	"ec-fm-06.brr" $FF $E0 $00 $04 $A0
+	"ec-fm-09.brr" $FF $E0 $00 $03 $EF
+	"ec-fm-37.brr" $BF $A0 $00 $03 $C0  ; octave below
+	"ec-fm-68.brr" $8F $F0 $00 $04 $E1
+	"square.brr" $FF $E0 $00 $04 $00
+	"square.brr" $FF $F6 $00 $04 $00
+}
+
+w191
+t52
+$EF $00 $00 $00
+$F0
+
+#0
+@34
+v192
+y3
+o2
+l16
+
+;1
+r1 r1 r1 r1
+;5
+[[
+	r2 r8. d > d < g > c < a
+	r2 r8. < d g a > c d
+	r2 r8. d > d < d > c < a
+	r2 r8. < d g a > c d
+]]2
+/
+;13
+[[ < b8. > b r2 r8 e f ]]3
+r8 d r8 e r8 f r8 d r e f a
+[[ d8. > d < r2 r8 g a ]]3
+r8 f r8 g r8 a r8 f r g a r
+;21
+[[ r1 ]]8
+;29
+[[ b ]]29 f g a
+[[ b ]]32
+[[ b- ]]32
+[[ a ]]32
+[[ a- ]]28 r < a > c d
+;39
+
+#1
+@31
+v192
+y10
+o2
+l8
+
+;1
+[[ d r ]]48
+/
+;13
+(4)[ < b r16 b16 r > d4 e8. f8. ]4
+[ d r16 d16 r f4 g8. a-8. ]4
+;21
+(4)3
+< b r16 b16 r > f4 e8. d8.
+(4)3
+< b- > b- < b-16 r16 b- > a- < b- > g- f
+;29
+< b1... r >
+;31
+(4)3
+< b r16 b16 r > f4 e8. d8.
+(4)3
+< b r16 b16 r > d4 e8. r8.
+;39
+
+#2
+@33
+v192
+y10
+o3
+
+;1
+a1^1 d1^1
+;5
+[[ r1 ]]8
+/
+;13
+[[ r1 ]]8
+;21
+b1^1^1 r1
+b-1^1^1 r1
+< b1^1
+;31
+l1
+> > b r b- r a r a- r
+;39
+
+#3
+@33
+v192
+y10
+o3
+
+;1
+d1^1 < d1^1 >
+;5
+[[ r1 ]]8
+/
+;13
+[[ r1 ]]8
+;21
+g-1^1^1 r1
+f1^1^1 r1
+< < b1^1
+;31
+l1
+> > > g- r f r e r e- r
+;39
+
+#4
+@35
+v80
+y10
+q1F
+o5
+l16
+
+;1
+r1 r1 r1 r1
+;5
+[
+	d r < d > d r < d > d < d d > d < d r > f < d > f < d >
+	d r < d > d < d d > d < d d > c < d d a d > c < d >
+	d < d d > d < d d > d < d d > d < d d > f < d > f < d >
+	< d > d < r d > c < d d g d d a d > c < d a r >
+]2
+/
+;13
+o4
+(5)[
+	b r < b > b < b b > > d r < < b > b < b b > a < b > b < b >
+	b < b b > b < b b > > d < < b b > > e < < b b > > d < < b > b < b >
+	b < b b > b < b b > > d < < b b > b < b b > a < b > b < b >
+]
+(6)[ b < b b > b < b b > g- < b b > a < b b > b < b > a r ]
+$FA $02 $03 ; up a minor third
+(5) (6)
+$FA $02 $00
+;21
+[[ r1 ]]10
+;31
+(5) (6) (5)
+b < b b > b < b b > g- < b b > a < b b > r d a r
+;39
+
+#5
+y10
+o3
+l8
+
+[[
+	(1)[ @30 v192 c r @36 n18 v80 c @30 v192 c r c @36 n18 v80 c @30 v192 c ]
+	(2)[ @30 v192 c r @36 n18 v80 c @30 v192 c r c @36 n18 v80 c16 @30 v192 c8. ]2
+	(3)[ c r @36 n18 v80 c r4 c r16 c16 c ]
+]]3
+/
+[[ (1) (2)2 (3) ]]2
+[[ (1) (2) ]]3
+[[ (1) (2)2 (3) ]]3
+
+#6
+@32
+v192
+y17
+o3
+l16
+
+;1
+[[
+	(7)[
+		c c c c c c c c c c c c r8 c c
+		c c c c r8. c c c c c r8 c c
+	]
+	(8)[
+		c c c c r8 c c c c c c c r c c
+		c c c c c r c c c c c c c c c c
+	]
+]]3
+/
+;13
+(7) (8)
+;17
+[[ c ]]64
+;21
+(7)3
+;27
+[[ (7) (8) ]]3
+;39

@@ -28,6 +28,7 @@ SONGSPEED[11] = 2199690 / RATE / ((3*11 + 2 + 3*11 + 2 + 7*8 + 8*8)/2)
 SONGSPEED[12] = 4961985 / RATE / 16 / 16
 SONGSPEED[13] = 3099494 / RATE / (51 * 4 + 6)
 SONGSPEED[14] = 1901507 / RATE / 24 / 4
+SONGSPEED[15] = 2124871 / RATE / 26 / 4
 TIMESIG = [[(4,2)]] * 17  # 4/4
 TIMESIG[5] = [(3,2)]  # 3/4
 TIMESIG[10] = [(6,2,22), (4,2,3), (3,2,1), (6,2)]  # 6/4 for 22 bars, then 3x 4/4, 1x 3/4 then back to 6/4
