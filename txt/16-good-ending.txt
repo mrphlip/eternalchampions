@@ -1,0 +1,58 @@
+#amk 2
+
+#SPC
+{
+	#game "Eternal Champions"
+	#title "Good Ending"
+	#author "DMP Entertainment"
+	#length "1:43" ; lead-in 0:04.1, single loop 0:49.4
+}
+
+#path "eternalchampions"
+
+#samples
+{
+	#optimized
+	"ec-fm-69.brr"
+	"ec-fm-69-60.brr"
+	"ec-fm-69-70.brr"
+	"ec-fm-01.brr"
+	"ec-fm-02.brr"
+	"ec-fm-71.brr"
+	"square.brr"
+	"square-0-2.brr"
+	"square-0-3.brr"
+	"square-0-4.brr"
+	"square-0-5.brr"
+	"square-0-7.brr"
+}
+
+#instruments
+{
+	"ec-fm-69.brr" $FF $E0 $00 $07 $DB
+	"ec-fm-69-60.brr" $FF $E0 $00 $07 $D4
+	"ec-fm-69-70.brr" $FF $E0 $00 $07 $D4
+	"ec-fm-01.brr" $FF $E0 $00 $0A $79
+	"ec-fm-02.brr" $FF $E0 $00 $12 $82
+	"ec-fm-71.brr" $FF $E0 $00 $03 $41
+	"square.brr" $FF $F5 $00 $04 $00
+	"square-0-2.brr" $FF $F5 $00 $04 $00
+	"square-0-3.brr" $FF $F5 $00 $04 $00
+	"square-0-4.brr" $FF $F5 $00 $04 $00
+	"square-0-5.brr" $FF $F5 $00 $04 $00
+	"square-0-7.brr" $FF $F5 $00 $04 $00
+}
+
+w191
+t35
+$EF $00 $00 $00
+$F0
+
+#0
+@34
+v192
+y10
+o3
+l4
+
+c

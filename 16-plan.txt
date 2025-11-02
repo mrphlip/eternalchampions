@@ -1,0 +1,43 @@
+FM0: bass drum, 1 track, tuneless
+FM1: cymbal, 1 track, tuneless
+FM2: bass, 1 track
+FM3: chords low, 1 track, hard left
+FM4: chords high, 1 track, hard right
+FM5: snare, 1 track, tuneless, interleave with FM0
+FM6: melody, 1 track
+FM7: harmony, 1 track
+PSG0: arpeggios, 1 track
+PSG1+2: chords, 2 tracks
+
+2 bar intro, 24 bar loop
+
+FM3, FM4, FM6 are all the same instrument
+
+Every percussion hit on FM0 or FM5 occurs at time as one on FM1
+if we make composite 0+1 and 5+1 instruments then 0+1+5 can be one track
+
+PSG1+2 also wants to be one track with psg_chords
+at least, for the first 16 bars... 17-26 look miserable
+
+0: FM6
+1: FM2
+2: FM3
+3: FM4
+4: FM7
+5: PSG1+2
+6: PSG0
+7: FM0+1+5
+
+FM1: @30
+FM1+0: @31
+FM1+5: @32
+FM2: @33
+FM3: @34
+FM4: @34
+FM6: @34
+FM7: @35
+PSG0: @36
+PSG1+2: @37..41
+
+PSG0 at v80 and PSG1+2 at v115 is balanced
+* presumably a factor of sqrt(2)?

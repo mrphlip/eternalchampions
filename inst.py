@@ -70,7 +70,7 @@ def doloop(inst, note, rate, start, loop, end, adsr=0xFFE0, insuffix="", suffix=
 
 	print(f"\"ec-fm-{inst:02d}{suffix}.brr\" ${adsr>>8:02X} ${adsr&0xFF:02X} $00 ${tuninga:02X} ${tuningb:02X}")
 
-def donoloop(inst, note, rate, start, end, adsr=0xFFE0, suffix="", transpose=None, maxnote=None, vol=VOL):
+def donoloop(inst, note, rate, start, end, adsr=0xFFE0, insuffix="", suffix="", transpose=None, maxnote=None, vol=VOL):
 	fulllen = (end - start) / ORIGRATE
 	samp = fulllen * rate
 	blocks = round(samp / 16)
@@ -78,7 +78,7 @@ def donoloop(inst, note, rate, start, end, adsr=0xFFE0, suffix="", transpose=Non
 	newsamp = blocks * 16
 
 	if not os.path.exists(f"inst/ec-fm-{inst:02d}{suffix}.brr") and not SKIPBUILD:
-		call(["sox", f"out/inst{inst:02d}_{note:02d}.wav", "tmp/tmp1.wav", "trim", f"{start}s", "channels", "1", "vol", f"{vol}dB", "rate", f"{rate}"])
+		call(["sox", f"out/inst{inst:02d}_{note:02d}{insuffix}.wav", "tmp/tmp1.wav", "trim", f"{start}s", "channels", "1", "vol", f"{vol}dB", "rate", f"{rate}"])
 		call(["sox", "tmp/tmp1.wav", "tmp/tmp2.wav", "trim", "0s", f"{newsamp}s"])
 		call(["wine", "../smwhack/brrtools/brr_encoder.exe", "tmp/tmp2.wav", "tmp/tmp.brr"])
 		call(["wine", "../smwhack/brrtools/brr_decoder.exe", f"-s{rate}", "tmp/tmp.brr", f"tmp/out_{inst:02d}{suffix}.wav"])
@@ -104,7 +104,7 @@ def donoloop(inst, note, rate, start, end, adsr=0xFFE0, suffix="", transpose=Non
 
 def main():
 	donoloop(0, 36, 16384, 0, 7368, transpose=60)
-	doloop(1, 43, 8192, 0, 26126, 29736, maxnote=51)
+	doloop(1, 43, 8192, 0, 26126, 29736, maxnote=52)
 	doloop(2, 45, 16384, 0, 23269, 24872, maxnote=80)
 	# duplicate of the instrument at a lower bitrate to use for higher notes
 	doloop(2, 45, 9216, 0, 23269, 24872, maxnote=89, transpose=33, suffix="-8va")
@@ -177,6 +177,11 @@ def main():
 	doloop(66, 48, 8192, 0, 1351, 2026, 0xFFF3, transpose=60)
 	doloop(67, 72, 16384, 0, 4424, 4761, maxnote=82)
 	doloop(68, 56, 8192, 0, 50085, 53480, 0x8FF0, maxnote=62)
+	donoloop(69, 58, 16384, 0, 5795, transpose=60)
+	donoloop(69, 58, 16384, 0, 17702, transpose=60, insuffix="_inst60", suffix="-60")
+	donoloop(69, 58, 16384, 0, 8568, transpose=60, insuffix="_inst70", suffix="-70")
+	donoloop(70, 64, 16384, 0, 8568, transpose=60)
+	doloop(71, 63, 8192, 0, 30862, 31995, maxnote=68)
 
 if __name__ == "__main__":
 	if "--skip" in sys.argv:

@@ -98,6 +98,10 @@ def main():
 	gen_squares(0, 8)  # G Eb
 	gen_squares(0, 9)  # G E
 	gen_squares(0, 5)  # Bb Eb
+	# for 16 Good Ending
+	gen_squares(0, 2)
+	gen_squares(0, 3)
+	gen_squares(0, 4)
 
 if __name__ == "__main__":
 	main()
