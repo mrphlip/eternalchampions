@@ -1,13 +1,13 @@
-FM0: bass drum, 1 track, tuneless
-FM1: cymbal, 1 track, tuneless
+FM0: bass drum, 1 track, tuneless {{done}}
+FM1: cymbal, 1 track, tuneless {{done}}
 FM2: bass, 1 track {{done}}
 FM3: chords low, 1 track, hard left {{done}}
 FM4: chords high, 1 track, hard right {{done}}
-FM5: snare, 1 track, tuneless, interleave with FM0
+FM5: snare, 1 track, tuneless, interleave with FM0 {{done}}
 FM6: melody, 1 track {{done}}
 FM7: harmony, 1 track {{done}}
-PSG0: arpeggios, 1 track {{partial}}
-PSG1+2: chords, 2 tracks {{partial}}
+PSG0: arpeggios, 1 track {{done}}
+PSG1+2: chords, 2 tracks {{done}}
 
 2 bar intro, 24 bar loop
 
@@ -43,6 +43,8 @@ PSG1+2: @37..41
 	@39: 0-4
 	@40: 0-5
 	@41: 0-7
+	@42: 0-9
+	@43: 0-12
 
 PSG0 at v80 and PSG1+2 at v115 is balanced
 * presumably a factor of sqrt(2)?

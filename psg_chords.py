@@ -102,6 +102,7 @@ def main():
 	gen_squares(0, 2)
 	gen_squares(0, 3)
 	gen_squares(0, 4)
+	gen_squares(0, 12)
 
 if __name__ == "__main__":
 	main()
