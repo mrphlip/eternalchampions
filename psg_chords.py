@@ -103,6 +103,13 @@ def main():
 	gen_squares(0, 3)
 	gen_squares(0, 4)
 	gen_squares(0, 12)
+	# for 01 main theme
+	gen_squares(0, 2, 7)
+	gen_squares(0, 3, 7)
+	gen_squares(0, 5, 8)
+	gen_squares(0, 5, 9)
+	gen_squares(0, 5, 12)
+	gen_squares(0, 7, 12)
 
 if __name__ == "__main__":
 	main()

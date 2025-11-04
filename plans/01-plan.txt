@@ -1,0 +1,34 @@
+FM0: Bass drum, 1 track
+FM1: Harmony, 1 track
+FM2: Harmony mirror, 1 track, hard left
+FM3: Harmony mirror up a fifth, 1 track, hard right
+FM4: multi
+	* Melody, 1 track, pitch bends
+	* Bass, 1 track, one pitch bend on the last note
+FM5: Cymbals, 1 track
+PSG0+1+2: chords
+
+FM2, FM3, FM4 are all the same instrument
+
+0: FM1
+1: FM4 Melody
+2: FM2
+3: FM3
+4: FM4 Bass
+5: PSG0+1+2
+6: FM0+5
+7: unused
+
+FM0: @30
+FM1: @31
+FM2: @32
+FM3: @32
+FM4: @32; @34 (8va)
+FM5: @33
+PSG chords:
+	0-2-7: @35
+	0-3-7: @36
+	0-5-8: @37
+	0-5-9: @38
+	0-5-12: @39
+	0-7-12: @40
