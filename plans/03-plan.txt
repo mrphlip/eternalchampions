@@ -1,0 +1,27 @@
+FM0: Bass, 1 track
+FM1: Intro melody, 2 tracks, only in 1-8
+FM2: Bonus melody, 1 track, only in 1-3
+FM3: Cymbal, 1 track, hard left
+FM4: multi
+	* Melody, 1 track, pitch bends, hard left
+	* Extra notes in 12, 16
+FM5: Trill, 1 track, only in 4
+FM6: multi
+	* Handful of scattered notes, 1 track, 5-8
+	* More melody, 1 track, 9-16, 25-28
+	* Walking bass, 2 tracks, 9-16, 25-28
+FM7: Bass drum, 1 track, 9-24
+FM8: multi
+	* Yet more melody, 1 track, 17-24
+	* Yet more harmony, 1 track, 17-24
+FM9: Snare, 1 track, 17-24
+
+Has ritardando on last two bars
+
+0: FM0
+1: FM1 low (1-8), FM5 (4), FM4 extra notes (12, 16)
+2: FM1 high (1-8), FM6 walking bass high (9-16, 25-28), FM8 melody (17-24)
+3: FM2 (1-3). FM6 scattered notes (5-8), FM6 melody (9-16, 25-28)
+4: FM4 melody
+5: FM6 walking bass low (9-16, 25-28), FM8 harmony (17-24)
+6: FM3+7+9

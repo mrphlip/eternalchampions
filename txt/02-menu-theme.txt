@@ -202,8 +202,6 @@ l4
 (11)
 ;57
 
-;NB: @33 is panned hard left
-
 #4
 @33
 v192
