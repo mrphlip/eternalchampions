@@ -302,9 +302,10 @@ def from_note(note):
 
 def ym_to_midi(hdr, ym):
 	tracks = []
-	for tr in range(len(song_instrumentmap)):
+	for tr, inst in enumerate(song_instrumentlist):
+		instix = all_instrumentmap[inst]
 		tracks.append([
-			midifile.TimedMidiEvent(0, midifile.MetaEvent(midifile.Events.TRACK_NAME, f"FM {tr}".encode("utf-8"))),
+			midifile.TimedMidiEvent(0, midifile.MetaEvent(midifile.Events.TRACK_NAME, f"FM {tr} ({instix})".encode("utf-8"))),
 		])
 	for ch in range(6):
 		tracks[0].extend(midifile.TimedMidiEvent(0, ev) for ev in midifile.param_change(ch, midifile.Params.PARAM_PITCH_BEND_SENSITIVITY, MAX_BEND, 0))
