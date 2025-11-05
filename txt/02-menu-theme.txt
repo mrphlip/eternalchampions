@@ -33,7 +33,7 @@
 	"square.brr" $FF $F5 $00 $04 $00
 }
 
-w191
+w230
 t49
 $EF $00 $00 $00
 $F0
@@ -42,7 +42,7 @@ $F0
 @30
 v192
 y10
-o2
+o1
 l8
 
 ;1
@@ -72,7 +72,7 @@ l8
 
 #1
 @31
-v192
+v220
 y10
 l16
 
@@ -97,9 +97,9 @@ l16
 ]
 (5)
 (7)[
-	@35 o5
+	@35 o5 v240
 	[[ e- < b- e- > ]]10 e- < b- >
-	@31
+	@31 v220
 ]
 ;17
 (4)2 (5) (6) (5) (7)
@@ -117,7 +117,7 @@ e- r r8 < e- r a- r r8 b- r r8 > e- r
 
 #2
 @31
-v192
+v220
 y10
 l16
 
@@ -147,6 +147,7 @@ r1 r1
 ;33
 @35
 o4
+v230
 [[ r8 d- r ]]4
 r8 < b- r r8 b-8^2 >
 [[ r8 d- r ]]4
@@ -156,6 +157,7 @@ r8 < b- r r8 b-8^2 >
 [[ r8 d- r ]]4
 @31
 o3
+v192
 r a- > d- g- b- > e- a- > d- g-
 ; There should be an `o6 b-` here but that's literally one semitone too high for AMK to encode
 $FA $02 $01 a $FA $02 $00
@@ -188,6 +190,7 @@ l4
 @35
 o3
 l16
+v230
 [[ r8 a- r ]]4
 r8 g- r r8 g-8^2
 [[ r8 a- r ]]4
@@ -199,12 +202,13 @@ r8 b-2..
 ;41
 @34
 l4
+v192
 (11)
 ;57
 
 #4
 @33
-v192
+v220
 y18
 l16
 o3
@@ -214,10 +218,12 @@ o3
 ; just need one note for this, the only bar that has 4 simultaneous chimes
 @31
 y10
+v192
 r8 e-2..
 
 @33
 y18
+v220
 [ c c c c ]64
 
 #5
@@ -311,7 +317,7 @@ l8
 
 #6
 @33
-v192
+v220
 y18
 l16
 o3

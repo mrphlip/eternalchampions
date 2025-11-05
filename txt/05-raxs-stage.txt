@@ -33,7 +33,7 @@
 	"square.brr" $FF $F2 $00 $04 $00
 }
 
-w191
+w230
 t43
 $EF $00 $00 $00
 $F0
@@ -207,13 +207,13 @@ o3
 l16
 
 ;1
-(6)[ @33 v192 c r c @36 v64 n18 c r @33 v192 c ]8
+(6)[ @33 v192 c r c @36 v50 n18 c r @33 v192 c ]8
 ;5
-(7)[ @33 v192 c r c @36 v64 n18 c @33 v192 c c ]6
-(8)[ @33 v192 c c c @36 v64 n18 c @33 v192 c c ]2
+(7)[ @33 v192 c r c @36 v50 n18 c @33 v192 c c ]6
+(8)[ @33 v192 c c c @36 v50 n18 c @33 v192 c c ]2
 ;9
 (7)6
-(8) @33 v192 c c c @36 v64 n18 c c c
+(8) @33 v192 c c c @36 v50 n18 c c c
 
 ;13
 @35
@@ -230,7 +230,7 @@ v192
 
 ;21
 (8)2
-(9)[ @33 v192 c c c c c c ] (10)[ @36 v64 n18 c @33 v192 c ]3
+(9)[ @33 v192 c c c c c c ] (10)[ @36 v50 n18 c @33 v192 c ]3
 (8)11 (9)
 ;29
 (8)7 (9)
@@ -252,25 +252,25 @@ l16
 c r c r8.
 ;13
 (4)14
-c @36 v64 y10 n18 c c c c c c c c c c c
+c @36 v50 y10 n18 c c c c c c c c c c c
 @32 v192 y17
 ;21
 (4)2
-c r @36 v64 y10 n18 c c c c @32 v192 y17 c r c r c @36 v64 y10 n18 c @32 v192 y17
+c r @36 v50 y10 n18 c c c c @32 v192 y17 c r c r c @36 v50 y10 n18 c @32 v192 y17
 (5)[ c c c c c c ]2
 (4)6
 (5)2
-c r c c c @36 v64 y10 n18 c c c c c c c @32 v192 y17
+c r c c c @36 v50 y10 n18 c c c c c c c @32 v192 y17
 ;29
 (4)4
 (5)2
-(4) c r c @36 v64 y10 n18 c c c @32 v192 y17
+(4) c r c @36 v50 y10 n18 c c c @32 v192 y17
 ;33
 (4)4
 ;35
 (5)4
 [ c r ]6
-@36 v64 y10 n18 c c c c c c c c c c c c
+@36 v50 y10 n18 c c c c c c c c c c c c
 ;39
 
 #6

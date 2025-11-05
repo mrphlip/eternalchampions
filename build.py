@@ -21,6 +21,7 @@ def get_songs():
 def build_songs(songs):
 	os.chdir(AMK)
 	subprocess.check_call(["wine", "AddmusicK.exe", "-v", "-noblock", "-norom", *(f"eternalchampions/{i}" for i in songs)])
+	os.chdir(TOP)
 
 def read_stats(songs):
 	os.chdir(AMK)

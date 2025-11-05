@@ -32,7 +32,7 @@
 	"square.brr" $FF $F4 $00 $04 $00
 }
 
-w191
+w238
 t41
 $EF $00 $00 $00
 $F0
@@ -65,11 +65,15 @@ r2. r e g e
 a8 $DD $00 $08 b a4 $DD $00 $08 b r b- $DD $00 $08 b r g8 p16,64 e8. p0,0 d < b
 > e d8. $DD $00 $0C f e d8 $DD $00 $08 e < b a8 $DD $00 $08 b- $DD $00 $0C a g e a p16,64 g8. p0,0
 l32
+$F4 $01 ; legato
 < g a b > d < a b > d e < b > d e g d e g a e g a b g a b > d < a b > d e < b > d e
+$F4 $01
 g4 $DD $00 $20 b- a-8 $DD $00 $0C b a8 $DD $00 $0C b a-4. $DD $00 $0C b $DD $30 $0C g ^32 p16,64 e8 p0,0
 ;9
+$F4 $01
 > e d c [[ e d < b > ]]4 [[ d < b a > ]]4 < [[ b a g ]]4 [[ a g e ]]3 [[ g e d ]]4
 [[ e d < b > ]]4 [[ d < b a > ]]2 < [[ b a g ]]3 [[ a g e ]]3 [[ g e d ]]2 [[ e d < b > ]]2 [[ d < b a > ]]2 < [[ b a g ]]2 [[ a g e ]]2 d e
+$F4 $01
 ;13
 p16,64 ^2 p0,0 ^2
 [[ r1 ]]3
@@ -82,7 +86,7 @@ p0,0
 
 #2
 @34
-v192
+v240
 y10
 o2
 
@@ -168,17 +172,18 @@ l16
 
 #7
 y10
-o3
+o3 
 l16
 
 ;1
 [
-	@30 v192 c r @36 n18 v64 c r @30 v192 c c @36 n18 v64 c @30 v192 c
-	r c @36 n18 v64 c @30 v192 c c c @36 n18 v64 c @30 v192 c
+	@30 v220 c r @36 n18 v50 c r @30 v220 c c @36 n18 v50 c @30 v220 c
+	r c @36 n18 v50 c @30 v220 c c c @36 n18 v50 c @30 v220 c
 ]15
-@30 v192 c r @36 n18 v64 c r @30 v192 c c @36 n18 v64 c @30 v192 c
-r c @36 n18 v64 c @30 v192 c c @36 n18 v64 c c c
+@30 v220 c r @36 n18 v50 c r @30 v220 c c @36 n18 v50 c @30 v220 c
+r c @36 n18 v50 c @30 v220 c c @36 n18 v50 c c c
 ;17
 [[ r1 ]]7
+v64
 r2 c c c c c c c c
 ;25

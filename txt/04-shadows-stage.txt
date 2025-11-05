@@ -39,7 +39,7 @@
 	"square.brr" $FF $F2 $00 $04 $00
 }
 
-w191
+w215
 t42
 $EF $00 $00 $00
 $F0
@@ -79,6 +79,7 @@ l8
 v192
 y10
 l8
+$FA $02 $00 ; reset transpose for loop
 
 ;1
 @32
@@ -121,12 +122,13 @@ y10
 (3)
 ;21
 @38
-v192
+v220
+$FA $02 $F4 ; pitch down an octave
 (3)
 ;25
-$FA $02 $F4 ; pitch down an octave
+$FA $02 $E8 ; another octave
 (4)
-$FA $02 $00
+$FA $02 $F4
 ;29
 (5)
 ;33

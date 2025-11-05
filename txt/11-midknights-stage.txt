@@ -40,8 +40,8 @@
 	"ec-fm-23.brr" $FF $E0 $00 $03 $E7
 	"ec-fm-09.brr" $FF $E0 $00 $03 $EF
 	"ec-fm-06.brr" $FF $E0 $00 $04 $A0
-	"ec-fm-31.brr" $FF $E0 $00 $0C $03
-	"ec-fm-31-fifths.brr" $FF $E0 $00 $06 $30
+	"ec-fm-31.brr" $8F $E5 $00 $0C $03  ; modified adsr
+	"ec-fm-31-fifths.brr" $8F $E5 $00 $06 $30  ; modified adsr
 	"square-0-4-9.brr" $FF $E0 $00 $04 $00
 	"square-0-5-9.brr" $FF $E0 $00 $04 $00
 	"square-0-4-8.brr" $FF $E0 $00 $04 $00
@@ -60,7 +60,7 @@
 	"ec-fm-31.brr" $FF $E0 $00 $06 $02  ; octave below
 }
 
-w191
+w216
 t46
 $EF $00 $00 $00
 $F0
@@ -212,7 +212,7 @@ l16
 #5
 @49
 n18
-v80
+v64
 y10
 o3
 l8
