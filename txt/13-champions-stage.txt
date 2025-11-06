@@ -69,19 +69,23 @@ r1.
 (3)[
 	@30
 	o2
+	v192
 	e4 r g r e r g4
 	g g g g f+ r4
 	@34
 	o4
+	v128
 	r g g g g f+ r4
 	d r d r f+4. r
 ]
 @30
 o2
+v192
 d4 r f r d r f4
 f f f f e r4
 @34
 o4
+v128
 r a b- > d e4 f e
 d4 < b-4 a4. r
 (3)
@@ -118,19 +122,23 @@ r1.
 (4)[
 	@30
 	o1
+	v192
 	b4 r > d r < b r > d4
 	d d d d c+ r4
 	@34
 	o4
+	v128
 	r d d d d c+ r4
 	< a r a r > c+4. r
 ]
 @30
 o1
+v192
 a4 r > c r < a r > c4
 c c c c < b r4
 @34
 o4
+v128
 r e f a b-4 > c < b-
 a4 f4 e4. r
 (4)
