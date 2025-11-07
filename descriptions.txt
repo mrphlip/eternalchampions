@@ -1,0 +1,117 @@
+Name: Eternal Champions - Main Theme
+Insert Size: 03E7
+Type: Song (same for all)
+Sample Usage: Many (same for all)
+Source: Port (same for all)
+Duration: 0:43
+Description:
+...
+Authors: phlip (same for all)
+Tags: title, upbeat
+
+
+Name: Eternal Champions - Menu Theme
+Insert Size: 0664
+Duration: 1:50
+Description:
+...
+Tags: menu, calm
+
+Name: Eternal Champions - Character Bios
+Insert Size: 0484
+Duration: 1:20
+Description:
+...
+Tags: cutscene, calm, mysterious
+
+Name: Eternal Champions - Shadow's Stage
+Insert Size: 078E
+Duration: 1:13
+Description:
+...
+Tags: urban, tense
+
+Name: Eternal Champions - RAX's Stage
+Insert Size: 05F7
+Duration: 1:04
+Description:
+...
+Tags: industrial, upbeat
+
+Name: Eternal Champions - Blade's Stage
+Insert Size: 037F
+Duration: 0:56
+Description:
+...
+Tags: urban, upbeat
+
+Name: Eternal Champions - Jetta's Stage
+Insert Size: 0374
+Duration: 1:04
+Description:
+...
+Tags: temple, athletic, upbeat
+
+Name: Eternal Champions - Slash's Stage
+Insert Size: 0522
+Duration: 1:05
+Description:
+...
+Tags: cave, dark
+
+Name: Eternal Champions - Trident's Stage
+Insert Size: 0883
+Duration: 0:45
+Description:
+...
+Tags: ambient, chaotic, spooky
+
+Name: Eternal Champions - Xavier's Stage
+Insert Size: 0416
+Duration: 1:11
+Description:
+...
+Tags: night, spooky, mysterious
+
+Name: Eternal Champions - Midknight's Stage
+Insert Size: 04CD
+Duration: 0:50
+Description:
+...
+Tags: castle, dark
+
+Name: Eternal Champions - Larcen's Stage
+Insert Size: 0507
+Duration: 1:54
+Description:
+...
+Tags: urban, athletic, tense
+
+Name: Eternal Champions - Eternal Champion's Stage
+Insert Size: 05D4
+Duration: 1:10
+Description:
+...
+Tags: boss, chaotic
+
+Name: Eternal Champions - Bad Ending
+Insert Size: 03B2
+Duration: 0:44
+Description:
+...
+Tags: credits, sad
+
+Name: Eternal Champions - Battle Room
+Insert Size: 0433
+Duration: 0:48
+Description:
+...
+Tags: industrial, athletic, upbeat
+
+Name: Eternal Champions - Good Ending
+Insert Size: 05A6
+Duration: 0:49
+Description:
+...
+Tags: credits, upbeat
+
