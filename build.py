@@ -70,7 +70,7 @@ def write_zips(songs, inst_dat):
 	os.chdir(TOP)
 	for song in songs:
 		assert song.endswith(".txt")
-		zipfn = f"build/{song[:-4]}.zip"
+		zipfn = f"build/eternalchampions-{song[:-4]}.zip"
 		insts = get_instruments(song, inst_dat)
 		with zipfile.ZipFile(zipfn, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as zfp:
 			zfp.write(f"txt/{song}", f"eternalchampions-{song}")

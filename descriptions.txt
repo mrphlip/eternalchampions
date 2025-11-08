@@ -5,7 +5,9 @@ Sample Usage: Many (same for all)
 Source: Port (same for all)
 Duration: 0:43
 Description:
-...
+Main title theme from the Eternal Champions, a rather middling fighting game for the Genesis but with quite good music.
+
+In the original game, this theme is noticeably louder than the other tracks... which I think is suitable for a main title theme, but if you wanted to use this as a level BGM you'd probably want to knock the volume down a titch.
 Authors: phlip (same for all)
 Tags: title, upbeat
 
@@ -14,104 +16,110 @@ Name: Eternal Champions - Menu Theme
 Insert Size: 0664
 Duration: 1:50
 Description:
-...
+Main menu music from Eternal Champions for Genesis.
 Tags: menu, calm
 
 Name: Eternal Champions - Character Bios
 Insert Size: 0484
 Duration: 1:20
 Description:
-...
+Character description/loredump theme from Eternal Champions for Genesis.
+
+A nice contemplative tune, was one of my main reasons for wanting to port this soundtrack in the first place.
 Tags: cutscene, calm, mysterious
 
 Name: Eternal Champions - Shadow's Stage
 Insert Size: 078E
 Duration: 1:13
 Description:
-...
+Music for Shadow's stage in Eternal Champions for Genesis. Ideal music for throwing someone from the roof of a skyscraper in inner-city Japan.
 Tags: urban, tense
 
 Name: Eternal Champions - RAX's Stage
 Insert Size: 05F7
 Duration: 1:04
 Description:
-...
+Music for RAX's stage in Eternal Champions for Genesis. Ideal music for fighting in an underground cyber-kickboxing league in the 24th century.
 Tags: industrial, upbeat
 
 Name: Eternal Champions - Blade's Stage
 Insert Size: 037F
 Duration: 0:56
 Description:
-...
+Music for Blade's stage in Eternal Champions for Genesis. Ideal for throwing someone through a giant fan in the wall of your Syrian penthouse.
 Tags: urban, upbeat
 
 Name: Eternal Champions - Jetta's Stage
 Insert Size: 0374
 Duration: 1:04
 Description:
-...
+Music for Jetta's stage in Eternal Champions for Genesis. Ideal for immediately activating your superspeed ability that you can control perfectly because you're the computer opponent, but as soon as I ever try it I immediately run straight into a wall and die, because it's that sort of game.
 Tags: temple, athletic, upbeat
 
 Name: Eternal Champions - Slash's Stage
 Insert Size: 0522
 Duration: 1:05
 Description:
-...
+Music for Slash's stage in Eternal Champions for Genesis. Ideal for cave man to do cave man thing like club, and get eaten by dinosaur.
 Tags: cave, dark
 
 Name: Eternal Champions - Trident's Stage
 Insert Size: 0883
 Duration: 0:45
 Description:
-...
+Music for Trident's stage in Eternal Champions for Genesis. I'm pretty sure they made this one by hooking up a RNG directly into the sequencer and recording what fell out.
+
+This is the one time I resorted to using code generation when porting this soundtrack. There is no "optimising" to be had here, only sadness.
 Tags: ambient, chaotic, spooky
 
 Name: Eternal Champions - Xavier's Stage
 Insert Size: 0416
 Duration: 1:11
 Description:
-...
+Music for Xavier's stage in Eternal Champions for Genesis. Ideal for being too good at alchemy and being burned at the stake for being a witch in Salem.
 Tags: night, spooky, mysterious
 
 Name: Eternal Champions - Midknight's Stage
 Insert Size: 04CD
 Duration: 0:50
 Description:
-...
+Music for Midknight's stage in Eternal Champions for Genesis. Ideal for just being a straight-up vampire I guess.
 Tags: castle, dark
 
 Name: Eternal Champions - Larcen's Stage
 Insert Size: 0507
 Duration: 1:54
 Description:
-...
+Music for Larcen's stage in Eternal Champions for Genesis. Ideal for being a mafia thief in 1920s noir Chicago.
 Tags: urban, athletic, tense
 
 Name: Eternal Champions - Eternal Champion's Stage
 Insert Size: 05D4
 Duration: 1:10
 Description:
-...
+Music for the final boss of Eternal Champions for Genesis. Ideal for one final pitched battle to win your life back.
 Tags: boss, chaotic
 
 Name: Eternal Champions - Bad Ending
 Insert Size: 03B2
 Duration: 0:44
 Description:
-...
+Bad Ending theme from Eternal Champions for Genesis. You have failed in your quest and disappointed the boss, and your world will not be saved.
 Tags: credits, sad
 
 Name: Eternal Champions - Battle Room
 Insert Size: 0433
 Duration: 0:48
 Description:
-...
+Music for the training room in Eternal Champions for Genesis. Ideal for locking in and practising exactly how to pull off that one trick.
 Tags: industrial, athletic, upbeat
 
 Name: Eternal Champions - Good Ending
 Insert Size: 05A6
 Duration: 0:49
 Description:
-...
+Good Ending theme from Eternal Champions for Genesis. Your victory is complete, the world is saved, the credits roll, and everyone is very proud of you.
+
+I've also seen this track titled "Tournament Results", depending on who you ask.
 Tags: credits, upbeat
 
