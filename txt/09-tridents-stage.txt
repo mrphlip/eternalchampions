@@ -14,6 +14,7 @@
 {
 	#optimized
 	"ec-fm-42.brr"
+	"ec-fm-43.brr"
 	"ec-fm-08.brr"
 	"ec-fm-09.brr"
 	"square-12.brr"
@@ -26,6 +27,7 @@
 	"ec-fm-09.brr" $FF $E0 $00 $03 $EF
 	"square-12.brr" $EF $80 $00 $04 $00
 	"square-12.brr" $DF $40 $00 $04 $00
+	"ec-fm-43.brr" $9F $EF $00 $0D $36
 }
 
 w234
@@ -36,7 +38,7 @@ $F0
 #0
 @30
 v192
-y10
+y17
 o1
 p8,64
 
@@ -66,15 +68,16 @@ r2
 ;25
 
 #2
-@30
+@35
 v192
 y4
 o1
 p8,64
 
-[[ e-2 r1. ]]11
-e-2
-o4 r8 e-1 r4.
+[[ e-1 r1 ]]11
+e-2^8
+@30
+o4 e-1 r4.
 
 #3
 @31

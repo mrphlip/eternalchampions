@@ -108,6 +108,9 @@ def imap(inst):
 		song_instrumentnotes[inst] = []
 	return song_instrumentmap[inst]
 
+INST_31 = (1, 3, 18, 97, 21, 28, 24, 17, 150, 26, 216, 21, 1, 1, 6, 131, 3, 1, 1, 13, 63, 47, 15, 15, 0, 0, 0, 0, 61, 210, 15)
+INST_43 = (51, 48, 114, 0, 36, 17, 25, 9, 0, 5, 6, 15, 24, 2, 25, 4, 12, 5, 6, 6, 9, 3, 3, 100, 0, 0, 0, 0, 59, 227, 14)
+
 def render_ym(hdr, ym, dn, do_instruments=False):
 	reset_imap()
 	for event in ym:
@@ -124,13 +127,17 @@ def write_instruments(dn):
 			write_instrument(fp, i, inst, dn)
 
 	# I want this instrument in parallel fifths for Blade's Stage
-	inst = (1, 3, 18, 97, 21, 28, 24, 17, 150, 26, 216, 21, 1, 1, 6, 131, 3, 1, 1, 13, 63, 47, 15, 15, 0, 0, 0, 0, 61, 210, 15)
-	if inst in all_instrumentmap:
-		gen_instrument_wav(all_instrumentmap[inst], inst, [40, 47], dn)
+	if INST_31 in all_instrumentmap:
+		gen_instrument_wav(all_instrumentmap[INST_31], INST_31, [40, 47], dn)
 	# Also want it at this specific note so I can mix it with a different instrument
 	# for Larcen's Stage
-	if inst in all_instrumentmap:
-		gen_instrument_wav(all_instrumentmap[inst], inst, [59], dn)
+	if INST_31 in all_instrumentmap:
+		gen_instrument_wav(all_instrumentmap[INST_31], INST_31, [59], dn)
+
+	# need to capture this note at a specific length to make it sound right
+	INST_43 = (51, 48, 114, 0, 36, 17, 25, 9, 0, 5, 6, 15, 24, 2, 25, 4, 12, 5, 6, 6, 9, 3, 3, 100, 0, 0, 0, 0, 59, 227, 14)
+	if INST_43 in all_instrumentmap:
+		gen_instrument_wav(all_instrumentmap[INST_43], INST_43, [39], dn, notelen=41506, breaklen=RATE*3)
 
 def write_instrument(fp, ix, inst, dn):
 	print(f"Instrument {ix}: {inst!r}", file=fp)
@@ -191,12 +198,20 @@ def write_instrument(fp, ix, inst, dn):
 	print(file=fp)
 
 	noteval = round(sum(song_instrumentnotes[inst])/len(song_instrumentnotes[inst]))
-	gen_instrument_wav(all_instrumentmap[inst], inst, [noteval], dn)
+	if inst != INST_43:
+		gen_instrument_wav(all_instrumentmap[inst], inst, [noteval], dn)
 
 SLOTS = [[3], [3], [3], [3], [1,3], [1,2,3], [1,2,3], [0,1,2,3]]
 
-def gen_instrument_wav(ix, inst, notevals, dn):
+def gen_instrument_wav(ix, inst, notevals, dn, notelen=RATE*3, breaklen=RATE, extralen=RATE):
 	with open("__tmpinst.vgm", "wb") as fp:
+		def writedelay(length):
+			sec, samp = divmod(length, RATE)
+			for i in range(sec):
+				fp.write(struct.pack("<bH", 0x61, RATE))
+			if samp:
+				fp.write(struct.pack("<bH", 0x61, samp))
+
 		fp.write(struct.pack("<4sLLLLLLLLLHBBLLLLL", b"Vgm ", 0, 0x150, 0, 0, 0, RATE * 7, 0, 0, 0, 0, 0, 0, 7670453, 0, 0, 0, 0))
 		# Reset
 		for ch in range(3):
@@ -227,12 +242,10 @@ def gen_instrument_wav(ix, inst, notevals, dn):
 		# Play note
 		for ch in range(len(notevals)):
 			fp.write(bytes((0x52, 0x28, inst[30] << 4 | ch)))
-		fp.write(struct.pack("<bH", 0x61, RATE))
-		fp.write(struct.pack("<bH", 0x61, RATE))
-		fp.write(struct.pack("<bH", 0x61, RATE))
+		writedelay(notelen)
 		for ch in range(len(notevals)):
 			fp.write(bytes((0x52, 0x28, ch)))
-		fp.write(struct.pack("<bH", 0x61, RATE))
+		writedelay(breaklen)
 		# Reset ADSR to peak volume only
 		alg = inst[28] & 0x07
 		voladjust = max(min(inst[4+i] & 0x7F for i in range(4) if i in SLOTS[alg]) - 0x10, 0)
@@ -261,10 +274,10 @@ def gen_instrument_wav(ix, inst, notevals, dn):
 		# Play note
 		for ch in range(len(notevals)):
 			fp.write(bytes((0x52, 0x28, inst[30] << 4 | ch)))
-		fp.write(struct.pack("<bH", 0x61, RATE))
+		writedelay(extralen)
 		for ch in range(len(notevals)):
 			fp.write(bytes((0x52, 0x28, ch)))
-		fp.write(struct.pack("<bH", 0x61, RATE))
+		writedelay(breaklen)
 		# Set volume to sustain level
 		voladjust = max(min((inst[20+i] & 0xF0)>>1 for i in range(4) if i in SLOTS[alg]) - 0x10, 0)
 		for ch in range(3):
@@ -276,7 +289,7 @@ def gen_instrument_wav(ix, inst, notevals, dn):
 		# Play note
 		for ch in range(len(notevals)):
 			fp.write(bytes((0x52, 0x28, inst[30] << 4 | ch)))
-		fp.write(struct.pack("<bH", 0x61, RATE))
+		writedelay(extralen)
 		for ch in range(len(notevals)):
 			fp.write(bytes((0x52, 0x28, ch)))
 		# EOF

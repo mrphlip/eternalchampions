@@ -149,7 +149,7 @@ def main():
 	# instrument 40 is the same sample as 38
 	doloop(41, 59, 16384, 104292, 104292, 107150, 0xF1EC, maxnote=59)
 	doloop(42, 56, 16384, 22916, 22916, 26318, 0x8460, maxnote=83)
-	# 43 is the same instrument as 42
+	doloop(43, 39, 8192, 0, 36937, 41486, 0x9FEF, maxnote=39)
 	doloop(44, 85, 16384, 0, 6648, 6807, 0xCFF4, maxnote=90)
 	donoloop(45, 37, 8192, 0, 11736, transpose=60)
 	donoloop(46, 75, 16384, 0, 4739, transpose=60)
