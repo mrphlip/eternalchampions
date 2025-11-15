@@ -64,7 +64,7 @@ Music for Slash's stage in Eternal Champions for Genesis. Ideal for cave man to 
 Tags: cave, dark
 
 Name: Eternal Champions - Trident's Stage
-Insert Size: 0883
+Insert Size: 09DA
 Duration: 0:45
 Description:
 Music for Trident's stage in Eternal Champions for Genesis. I'm pretty sure they made this one by hooking up a RNG directly into the sequencer and recording what fell out.
