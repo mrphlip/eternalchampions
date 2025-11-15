@@ -79,7 +79,7 @@ e-2^8
 @30
 o4 e-1 r4.
 
-#3
+#7
 @31
 v192
 y10
@@ -87,7 +87,7 @@ o3
 
 [[ c16 r4. c16 r8 c16 r16^4  ]]24
 
-#4
+#6
 @34
 v80
 y10
@@ -97,43 +97,69 @@ n18
 r16 [[ (3)[r8. c8 r4. c8 r4. c8 r4. c8 r16] c8 ]]11
 (3) c16
 
-#5
+#3
 @33
 v64
-$F4 $01
+y8
 
-; I make absolutely no apologies or excuses for this track
+; I make absolutely no apologies or excuses for these tracks
 
 ;1
 (1)[
-	r=9 $EE $04 o4f=5 $EE $16 o4g+=12 $EE $FF o4a=7 $EE $E1 o5g+=9 $EE $E8 o5f=3 $EE $2C o5e=5 $EE $3A o5d=7 $EE $15 o4g=5 $EE $E1 o4g+=4 $EE $E3 o4a+=12 $EE $3A o5d=3 $EE $FA o5d=5 $EE $2C o5e=7 $EE $04 o5f=7 r=2 $EE $16 o4g+=3 $EE $FF o4a=9 $EE $E1 o4g+=3 $EE $3A o5d=5 $EE $04 o5f=7 $EE $31 o5b=9 $EE $F8 o4d+=3 $EE $E8 o4f=12 $EE $25 o5c=9 r=3 $EE $FA o5d=5 $EE $04 o5f=4 $EE $16 o4g+=4 $EE $FF o4a=8 r=4 $EE $E1 o4g+=2
-	^=2 $EE $3A o5d=8 r=4 $EE $E3 o4a+=3 $EE $25 o5c=5 $EE $16 o4g+=7 r=5 $EE $E3 o4a+=7 $EE $3A o5d=9 $EE $FA o5d=3 $EE $E1 o5g+=21 $EE $27 o5c+=3 $EE $16 o4g+=9 $EE $FF o4a=8 o5a=7 $EE $25 o5c=5 $EE $27 o5c+=7 $EE $04 o5f=9 $EE $FF o4a=3 $EE $16 o4g+=5 $EE $E8 o4f=7 r=5 $EE $3A o5d=4 $EE $E3 o4a+=3 $EE $15 o4g=9 $EE $16 o4g+=3 $EE $04 o4f=5 $EE $FA o4d=7 $EE $04 o5f=5 $EE $FA o5d=4 $EE $27 o5c+=8 r=2
-	r=2 $EE $25 o5c=3 $EE $E1 o4g+=1 o4g+=4 $EE $FF o4a=8 $EE $3A o5d=3 $EE $FA o5d=5 $EE $04 o5f=4 $EE $E3 o4a+=8 $EE $E1 o4g+=4 $EE $15 o4g=3 $EE $3A o5d=5 $EE $2C o5e=7 $EE $54 o5g=5 $EE $E1 o5g+=7 r=5 $EE $FF o4a=4 $EE $16 o4g+=3 $EE $E8 o4f=5 $EE $E3 o4a+=7 $EE $25 o5c=5 $EE $3A o5d=4 $EE $E1 o4g+=8 $EE $15 o4g=4 $EE $E8 o4f=3 $EE $F8 o4d+=9 r=3 $EE $04 o5f=5 $EE $27 o5c+=4 $EE $E3 o4a+=8 $EE $15 o4g=4 $EE $16 o4g+=3 $EE $04 o4f=5 $EE $FA o5d=7 $EE $2C o5e=5 $EE $E8 o5f=7 r=5 $EE $2C o5e=4 $EE $25 o5c=6
-	^=2 $EE $31 o5b=7 $EE $FF o5a=5 $EE $E1 o5g+=4 $EE $54 o5g=4 $EE $2C o5e=8 $EE $25 o5c=4 $EE $15 o4g=4 $EE $59 o5g+=11 $EE $E8 o5f=5 $EE $04 o5f=4 $EE $3A o5d=8 r=4 $EE $E8 o4f=12 $EE $FF o5a=3 $EE $59 o5g+=5 $EE $04 o5f=12 $EE $3A o5d=4 $EE $27 o5c+=3 $EE $FF o4a=9 $EE $04 o4f=3 $EE $31 o5b=5 $EE $FF o5a=4 $EE $E1 o5g+=8 $EE $54 o5g=7 $EE $2C o5e=9 r=3 $EE $25 o5c=7 r=2 $EE $E8 o5f=8 r=4 $EE $2C o5e=3 $EE $25 o5c=9 $EE $16 o4g+=2
-	^=1 $EE $E8 o4f=5 $EE $E3 o4a+=4 $EE $59 o5g+=8 $EE $3A o5d=4 $EE $04 o5f=3 $EE $FA o5d=5 $EE $E3 o4a+=7 $EE $27 o5c+=5 $EE $FA o5d=4 $EE $04 o5f=8 $EE $59 o5g+=4 $EE $E8 o5f=4 $EE $04 o5f=4 $EE $3A o5d=11 $EE $25 o5c=5 $EE $FF o5a=7 $EE $E1 o5g+=5 $EE $54 o5g=4 $EE $04 o5f=3 $EE $16 o4g+=9 $EE $E3 o4a+=3 $EE $27 o5c+=5 $EE $2C o5e=7 $EE $E8 o5f=5 $EE $FA o5d=4 $EE $04 o5f=3 $EE $2C o5e=9 $EE $3A o5d=3 $EE $E3 o4a+=5 $EE $31 o5b=7 $EE $FA o5d=5 $EE $54 o5g=4 $EE $59 o5g+=3 $EE $2C o5e=9 $EE $3A o5d=8 $EE $15 o4g=2
-	^=5 $EE $E8 o5f=5 $EE $2C o5e=4 $EE $25 o5c=8 r=4 $EE $27 o5c+=3 $EE $16 o4g+=9 $EE $04 o5f=8 $EE $FA o5d=4 $EE $25 o5c=8 r=4 $EE $E1 o4g+=4 $EE $F8 o4d+=4 $EE $0B o4d=7 r=5 $EE $3A o5d=4 $EE $2C o5e=3 $EE $E8 o5f=1 o5f=8 $EE $E1 o5g+=4 $EE $31 o5b=3 $EE $E3 o4a+=5 $EE $E1 o4g+=7 $EE $15 o4g=5 $EE $E8 o4f=4 $EE $3A o5d=8 $EE $FA o5d=4 $EE $04 o5f=3 $EE $59 o5g+=5 $EE $25 o5c=7 $EE $27 o5c+=5 $EE $16 o4g+=4 $EE $04 o4f=8 $EE $54 o5g=4 $EE $2C o5e=3 $EE $3A o5d=5 $EE $25 o5c=10
+	r=8 $EE $04 o4f=10 r=7 $EE $FF o4a=9 $EE $E1 o5g+=8 $EE $E8 o5f=7 $EE $3A o5d=9 $EE $15 o4g=8 $EE $E3 o4a+=12 $EE $3A o5d=4 $EE $FA o5d=8 r=4 $EE $04 o5f=8 $EE $16 o4g+=7 r=5 $EE $E1 o4g+=7 $EE $04 o5f=9 $EE $31 o5b=8 $EE $F8 o4d+=7 r=9 $EE $25 o5c=8 r=4 $EE $FA o5d=3 $EE $04 o5f=1 o5f=4 $EE $16 o4g+=8 r=8 $EE $E1 o4g+=2
+	^=5 r=9 $EE $E3 o4a+=8 $EE $16 o4g+=7 r=5 $EE $E3 o4a+=12 r=4 $EE $FA o5d=8 r=16 $EE $27 o5c+=8 r=4 $EE $FF o4a=8 o5a=7 $EE $25 o5c=5 $EE $27 o5c+=7 $EE $04 o5f=12 $EE $16 o4g+=9 r=8 $EE $3A o5d=7 $EE $15 o4g=9 $EE $16 o4g+=8 $EE $FA o4d=7 $EE $04 o5f=5 $EE $FA o5d=4 $EE $27 o5c+=8 r=2
+	r=2 $EE $25 o5c=3 $EE $E1 o4g+=1 o4g+=8 r=4 $EE $3A o5d=3 $EE $FA o5d=9 $EE $E3 o4a+=8 $EE $E1 o4g+=4 $EE $15 o4g=8 $EE $2C o5e=7 $EE $54 o5g=9 r=8 $EE $FF o4a=4 $EE $16 o4g+=8 $EE $E3 o4a+=7 $EE $25 o5c=5 $EE $3A o5d=7 r=5 $EE $15 o4g=7 $EE $F8 o4d+=9 r=3 $EE $04 o5f=5 $EE $27 o5c+=7 r=5 $EE $15 o4g=4 $EE $16 o4g+=8 $EE $FA o5d=7 $EE $2C o5e=5 $EE $E8 o5f=7 r=5 $EE $2C o5e=4 $EE $25 o5c=6
+	^=2 $EE $31 o5b=7 $EE $FF o5a=5 $EE $E1 o5g+=4 $EE $54 o5g=8 r=4 $EE $25 o5c=8 $EE $59 o5g+=11 $EE $E8 o5f=5 $EE $04 o5f=7 r=9 $EE $E8 o4f=12 $EE $FF o5a=8 $EE $04 o5f=12 $EE $3A o5d=4 $EE $27 o5c+=8 r=4 $EE $04 o4f=3 $EE $31 o5b=5 $EE $FF o5a=12 $EE $54 o5g=7 $EE $2C o5e=9 r=3 $EE $25 o5c=7 r=2 $EE $E8 o5f=8 r=4 $EE $2C o5e=8 r=4 $EE $16 o4g+=2
+	^=10 $EE $59 o5g+=8 $EE $3A o5d=4 $EE $04 o5f=8 $EE $E3 o4a+=7 $EE $27 o5c+=9 $EE $04 o5f=8 $EE $59 o5g+=4 $EE $E8 o5f=8 $EE $3A o5d=11 $EE $25 o5c=5 $EE $FF o5a=7 $EE $E1 o5g+=9 $EE $04 o5f=8 r=4 $EE $E3 o4a+=8 $EE $2C o5e=7 $EE $E8 o5f=5 $EE $FA o5d=4 $EE $04 o5f=8 r=4 $EE $3A o5d=3 $EE $E3 o4a+=9 r=3 $EE $FA o5d=5 $EE $54 o5g=12 r=4 $EE $3A o5d=8 $EE $15 o4g=2
+	^=10 $EE $2C o5e=4 $EE $25 o5c=8 r=4 $EE $27 o5c+=8 r=4 $EE $04 o5f=12 $EE $25 o5c=8 r=4 $EE $E1 o4g+=8 $EE $0B o4d=7 r=5 $EE $3A o5d=7 $EE $E8 o5f=1 o5f=12 $EE $31 o5b=8 $EE $E1 o4g+=7 $EE $15 o4g=5 $EE $E8 o4f=7 r=5 $EE $FA o5d=7 $EE $59 o5g+=9 r=3 $EE $27 o5c+=9 $EE $04 o4f=8 $EE $54 o5g=4 $EE $2C o5e=3 $EE $3A o5d=9 r=6
 ]
 (2)[
-	^=2 $EE $E1 o4g+=4 $EE $15 o4g=3 $EE $F8 o4d+=9 $EE $E3 o4a+=3 $EE $27 o5c+=5 $EE $FA o5d=7 $EE $04 o5f=5 $EE $E3 o4a+=4 $EE $FF o4a=3 $EE $16 o4g+=9 $EE $25 o5c=3 $EE $3A o5d=5 $EE $2C o5e=7 $EE $E8 o5f=5 $EE $2C o5e=4 $EE $3A o5d=3 $EE $25 o5c=9 $EE $E1 o4g+=3 $EE $15 o4g=5 $EE $E8 o4f=7 $EE $F8 o4d+=5 $EE $3A o5d=7 $EE $E8 o5f=1 o5f=8 r=4 $EE $59 o5g+=3 $EE $E3 o4a+=9 $EE $FF o4a=3 $EE $16 o4g+=5 $EE $25 o5c=4 $EE $FA o5d=8 r=4 $EE $54 o5g=3 $EE $E1 o4g+=9 $EE $15 o4g=3 $EE $E8 o4f=5 $EE $F8 o4d+=6
-	^=1 r=5 $EE $54 o5g=4 $EE $E8 o4f=3 $EE $2C o5e=5 $EE $E1 o4g+=12 $EE $04 o5f=4 $EE $FF o5a=8 r=4 $EE $04 o5f=3 $EE $2C o5e=7 r=10 $EE $16 o4g+=4 $EE $FF o4a=8 $EE $27 o5c+=4 $EE $25 o5c=3 $EE $31 o5b=5 $EE $E1 o5g+=7 $EE $54 o5g=5 $EE $E8 o5f=4 o4f=8 $EE $15 o4g=4 $EE $E1 o4g+=3 $EE $E3 o4a+=5 $EE $25 o5c=7 $EE $FA o5d=5 $EE $2C o5e=4 $EE $04 o5f=8 r=4 $EE $2C o5e=4 $EE $27 o5c+=8 r=4 $EE $25 o5c=3 $EE $2C o5e=5 $EE $54 o5g=7 $EE $E1 o5g+=5 $EE $54
-] o5g=2
+	r=2 $EE $E1 o4g+=7 $EE $F8 o4d+=9 $EE $E3 o4a+=3 $EE $27 o5c+=5 $EE $FA o5d=7 $EE $04 o5f=5 $EE $E3 o4a+=4 $EE $FF o4a=8 r=4 $EE $25 o5c=3 $EE $3A o5d=5 $EE $2C o5e=7 $EE $E8 o5f=5 $EE $2C o5e=4 $EE $3A o5d=8 r=4 $EE $E1 o4g+=3 $EE $15 o4g=5 $EE $E8 o4f=7 $EE $F8 o4d+=5 $EE $3A o5d=7 $EE $E8 o5f=1 o5f=8 r=4 $EE $59 o5g+=12 $EE $FF o4a=8 $EE $25 o5c=7 r=9 $EE $54 o5g=8 r=4 $EE $15 o4g=3 $EE $E8 o4f=9 r=2
+	r=6 $EE $54 o5g=4 $EE $E8 o4f=8 $EE $E1 o4g+=12 $EE $04 o5f=7 r=9 o5f=8 r=12 $EE $16 o4g+=7 r=5 $EE $27 o5c+=7 $EE $31 o5b=9 r=3 $EE $54 o5g=9 $EE $E8 o4f=12 $EE $E1 o4g+=8 $EE $25 o5c=12 $EE $2C o5e=8 r=8 o5e=12 r=4 $EE $25 o5c=8 $EE $54 o5g=7 $EE $E1 o5g+=5 $EE $54 o5g=2
+]
 ;9
-^=5 $EE $F8 o4d+=5 $EE $E1 o4g+=12 $EE $25 o5c=4 $EE $FA o5d=3 $EE $04 o5f=9 r=3 $EE $16 o4g+=5 $EE $27 o5c+=7 $EE $25 o5c=9 $EE $2C o5e=3 $EE $E8 o5f=5 $EE $15 o4g=12 $EE $3A o5d=4 $EE $2C o5e=3 $EE $59 o5g+=7 r=2 $EE $54 o5g=3 $EE $FA o5d=5 $EE $31 o5b=7 $EE $E3 o4a+=5 $EE $3A o5d=4 $EE $2C o5e=3 $EE $04 o5f=9 $EE $FA o5d=3 $EE $E8 o5f=5 $EE $2C o5e=8 $EE $27 o5c+=4 $EE $E3 o4a+=4 $EE $16 o4g+=3 $EE $04 o5f=9 $EE $54 o5g=3 $EE $E1 o5g+=1 o5g+=4 $EE $FF o5a=8 $EE $25 o5c=6
-^=2 $EE $3A o5d=4 $EE $04 o5f=8 $EE $E8 o5f=4 $EE $59 o5g+=3 $EE $04 o5f=5 $EE $FA o5d=7 $EE $27 o5c+=5 $EE $E3 o4a+=4 $EE $FA o5d=8 $EE $04 o5f=4 $EE $3A o5d=3 $EE $59 o5g+=5 $EE $E3 o4a+=7 $EE $E8 o4f=5 $EE $16 o4g+=4 $EE $25 o5c=8 $EE $2C o5e=7 $EE $E8 o5f=9 r=3 $EE $25 o5c=7 r=2 $EE $2C o5e=8 r=4 $EE $54 o5g=3 $EE $E1 o5g+=5 $EE $FF o5a=7 $EE $31 o5b=5 $EE $04 o4f=4 $EE $FF o4a=8 $EE $27 o5c+=4 $EE $3A o5d=8 $EE $04 o5f=7 $EE $59 o5g+=5 $EE $FF o5a=7 r=3
-r=2 $EE $E8 o4f=7 $EE $3A o5d=1 o5d=4 $EE $04 o5f=8 $EE $E8 o5f=8 $EE $59 o5g+=4 $EE $15 o4g=8 $EE $25 o5c=4 $EE $2C o5e=3 $EE $54 o5g=9 $EE $E1 o5g+=3 $EE $FF o5a=5 $EE $31 o5b=7 r=5 $EE $25 o5c=4 $EE $2C o5e=8 r=4 $EE $E8 o5f=3 $EE $2C o5e=5 $EE $FA o5d=4 $EE $04 o4f=8 $EE $16 o4g+=4 $EE $15 o4g=3 $EE $E3 o4a+=7 r=2 $EE $27 o5c+=3 $EE $04 o5f=7 r=2 $EE $F8 o4d+=8 $EE $E8 o4f=4 $EE $15 o4g=3 $EE $E1 o4g+=7 r=2 $EE $3A o5d=3 $EE $25 o5c=5 $EE $E3 o4a+=4 $EE $E8 o4f=8 $EE $16 o4g+=4 $EE $FF o4a=2
-^=6 r=4 $EE $E1 o5g+=3 $EE $54 o5g=5 $EE $2C o5e=4 $EE $3A o5d=8 $EE $15 o4g=4 $EE $E1 o4g+=4 $EE $E3 o4a+=4 $EE $04 o5f=8 $EE $FA o5d=3 $EE $3A o5d=5 $EE $FF o4a=7 $EE $E1 o4g+=5 $EE $25 o5c=7 $EE $27 o5c+=9 $EE $FA o5d=3 $EE $04 o5f=5 $EE $FA o4d=7 $EE $04 o4f=5 $EE $16 o4g+=4 $EE $15 o4g=3 $EE $E3 o4a+=9 $EE $3A o5d=8 $EE $E8 o4f=7 $EE $16 o4g+=5 $EE $FF o4a=4 $EE $04 o5f=8 r=4 $EE $27 o5c+=3 $EE $25 o5c=5 $EE $FF o5a=7 r=5 o4a=4 $EE $16 o4g+=3 $EE $27 o5c+=7
-^=5 r=9 $EE $E1 o5g+=8 $EE $FA o5d=4 $EE $3A o5d=8 r=4 $EE $E3 o4a+=8 $EE $16 o4g+=4 $EE $25 o5c=8 $EE $E3 o4a+=7 $EE $3A o5d=1 o5d=8 $EE $E1 o4g+=7 $EE $FF o4a=5 $EE $16 o4g+=7 $EE $04 o5f=5 $EE $FA o5d=7 r=5 $EE $25 o5c=7 $EE $E8 o4f=5 $EE $F8 o4d+=7 r=5 $EE $31 o5b=4 $EE $04 o5f=8 $EE $3A o5d=4 $EE $E1 o4g+=3 $EE $FF o4a=5 $EE $16 o4g+=12 $EE $04 o5f=4 $EE $2C o5e=8 $EE $FA o5d=4 $EE $3A o5d=6
-^=2 $EE $E3 o4a+=7 $EE $E1 o4g+=5 $EE $15 o4g=4 $EE $3A o5d=3 $EE $2C o5e=9 $EE $E8 o5f=3 $EE $E1 o5g+=7 r=5 $EE $FF o4a=9 $EE $16 o4g+=3 $EE $04 o4f=13 $EE $0B o4d=8 r=3 $EE $3A o5d=5 $EE $2C o5e=4 $EE $E8 o5f=8 $EE $E1 o5g+=4 $EE $31 o5b=4 $EE $E3 o4a+=3 $EE $E1 o4g+=9 $EE $15 o4g=3 $EE $E8 o4f=5 $EE $3A o5d=7 $EE $FA o5d=5 $EE $04 o5f=4 $EE $59 o5g+=3 $EE $25 o5c=9 $EE $27 o5c+=3 $EE $16 o4g+=5 $EE $04 o4f=7 $EE $54 o5g=5 $EE $2C o5e=4 $EE $3A o5d=3 $EE $25 o5c=11
-(2) o5g=2
+^=5 $EE $F8 o4d+=5 $EE $E1 o4g+=12 $EE $25 o5c=7 $EE $04 o5f=9 r=3 $EE $16 o4g+=9 r=3 $EE $25 o5c=9 $EE $2C o5e=3 $EE $E8 o5f=9 r=8 $EE $3A o5d=7 $EE $59 o5g+=7 r=2 $EE $54 o5g=12 r=3 $EE $E3 o4a+=9 $EE $2C o5e=3 $EE $04 o5f=9 $EE $FA o5d=3 $EE $E8 o5f=9 r=4 $EE $27 o5c+=4 $EE $E3 o4a+=7 $EE $04 o5f=9 $EE $54 o5g=3 $EE $E1 o5g+=1 o5g+=8 r=4 $EE $25 o5c=6
+^=2 $EE $3A o5d=12 $EE $E8 o5f=7 $EE $04 o5f=5 $EE $FA o5d=7 $EE $27 o5c+=9 $EE $FA o5d=8 $EE $04 o5f=7 $EE $59 o5g+=9 r=3 $EE $E8 o4f=5 $EE $16 o4g+=12 $EE $2C o5e=7 $EE $E8 o5f=9 r=3 $EE $25 o5c=7 r=2 $EE $2C o5e=8 r=4 $EE $54 o5g=8 $EE $FF o5a=12 $EE $04 o4f=4 $EE $FF o4a=8 $EE $27 o5c+=7 r=5 $EE $04 o5f=12 $EE $FF o5a=7 r=3
+r=2 $EE $E8 o4f=7 $EE $3A o5d=1 o5d=8 r=4 $EE $E8 o5f=8 $EE $59 o5g+=12 $EE $25 o5c=7 $EE $54 o5g=9 $EE $E1 o5g+=3 $EE $FF o5a=9 r=8 $EE $25 o5c=7 r=9 $EE $E8 o5f=3 $EE $2C o5e=9 $EE $04 o4f=12 $EE $15 o4g=3 $EE $E3 o4a+=7 r=2 $EE $27 o5c+=8 r=4 $EE $F8 o4d+=12 $EE $15 o4g=8 r=4 $EE $3A o5d=3 $EE $25 o5c=5 $EE $E3 o4a+=7 r=5 $EE $16 o4g+=4 $EE $FF o4a=2
+^=6 r=4 $EE $E1 o5g+=8 $EE $2C o5e=7 r=5 $EE $15 o4g=4 $EE $E1 o4g+=8 $EE $04 o5f=8 $EE $FA o5d=8 $EE $FF o4a=7 $EE $E1 o4g+=5 $EE $25 o5c=7 $EE $27 o5c+=9 $EE $FA o5d=3 $EE $04 o5f=9 r=3 o4f=9 $EE $15 o4g=8 r=4 $EE $3A o5d=8 $EE $E8 o4f=7 $EE $16 o4g+=9 $EE $04 o5f=8 r=4 $EE $27 o5c+=8 $EE $FF o5a=7 r=5 o4a=4 $EE $16 o4g+=8 r=2
+r=14 $EE $E1 o5g+=12 $EE $3A o5d=8 r=4 $EE $E3 o4a+=12 $EE $25 o5c=8 $EE $E3 o4a+=7 $EE $3A o5d=1 o5d=8 $EE $E1 o4g+=7 $EE $FF o4a=9 r=3 $EE $04 o5f=5 $EE $FA o5d=7 r=5 $EE $25 o5c=7 $EE $E8 o4f=12 r=5 $EE $31 o5b=12 $EE $3A o5d=4 $EE $E1 o4g+=8 $EE $16 o4g+=12 $EE $04 o5f=7 r=5 $EE $FA o5d=4 $EE $3A o5d=6
+^=2 $EE $E3 o4a+=12 $EE $15 o4g=7 $EE $2C o5e=9 $EE $E8 o5f=8 r=7 $EE $FF o4a=9 $EE $16 o4g+=12 r=4 $EE $0B o4d=8 r=3 $EE $3A o5d=9 $EE $E8 o5f=12 $EE $31 o5b=7 $EE $E1 o4g+=9 $EE $15 o4g=3 $EE $E8 o4f=9 r=3 $EE $FA o5d=9 $EE $59 o5g+=8 r=4 $EE $27 o5c+=8 $EE $04 o4f=7 $EE $54 o5g=5 $EE $2C o5e=4 $EE $3A o5d=8 r=6
+(2)
 ;17
 (1) (2)
-; make sure legato is turned off _before_ it loops, so that the $F4 $01 at the
-; top of the track is turning it back _on_ again, not toggling each loop
-$F4 $01
-o5g=2
 ;25
 
-#6
+#4
+@33
+v64
+y12
+
+;1
+(4)[
+	r=13 $EE $16 o4g+=12 r=21 $EE $2C o5e=8 r=7 $EE $E1 o4g+=9 r=15 $EE $2C o5e=9 r=12 $EE $FF o4a=8 r=4 $EE $3A o5d=8 r=16 $EE $E8 o4f=12 r=24 $EE $FF o4a=7 r=7
+	r=2 $EE $3A o5d=8 r=7 $EE $25 o5c=7 r=17 $EE $3A o5d=12 $EE $E1 o5g+=21 r=3 $EE $16 o4g+=9 r=36 $EE $FF o4a=8 $EE $E8 o4f=7 r=9 $EE $E3 o4a+=8 r=7 $EE $04 o4f=9 r=22
+	r=10 $EE $FF o4a=8 r=8 $EE $04 o5f=7 r=12 $EE $3A o5d=7 r=10 $EE $E1 o5g+=7 r=12 $EE $E8 o4f=9 r=12 $EE $E1 o4g+=8 r=4 $EE $E8 o4f=8 r=16 $EE $E3 o4a+=8 r=7 $EE $04 o4f=12 r=27
+	r=22 $EE $2C o5e=8 r=4 $EE $15 o4g=8 r=16 $EE $3A o5d=8 r=19 $EE $59 o5g+=7 r=17 $EE $FF o4a=9 r=12 $EE $E1 o5g+=8 r=43 $EE $25 o5c=9 r=2
+	r=1 $EE $E8 o4f=5 $EE $E3 o4a+=7 r=12 $EE $FA o5d=7 r=10 o5d=7 r=13 $EE $04 o5f=8 r=24 $EE $54 o5g=7 $EE $16 o4g+=9 r=3 $EE $27 o5c+=9 r=15 $EE $2C o5e=9 r=8 $EE $31 o5b=12 r=4 $EE $59 o5g+=3 $EE $2C o5e=12 r=7
+	r=5 $EE $E8 o5f=7 r=17 $EE $16 o4g+=9 r=8 $EE $FA o5d=7 r=13 $EE $F8 o4d+=6 r=14 $EE $2C o5e=8 r=4 $EE $E1 o5g+=7 $EE $E3 o4a+=9 r=12 $EE $3A o5d=12 $EE $04 o5f=8 $EE $25 o5c=7 r=5 $EE $16 o4g+=9 r=15 $EE $25 o5c=10
+]
+(5)[
+	^=2 r=4 $EE $15 o4g=8 r=31 $EE $16 o4g+=9 r=27 $EE $25 o5c=9 r=43 $EE $E3 o4a+=9 r=3 $EE $16 o4g+=9 $EE $FA o5d=8 r=7 $EE $E1 o4g+=9 r=8 $EE $F8 o4d+=6
+	^=1 r=12 $EE $2C o5e=9 r=12 $EE $FF o5a=8 r=7 $EE $2C o5e=7 r=14 $EE $FF o4a=8 r=4 $EE $25 o5c=8 $EE $E1 o5g+=7 r=5 $EE $E8 o5f=9 r=3 $EE $15 o4g=7 $EE $E3 o4a+=9 r=3 $EE $FA o5d=9 $EE $04 o5f=8 r=8 $EE $27 o5c+=8 r=7 $EE $2C o5e=9 r=10
+]
+;9
+r=26 $EE $FA o5d=8 r=12 $EE $27 o5c+=7 r=17 $EE $15 o4g=12 r=4 $EE $2C o5e=8 r=7 $EE $FA o5d=5 $EE $31 o5b=12 $EE $3A o5d=9 r=15 $EE $2C o5e=8 r=8 $EE $16 o4g+=8 r=12 $EE $FF o5a=8 r=6
+r=6 $EE $04 o5f=8 r=4 $EE $59 o5g+=8 r=12 $EE $E3 o4a+=7 r=9 $EE $3A o5d=8 $EE $E3 o4a+=7 r=9 $EE $25 o5c=8 r=43 $EE $E1 o5g+=9 r=3 $EE $31 o5b=7 r=14 $EE $3A o5d=8 r=7 $EE $59 o5g+=7 r=8
+r=14 $EE $04 o5f=8 r=12 $EE $15 o4g=8 r=4 $EE $2C o5e=8 r=12 $EE $31 o5b=7 r=9 $EE $2C o5e=8 r=12 $EE $FA o5d=7 r=5 $EE $16 o4g+=7 r=12 $EE $04 o5f=7 r=10 $EE $E8 o4f=7 $EE $E1 o4g+=7 r=14 $EE $E8 o4f=8 r=6
+r=13 $EE $54 o5g=9 $EE $3A o5d=8 r=8 $EE $E3 o4a+=8 r=7 $EE $3A o5d=9 r=32 $EE $FA o4d=7 r=5 $EE $16 o4g+=7 $EE $E3 o4a+=9 r=20 $EE $FF o4a=9 r=10 $EE $25 o5c=7 r=17 $EE $27 o5c+=7
+^=5 r=17 $EE $FA o5d=7 r=17 $EE $16 o4g+=8 r=32 o4g+=7 r=29 $EE $F8 o4d+=7 r=9 $EE $04 o5f=8 r=7 $EE $FF o4a=9 r=12 $EE $2C o5e=8 r=10
+r=9 $EE $E1 o4g+=7 r=2 $EE $3A o5d=8 r=7 $EE $E1 o5g+=7 r=17 $EE $04 o4f=13 r=16 $EE $2C o5e=9 r=3 $EE $E1 o5g+=8 $EE $E3 o4a+=8 r=12 $EE $3A o5d=12 $EE $04 o5f=7 $EE $25 o5c=9 r=3 $EE $16 o4g+=7 r=17 $EE $25 o5c=11
+(5)
+;17
+(4) (5)
+;25
+
+#5
 @32
 v192
 y17

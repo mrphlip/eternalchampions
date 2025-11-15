@@ -12,11 +12,11 @@ PSG3: snare, can interleave with FM2
 0: FM0 drone
 1: FM0 melody
 2: FM1 drone + FM0 spare note
-3: FM2
-4: PSG3
-5: PSG0+1+2
-6: FM3
-7: unused
+3: PSG0+2
+4: PSG1
+5: FM3
+6: PSG3
+7: FM2
 
 On closer inspection, the PSG does have some repetition...
 
